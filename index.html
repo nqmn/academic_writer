@@ -3,60 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adremote-mcp - SSH MCP Server</title>
+    <title>Scholarly Research Writing and Review Agent System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace'],
+                        sans: ['Manrope', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
                         brand: {
-                            400: '#f87171',
-                            500: '#ef4444',
-                            600: '#dc2626',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
                         },
                         dark: {
-                            900: '#0f1115',
-                            800: '#161b22',
-                            700: '#21262d',
+                            950: '#06101e',
+                            900: '#0a1428',
+                            800: '#0f1b33',
+                            700: '#15233d',
                         }
+                    },
+                    boxShadow: {
+                        halo: '0 0 60px -18px rgba(14, 165, 233, 0.45)',
                     }
                 }
             }
         };
     </script>
     <style>
+        :root {
+            color-scheme: dark;
+        }
+
         body {
-            background-color: #050505;
-            color: #ffffff;
+            background-color: #050b16;
+            color: #f8fbff;
             background-image:
-                radial-gradient(circle at 15% 50%, rgba(239, 68, 68, 0.07) 0%, transparent 40%),
-                radial-gradient(circle at 85% 30%, rgba(220, 38, 38, 0.06) 0%, transparent 40%);
+                radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.18) 0%, transparent 34%),
+                radial-gradient(circle at 84% 20%, rgba(14, 165, 233, 0.12) 0%, transparent 32%),
+                radial-gradient(circle at 50% 100%, rgba(2, 132, 199, 0.14) 0%, transparent 40%);
             background-attachment: fixed;
             overflow-x: hidden;
         }
 
         .gradient-text {
-            background: linear-gradient(to right, #f87171, #fca5a5);
+            background: linear-gradient(90deg, #e0f2fe 0%, #7dd3fc 45%, #38bdf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .glass-panel {
-            background: rgba(22, 27, 34, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(180deg, rgba(15, 27, 51, 0.82), rgba(10, 20, 40, 0.72));
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(125, 211, 252, 0.09);
         }
 
         .terminal-glow {
-            box-shadow: 0 0 60px -15px rgba(239, 68, 68, 0.2);
+            box-shadow: 0 0 70px -24px rgba(56, 189, 248, 0.5);
+        }
+
+        .mesh-line {
+            position: relative;
+        }
+
+        .mesh-line::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(125, 211, 252, 0.08) 1px, transparent 1px),
+                linear-gradient(rgba(125, 211, 252, 0.08) 1px, transparent 1px);
+            background-size: 28px 28px;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+            pointer-events: none;
         }
 
         .accordion-content {
@@ -67,7 +94,7 @@
         }
 
         .accordion-content.open {
-            max-height: 240px;
+            max-height: 320px;
             opacity: 1;
             padding-bottom: 1.5rem;
         }
@@ -79,18 +106,6 @@
         .accordion-button.active .accordion-icon {
             transform: rotate(45deg);
         }
-
-        .mobile-menu {
-            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-
-        .mobile-menu.open {
-            max-height: 320px;
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col font-sans selection:bg-brand-500 selection:text-white">
@@ -98,22 +113,29 @@
     <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="terminal" class="w-6 h-6 text-brand-400"></i>
-                    <span class="font-bold text-xl tracking-tight">adremote-mcp</span>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-400/20 flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5 text-brand-300"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-base tracking-tight">Academic Writer</div>
+                        <div class="text-[11px] uppercase tracking-[0.22em] text-sky-200/55">Scholarly Agent System</div>
+                    </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
-                    <a href="https://github.com/nqmn/adremote-mcp" target="_blank" rel="noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
-                        <i data-lucide="github" class="w-4 h-4"></i> GitHub
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                    <a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a>
+                    <a href="#modules" class="hover:text-white transition-colors">Modules</a>
+                    <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                    <a href="README.md" class="hover:text-white transition-colors flex items-center gap-2">
+                        <i data-lucide="book" class="w-4 h-4"></i> README
                     </a>
-                    <a href="https://github.com/nqmn/adremote-mcp/blob/main/README.md" target="_blank" rel="noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
-                        <i data-lucide="book" class="w-4 h-4"></i> Docs
-                    </a>
-                    <a href="#install" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all border border-white/10">
-                        Get Started
+                    <a href="#start" class="bg-brand-500/15 hover:bg-brand-500/25 text-white px-4 py-2 rounded-lg transition-all border border-brand-400/20">
+                        Start Here
                     </a>
                 </div>
-                <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 bg-white/5 text-gray-200 hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+
+                <button id="mobile-menu-button" onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 bg-white/5 text-slate-200 hover:bg-white/10 transition-colors" aria-label="Toggle menu">
                     <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -124,193 +146,189 @@
             </div>
         </div>
 
-        <!-- Mobile dropdown — full width below the bar -->
-        <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-[#0f1115]">
-            <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1 text-sm font-medium text-gray-300">
-                <a href="#how-it-works" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">See how it works</a>
-                <a href="#tools" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">Tools</a>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-dark-950/95">
+            <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1 text-sm font-medium text-slate-300">
+                <a href="#how-it-works" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">How It Works</a>
+                <a href="#modules" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">Modules</a>
                 <a href="#faq" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">FAQ</a>
-                <a href="https://github.com/nqmn/adremote-mcp/blob/main/README.md" target="_blank" rel="noreferrer" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">Docs</a>
-                <a href="https://github.com/nqmn/adremote-mcp" target="_blank" rel="noreferrer" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors flex items-center gap-2">
-                    <i data-lucide="github" class="w-4 h-4"></i> GitHub
-                </a>
-                <a href="#install" onclick="closeMobileMenu()" class="mt-1 mb-1 bg-brand-500/10 border border-brand-500/30 text-brand-400 px-4 py-2.5 rounded-lg text-center transition-colors hover:bg-brand-500/20">
-                    Get Started
+                <a href="README.md" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">README</a>
+                <a href="skill-package/scholarly-research-writing-review/SKILL.md" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors">SKILL.md</a>
+                <a href="#start" onclick="closeMobileMenu()" class="mt-1 mb-1 bg-brand-500/10 border border-brand-500/30 text-brand-300 px-4 py-2.5 rounded-lg text-center transition-colors hover:bg-brand-500/20">
+                    Start Here
                 </a>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow pt-32 pb-20">
-        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold mb-8">
-                <i data-lucide="shield" class="w-3 h-3"></i>
-                <span>v1.2.0 — Plan-and-approve SSH for MCP</span>
+    <main class="flex-grow pt-32 pb-20 mesh-line">
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold mb-8">
+                <i data-lucide="sparkles" class="w-3 h-3"></i>
+                <span>Phrasebank-led academic writing, Q1 readiness, and offline review methodology</span>
             </div>
 
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                SSH into anything. <br class="hidden md:block">
-                <span class="gradient-text">Safely, from your AI.</span>
+                A modular writing system for
+                <br class="hidden md:block">
+                <span class="gradient-text">research drafting, synthesis, and review.</span>
             </h1>
 
-            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                adremote-mcp is an MCP server that gives Claude and other AI clients safe, audited SSH access to remote servers —
-                with a plan-and-approve flow, credential management, file transfers, and a human-readable audit log.
+            <p class="text-lg md:text-xl text-slate-300/80 mb-10 max-w-4xl mx-auto leading-relaxed">
+                This repository turns Academic Phrasebank-style rhetorical guidance into a task-first agent system for
+                manuscript drafting, literature analysis, reviewer response work, and SLR or SMS methodology support.
+                The structure is local, modular, and built to route real academic tasks instead of serving as a flat prompt template.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-20">
-                <a href="https://github.com/nqmn/adremote-mcp" target="_blank" rel="noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(239,68,68,0.3)] hover:shadow-[0_0_30px_rgba(239,68,68,0.5)]">
-                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    Star on GitHub
+                <a href="README.md" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-halo">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                    Read the README
                 </a>
-                <a href="#get-started" class="w-full sm:w-auto flex items-center justify-center gap-2 glass-panel hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-xl transition-all border border-white/10">
-                    How to install
+                <a href="#start" class="w-full sm:w-auto flex items-center justify-center gap-2 glass-panel hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-xl transition-all border border-white/10">
+                    Try a starting prompt
                 </a>
             </div>
 
             <div id="how-it-works" class="max-w-4xl mx-auto mb-6 text-center">
                 <h2 class="text-2xl font-bold text-white">How this works</h2>
-                <p class="text-gray-500 text-sm mt-2">Connect once. Safe commands run instantly. Anything risky goes through a plan you review and approve before it touches your server.</p>
+                <p class="text-slate-400 text-sm mt-2">The system is task-first. A natural request determines the section, style, discipline overlay, methodology layer, quality checks, and anti-AI controls.</p>
             </div>
 
             <div id="terminal" class="max-w-4xl mx-auto bg-dark-800 rounded-2xl overflow-hidden border border-white/10 terminal-glow text-left">
-                <div class="flex items-center px-4 py-3 bg-[#0d1117] border-b border-white/5">
+                <div class="flex items-center px-4 py-3 bg-[#081120] border-b border-white/5">
                     <div class="flex gap-2">
-                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-sky-300/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-cyan-400/75"></div>
+                        <div class="w-3 h-3 rounded-full bg-blue-500/75"></div>
                     </div>
-                    <div class="mx-auto text-xs text-gray-500 font-mono">claude — ssh-remote mcp</div>
+                    <div class="mx-auto text-xs text-slate-500 font-mono">scholarly-research-writing-review</div>
                 </div>
                 <div class="p-6 font-mono text-sm md:text-base leading-relaxed overflow-x-auto">
-                    <div class="text-gray-500 mb-3"># Connect to a remote server</div>
-                    <div class="text-gray-300 mb-1"><span class="text-brand-400">user:</span> ssh 192.168.1.100:22 ubuntu mypass</div>
-                    <div class="text-emerald-400 mb-4">Connected: ubuntu@192.168.1.100 — credential saved as "ubuntu-home"</div>
+                    <div class="text-slate-500 mb-3"># Natural request</div>
+                    <div class="text-slate-300 mb-1"><span class="text-brand-300">user:</span> Use $scholarly-research-writing-review.</div>
+                    <div class="text-slate-300 mb-1">Write an Introduction for an Elsevier article in engineering.</div>
+                    <div class="text-slate-300 mb-4">Topic: explainable AI for medical image diagnosis. Use British English.</div>
 
-                    <div class="text-gray-500 mb-3"># Safe commands run directly</div>
-                    <div class="text-gray-300 mb-1"><span class="text-brand-400">user:</span> run ls /home on the server</div>
-                    <div class="text-emerald-400 mb-4">ubuntu  backup  logs</div>
+                    <div class="text-slate-500 mb-3"># Internal routing</div>
+                    <div class="text-emerald-300 mb-1">section: introduction</div>
+                    <div class="text-emerald-300 mb-1">style: elsevier</div>
+                    <div class="text-emerald-300 mb-1">discipline: engineering</div>
+                    <div class="text-emerald-300 mb-1">quality: q1_wos_readiness + self_review_protocol</div>
+                    <div class="text-emerald-300 mb-4">controls: anti_ai + gap_validation</div>
 
-                    <div class="text-gray-500 mb-3"># Risky commands go through plan-and-approve</div>
-                    <div class="text-gray-300 mb-1"><span class="text-brand-400">user:</span> run systemctl restart nginx</div>
-                    <div class="text-yellow-300 mb-1">Plan ID  : plan-3a9f12c04e81</div>
-                    <div class="text-yellow-300 mb-1">Kind     : command</div>
-                    <div class="text-yellow-300 mb-1">Risk     : high — approve before execution</div>
-                    <div class="text-gray-300 mb-1"><span class="text-brand-400">user:</span> approve plan-3a9f12c04e81</div>
-                    <div class="text-emerald-400">Approved. Execute with ssh_execute_plan.</div>
+                    <div class="text-slate-500 mb-3"># Result</div>
+                    <div class="text-sky-200">A rhetorically structured draft with explicit gap framing, controlled novelty claims, and section-level academic language that aligns with the repository modules.</div>
                 </div>
             </div>
 
             <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-white/5 py-10">
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">20+</div>
-                    <div class="text-xs tracking-widest text-gray-500 uppercase">MCP Tools<br>Exposed</div>
+                    <div class="text-4xl font-bold text-white mb-2">22</div>
+                    <div class="text-xs tracking-widest text-slate-500 uppercase">Phrase Libraries</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">24h</div>
-                    <div class="text-xs tracking-widest text-gray-500 uppercase">Plan TTL<br>with Audit Log</div>
+                    <div class="text-4xl font-bold text-white mb-2">8</div>
+                    <div class="text-xs tracking-widest text-slate-500 uppercase">Methodology Source Notes</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">SFTP</div>
-                    <div class="text-xs tracking-widest text-gray-500 uppercase">File Upload<br>&amp; Download</div>
+                    <div class="text-4xl font-bold text-white mb-2">5</div>
+                    <div class="text-xs tracking-widest text-slate-500 uppercase">Journal Style Overlays</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-white mb-2">0</div>
-                    <div class="text-xs tracking-widest text-gray-500 uppercase">Unreviewed<br>Destructive Runs</div>
+                    <div class="text-4xl font-bold text-white mb-2">3</div>
+                    <div class="text-xs tracking-widest text-slate-500 uppercase">Core Analysis Workflows</div>
                 </div>
             </div>
 
-            <!-- OS picker -->
-            <div id="get-started" class="mt-16">
-                <h2 class="text-2xl font-bold mb-2">Get started in seconds</h2>
-                <p class="text-gray-500 text-sm mb-8">Pick your OS — the command appears below.</p>
+            <div id="start" class="mt-16">
+                <h2 class="text-2xl font-bold mb-2">Start from a real prompt</h2>
+                <p class="text-slate-400 text-sm mb-8">Pick a common task. The prompt below is copied directly from the patterns supported in the README and codebase.</p>
 
                 <div class="flex justify-center gap-4 mb-8">
-                    <button id="os-win" onclick="selectOs('win')" class="os-btn flex flex-col items-center justify-center gap-2 w-24 h-24 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all focus:outline-none">
-                        <svg class="w-6 h-6 text-gray-300" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-                        <span class="text-xs font-medium text-gray-300">Windows</span>
+                    <button id="mode-draft" onclick="selectMode('draft')" class="mode-btn flex flex-col items-center justify-center gap-2 w-28 h-24 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all focus:outline-none">
+                        <i data-lucide="file-text" class="w-6 h-6 text-slate-200"></i>
+                        <span class="text-xs font-medium text-slate-200">Drafting</span>
                     </button>
-                    <button id="os-linux" onclick="selectOs('linux')" class="os-btn flex flex-col items-center justify-center gap-2 w-24 h-24 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all focus:outline-none">
-                        <svg class="w-6 h-6 text-gray-300" viewBox="0 0 24 24" fill="currentColor"><path d="M20.581 19.049c-.55-.446-.336-1.431-.907-1.917.553-3.365-.997-6.171-2.335-8.35-1.227-1.992-1.714-4.049-2.44-4.049-.726 0-.334 1.475-1.009 2.982-.706 1.578-2.076 2.12-3.508 3.36-1.413 1.22-2.538 2.815-2.465 5.334.048 1.777-.87 3.695-.566 4.123.384.631 1.903-.494 2.911-.579.74-.063 1.52.58 2.359.6.703.019 1.57-.993 2.065-.998.495.005 1.082.907 2.03.907.935 0 2.126-1.047 2.531-.964.405.084.946 1.014 1.335 1.014.39 0 1.198-1.463.999-1.463zm-8.713-1.811c-.26-.532-.358-1.53.115-2.414.73-1.344 2.113-1.677 2.942-1.163.918.567.96 1.686.655 2.548-.438 1.233-1.36 1.782-2.156 1.763-.5-.012-.985-.32-1.085-.502l-.471-.232zm2.789 1.192c.2-.232.376-.583.39-.898.243.127.625.205.864.127-.263.456-.728.757-1.254.771zm1.531-1.955c-.182.498-.503.936-.909 1.176-.141-.26-.167-.66-.027-1.051.23-.646.717-1.042 1.086-.886.244.101.088.436-.15.761zm-4.627 1.343c-.498.14-1.048-.108-1.348-.606-.338-.564-.271-1.266.151-1.697.6-.614 1.601-.55 2.031.237.299.549.187 1.308-.337 1.708l-.497.358zm7.024-8.483c-.145.552-.692.867-1.215.703-.523-.163-.818-.737-.673-1.288.145-.55.692-.867 1.215-.703.523.164.818.737.673 1.288z"/></svg>
-                        <span class="text-xs font-medium text-gray-300">Linux / WSL</span>
+                    <button id="mode-review" onclick="selectMode('review')" class="mode-btn flex flex-col items-center justify-center gap-2 w-28 h-24 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all focus:outline-none">
+                        <i data-lucide="search" class="w-6 h-6 text-slate-200"></i>
+                        <span class="text-xs font-medium text-slate-200">Review</span>
+                    </button>
+                    <button id="mode-slr" onclick="selectMode('slr')" class="mode-btn flex flex-col items-center justify-center gap-2 w-28 h-24 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all focus:outline-none">
+                        <i data-lucide="network" class="w-6 h-6 text-slate-200"></i>
+                        <span class="text-xs font-medium text-slate-200">SLR / SMS</span>
                     </button>
                 </div>
 
-                <!-- Command display -->
-                <div id="os-cmd-box" class="hidden max-w-2xl mx-auto">
-                    <p id="os-cmd-label" class="text-sm font-semibold text-white mb-3">Install with one command</p>
-                    <div class="bg-dark-800 border border-white/10 rounded-xl px-5 py-4 flex items-center justify-between gap-4">
-                        <code id="os-cmd-text" class="font-mono text-sm text-gray-200 truncate"></code>
-                        <button onclick="copyOsCmd()" id="os-copy-btn" class="shrink-0 bg-white/10 hover:bg-white/20 p-2 rounded-lg transition-colors" title="Copy">
-                            <i data-lucide="copy" class="w-4 h-4 text-gray-400"></i>
+                <div id="mode-box" class="hidden max-w-3xl mx-auto">
+                    <p id="mode-label" class="text-sm font-semibold text-white mb-3">Prompt</p>
+                    <div class="bg-dark-800 border border-white/10 rounded-xl px-5 py-4 flex items-center justify-between gap-4 text-left">
+                        <code id="mode-text" class="font-mono text-sm text-slate-200 whitespace-pre-wrap break-words"></code>
+                        <button onclick="copyModeText()" id="mode-copy-btn" class="shrink-0 bg-white/10 hover:bg-white/20 p-2 rounded-lg transition-colors" title="Copy">
+                            <i data-lucide="copy" class="w-4 h-4 text-slate-300"></i>
                         </button>
                     </div>
-                    <p id="os-cmd-note" class="text-xs text-gray-600 mt-3"></p>
+                    <p id="mode-note" class="text-xs text-slate-500 mt-3"></p>
                 </div>
             </div>
         </section>
 
-        <section id="tools" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
+        <section id="modules" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Safe by design, not by convention</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Every non-trivial command goes through a structured review gate. Your AI proposes, you approve, the server executes — with a full audit trail.
+                <h2 class="text-3xl font-bold mb-4">More than a phrase template</h2>
+                <p class="text-slate-300/80 max-w-3xl mx-auto">
+                    The repository combines rhetorical language support with routing rules, standards, workflows, methodology notes, and anti-formulaic controls.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6 text-left">
-                <div class="glass-panel p-8 rounded-2xl border border-red-500/20 bg-gradient-to-b from-transparent to-red-950/10">
-                    <div class="text-xs text-red-400 font-bold tracking-wider mb-6">WITHOUT — Unguarded AI Shell Access</div>
+                <div class="glass-panel p-8 rounded-2xl border border-slate-700/60 bg-gradient-to-b from-transparent to-slate-950/20">
+                    <div class="text-xs text-slate-400 font-bold tracking-wider mb-6">IF THIS WERE ONLY A PROMPT PACK</div>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-3 text-gray-400">
-                            <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
-                            <span>AI runs commands directly with <b>no review gate</b>.</span>
+                        <li class="flex items-start gap-3 text-slate-400">
+                            <i data-lucide="x" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>Section phrases would exist without routing logic or task classification.</span>
                         </li>
-                        <li class="flex items-start gap-3 text-gray-400">
-                            <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
-                            <span>No audit trail — <b>impossible to know</b> what ran and when.</span>
+                        <li class="flex items-start gap-3 text-slate-400">
+                            <i data-lucide="x" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>Systematic review work would depend on generic web-style prompting rather than local methodology notes.</span>
                         </li>
-                        <li class="flex items-start gap-3 text-gray-400">
-                            <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
-                            <span>Credentials stored insecurely or re-entered every session.</span>
+                        <li class="flex items-start gap-3 text-slate-400">
+                            <i data-lucide="x" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>Novelty framing, Q1 readiness, and self-review would be left implicit.</span>
                         </li>
-                        <li class="flex items-start gap-3 text-gray-400">
-                            <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
-                            <span>File edits overwrite with <b>no backup and no hash check</b>.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-red-400/80 bg-red-500/10 p-4 rounded-xl mt-6 text-sm border border-red-500/10">
-                            <i data-lucide="alert-triangle" class="w-5 h-5 shrink-0"></i>
-                            One hallucinated command can break production. There is no rollback.
+                        <li class="flex items-start gap-3 text-slate-400">
+                            <i data-lucide="x" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>Outputs would drift toward repetitive, polished, AI-sounding prose.</span>
                         </li>
                     </ul>
                 </div>
 
-                <div class="glass-panel p-8 rounded-2xl border border-brand-500/30 bg-gradient-to-b from-brand-900/10 to-transparent relative overflow-hidden">
-                    <div class="text-xs text-brand-400 font-bold tracking-wider mb-6 relative z-10">WITH adremote-mcp</div>
+                <div class="glass-panel p-8 rounded-2xl border border-brand-500/30 bg-gradient-to-b from-brand-900/20 to-transparent relative overflow-hidden">
+                    <div class="text-xs text-brand-300 font-bold tracking-wider mb-6 relative z-10">WHAT THIS REPOSITORY ADDS</div>
                     <ul class="space-y-4 relative z-10">
-                        <li class="flex items-start gap-3 text-gray-200">
-                            <i data-lucide="check" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-                            <span>Safe commands (<code class="text-brand-300 bg-black/30 px-1 rounded">ls</code>, <code class="text-brand-300 bg-black/30 px-1 rounded">pwd</code>, <code class="text-brand-300 bg-black/30 px-1 rounded">whoami</code>) run directly. Everything else needs a plan.</span>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-300 shrink-0 mt-0.5"></i>
+                            <span><b>Task-first runtime</b> through routing files such as <code class="text-brand-300 bg-black/30 px-1 rounded">runtime/router.md</code> and <code class="text-brand-300 bg-black/30 px-1 rounded">runtime/agent_manifest.yml</code>.</span>
                         </li>
-                        <li class="flex items-start gap-3 text-gray-200">
-                            <i data-lucide="check" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-                            <span>Every plan shows <b>full details</b> — risk level, rollback plan, and payload — before you approve.</span>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-300 shrink-0 mt-0.5"></i>
+                            <span><b>Methodology grounding</b> via Kitchenham, SEGRESS, and PRISMA source notes kept locally in <code class="text-brand-300 bg-black/30 px-1 rounded">methodology/source_notes/</code>.</span>
                         </li>
-                        <li class="flex items-start gap-3 text-gray-200">
-                            <i data-lucide="check" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-                            <span>Credentials saved locally with key-based auth — <b>no passwords re-entered</b>.</span>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-300 shrink-0 mt-0.5"></i>
+                            <span><b>Quality governance</b> through <code class="text-brand-300 bg-black/30 px-1 rounded">standards/q1_wos_readiness.md</code>, <code class="text-brand-300 bg-black/30 px-1 rounded">self_review_protocol.md</code>, and gap validation rules.</span>
                         </li>
-                        <li class="flex items-start gap-3 text-gray-200">
-                            <i data-lucide="check" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-                            <span>File edits create a timestamped backup and <b>verify SHA256</b> after writing.</span>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-300 shrink-0 mt-0.5"></i>
+                            <span><b>Anti-AI writing controls</b> that explicitly target cadence, transition stacking, and over-symmetry.</span>
                         </li>
-                        <li class="flex items-start gap-3 text-gray-200">
-                            <i data-lucide="check" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-                            <span>Human-readable audit log via <code class="text-brand-300 bg-black/30 px-1 rounded">ssh_read_audit_log</code>.</span>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-300 shrink-0 mt-0.5"></i>
+                            <span><b>Packaged skill delivery</b> under <code class="text-brand-300 bg-black/30 px-1 rounded">skill-package/scholarly-research-writing-review/</code>.</span>
                         </li>
                     </ul>
                     <div class="mt-8 pt-6 border-t border-white/10 relative z-10">
-                        <p class="text-sm text-brand-300">Your AI proposes. You approve. The server executes. Always.</p>
+                        <p class="text-sm text-brand-200">The phrase libraries support the system. They are not the whole system.</p>
                     </div>
                 </div>
             </div>
@@ -318,88 +336,105 @@
 
         <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Tool Groups</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    20+ MCP tools organized across five capability areas.
+                <h2 class="text-3xl font-bold mb-4">Repository modules</h2>
+                <p class="text-slate-300/80 max-w-2xl mx-auto">
+                    The page keeps the original card layout, but the content now reflects the actual folders and responsibilities in this repo.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-colors">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-400">
-                            <i data-lucide="plug" class="w-6 h-6"></i>
+                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-300">
+                            <i data-lucide="library" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">Connection</h3>
+                        <h3 class="text-lg font-bold text-white">Phrase Libraries</h3>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li>ssh_connect</li>
-                        <li>ssh_connect_saved</li>
-                        <li>ssh_disconnect</li>
-                        <li>ssh_list_connections</li>
-                        <li>ssh_health_check</li>
+                    <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                        <li>phrases/introduction.yml</li>
+                        <li>phrases/literature_review.yml</li>
+                        <li>phrases/methods.yml</li>
+                        <li>phrases/discussion.yml</li>
+                        <li>phrases/cautious_language.yml</li>
                     </ul>
                 </div>
 
                 <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-colors">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-400">
+                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-300">
+                            <i data-lucide="git-branch" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Rhetorical Moves</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                        <li>rhetorical_moves/cars_model.md</li>
+                        <li>gap_identification.md</li>
+                        <li>novelty_positioning.md</li>
+                        <li>methodological_justification.md</li>
+                        <li>contribution_framing.md</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-colors">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-300">
                             <i data-lucide="shield-check" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">Plan &amp; Approve</h3>
+                        <h3 class="text-lg font-bold text-white">Quality Standards</h3>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li>ssh_execute</li>
-                        <li>ssh_plan_command</li>
-                        <li>ssh_approve_plan</li>
-                        <li>ssh_reject_plan</li>
-                        <li>ssh_execute_plan</li>
-                        <li>ssh_list_plans</li>
-                        <li>ssh_get_plan</li>
+                    <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                        <li>standards/q1_wos_readiness.md</li>
+                        <li>standards/self_review_protocol.md</li>
+                        <li>methodology/gap_validation.md</li>
+                        <li>runtime/ambiguity_policy.md</li>
                     </ul>
                 </div>
 
                 <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-colors">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-400">
-                            <i data-lucide="file-edit" class="w-6 h-6"></i>
+                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-300">
+                            <i data-lucide="flask-conical" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">File Management</h3>
+                        <h3 class="text-lg font-bold text-white">Methodology</h3>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li>ssh_read_file</li>
-                        <li>ssh_plan_edit</li>
-                        <li>ssh_upload_file</li>
-                        <li>ssh_download_file</li>
+                    <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                        <li>methodology/slr_kitchenham.md</li>
+                        <li>methodology/source_manifest.yml</li>
+                        <li>source_notes/prisma_2020_core.md</li>
+                        <li>source_notes/segress_core.md</li>
                     </ul>
                 </div>
 
                 <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-colors">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-400">
-                            <i data-lucide="key-round" class="w-6 h-6"></i>
+                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-300">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">Credentials</h3>
+                        <h3 class="text-lg font-bold text-white">Runtime &amp; Routing</h3>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li>ssh_save_credentials</li>
-                        <li>ssh_list_saved_credentials</li>
-                        <li>ssh_delete_saved_credentials</li>
-                        <li>ssh_setup_key_auth</li>
+                    <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                        <li>runtime/system_prompt.md</li>
+                        <li>runtime/router.md</li>
+                        <li>runtime/agent_manifest.yml</li>
+                        <li>AUTO_ROUTING_RULES.md</li>
+                        <li>COMMANDS.md</li>
                     </ul>
                 </div>
 
                 <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-colors">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-400">
-                            <i data-lucide="scroll-text" class="w-6 h-6"></i>
+                        <div class="p-3 bg-brand-500/10 rounded-xl text-brand-300">
+                            <i data-lucide="package" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">Audit Log</h3>
+                        <h3 class="text-lg font-bold text-white">Skill Package</h3>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li>ssh_read_audit_log</li>
+                    <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                        <li>skill-package/.../SKILL.md</li>
+                        <li>agents/openai.yaml</li>
+                        <li>references/README.md</li>
+                        <li>references/methodology/...</li>
+                        <li>references/phrases/...</li>
                     </ul>
-                    <p class="text-xs text-gray-500 mt-4">Supports <span class="font-mono">limit</span> and <span class="font-mono">event_filter</span> params. Events: created, approved, rejected, executed, expired.</p>
                 </div>
             </div>
         </section>
@@ -410,126 +445,127 @@
             <div class="space-y-4">
                 <div class="glass-panel rounded-xl border border-white/10 overflow-hidden">
                     <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
-                        <span class="font-medium text-lg text-white">Which commands run directly without a plan?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon"></i>
+                        <span class="font-medium text-lg text-white">Is this the Academic Phrasebank itself?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-slate-400 accordion-icon"></i>
                     </button>
-                    <div class="accordion-content px-6 text-gray-400">
-                        A small allowlist of read-only commands: <code class="bg-black/30 px-1 rounded text-brand-300">date</code>, <code class="bg-black/30 px-1 rounded text-brand-300">hostname</code>, <code class="bg-black/30 px-1 rounded text-brand-300">id</code>, <code class="bg-black/30 px-1 rounded text-brand-300">ls</code>, <code class="bg-black/30 px-1 rounded text-brand-300">pwd</code>, <code class="bg-black/30 px-1 rounded text-brand-300">uname</code>, <code class="bg-black/30 px-1 rounded text-brand-300">uptime</code>, <code class="bg-black/30 px-1 rounded text-brand-300">whoami</code>. Everything else — including shell composition, pipes, and high-risk prefixes like <code class="bg-black/30 px-1 rounded text-brand-300">rm</code>, <code class="bg-black/30 px-1 rounded text-brand-300">systemctl</code>, <code class="bg-black/30 px-1 rounded text-brand-300">curl</code> — is routed through a plan.
+                    <div class="accordion-content px-6 text-slate-400">
+                        No. The README is explicit that this repository is not an official Academic Phrasebank product. It is a derivative, modular scholarly writing and review system that uses the Phrasebank as a primary rhetorical foundation and extends it with routing, methodology, standards, and review workflows.
                     </div>
                 </div>
 
                 <div class="glass-panel rounded-xl border border-white/10 overflow-hidden">
                     <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
-                        <span class="font-medium text-lg text-white">What happens if I don't approve a plan in time?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon"></i>
+                        <span class="font-medium text-lg text-white">What kinds of tasks does the repository cover?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-slate-400 accordion-icon"></i>
                     </button>
-                    <div class="accordion-content px-6 text-gray-400">
-                        Plans expire after 24 hours. An expired plan is automatically marked as rejected and cannot be executed. You would need to recreate it. Plans are persisted locally so they survive MCP server restarts within that window.
+                    <div class="accordion-content px-6 text-slate-400">
+                        The codebase and README cover manuscript drafting, literature review writing, gap identification, reviewer response work, single-paper analysis, multi-paper synthesis, manuscript diagnosis, and SLR, SMS, or tertiary-study methodology support.
                     </div>
                 </div>
 
                 <div class="glass-panel rounded-xl border border-white/10 overflow-hidden">
                     <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
-                        <span class="font-medium text-lg text-white">How are credentials stored?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon"></i>
+                        <span class="font-medium text-lg text-white">Why keep methodology notes offline in the repo?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-slate-400 accordion-icon"></i>
                     </button>
-                    <div class="accordion-content px-6 text-gray-400">
-                        Credentials are saved locally in <code class="bg-black/30 px-1 rounded text-brand-300">~/.ssh_mcp_credentials.json</code> with 0600 permissions. The first password-based login automatically bootstraps key-based auth and saves the key credential — the password is never stored. Passphrase-protected private keys are also supported and stored alongside the credential.
+                    <div class="accordion-content px-6 text-slate-400">
+                        The repository intentionally keeps Kitchenham, SEGRESS, and PRISMA support as local Markdown or YAML notes under <code class="bg-black/30 px-1 rounded text-brand-300">methodology/source_notes/</code>. The goal is to reduce unnecessary web dependence and make review-method tasks reproducible from the local knowledge base first.
                     </div>
                 </div>
 
                 <div class="glass-panel rounded-xl border border-white/10 overflow-hidden">
                     <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
-                        <span class="font-medium text-lg text-white">Does it support jump hosts / bastions?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon"></i>
+                        <span class="font-medium text-lg text-white">What does “Q1 readiness” mean in this system?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-slate-400 accordion-icon"></i>
                     </button>
-                    <div class="accordion-content px-6 text-gray-400">
-                        Yes. Pass a <code class="bg-black/30 px-1 rounded text-brand-300">jump_host</code> object on <code class="bg-black/30 px-1 rounded text-brand-300">ssh_connect</code> or <code class="bg-black/30 px-1 rounded text-brand-300">ssh_save_credentials</code>. The server opens a native SSH tunnel through the bastion to the target. Jump host keys can also be passphrase-protected.
+                    <div class="accordion-content px-6 text-slate-400">
+                        It means the default quality bar is not just fluent prose. The system is expected to apply explicit standards for contribution framing, methodological defensibility, rhetorical coherence, and self-review, primarily through the files in <code class="bg-black/30 px-1 rounded text-brand-300">standards/</code> and the gap-validation layer.
                     </div>
                 </div>
 
                 <div class="glass-panel rounded-xl border border-white/10 overflow-hidden">
                     <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
-                        <span class="font-medium text-lg text-white">How do remote file edits work?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon"></i>
+                        <span class="font-medium text-lg text-white">How should a user invoke it?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-slate-400 accordion-icon"></i>
                     </button>
-                    <div class="accordion-content px-6 text-gray-400">
-                        Use <code class="bg-black/30 px-1 rounded text-brand-300">ssh_read_file</code> to read the current content, then <code class="bg-black/30 px-1 rounded text-brand-300">ssh_plan_edit</code> to stage the new content. After approval and execution, the server creates a timestamped <code class="bg-black/30 px-1 rounded text-brand-300">.ssh-mcp.bak.&lt;ts&gt;</code> backup and verifies the written file's SHA256 hash before reporting success.
+                    <div class="accordion-content px-6 text-slate-400">
+                        The recommended pattern in the README is natural-language prompting, optionally with explicit invocation such as <code class="bg-black/30 px-1 rounded text-brand-300">Use $scholarly-research-writing-review.</code> Optional routing labels exist in <code class="bg-black/30 px-1 rounded text-brand-300">COMMANDS.md</code>, but they are presented as conventions rather than guaranteed native commands.
                     </div>
                 </div>
 
                 <div class="glass-panel rounded-xl border border-white/10 overflow-hidden">
                     <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
-                        <span class="font-medium text-lg text-white">Which MCP clients are supported?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon"></i>
+                        <span class="font-medium text-lg text-white">What is inside the packaged skill?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-slate-400 accordion-icon"></i>
                     </button>
-                    <div class="accordion-content px-6 text-gray-400">
-                        Any MCP-compatible client — Claude Desktop, Claude Code, and Codex are all supported. The server communicates over stdio and is launched as a subprocess by the client. Windows and WSL/Linux are both supported with OS-specific venvs and launcher scripts.
+                    <div class="accordion-content px-6 text-slate-400">
+                        The packaged skill under <code class="bg-black/30 px-1 rounded text-brand-300">skill-package/scholarly-research-writing-review/</code> includes a <code class="bg-black/30 px-1 rounded text-brand-300">SKILL.md</code>, <code class="bg-black/30 px-1 rounded text-brand-300">agents/openai.yaml</code>, and a bundled <code class="bg-black/30 px-1 rounded text-brand-300">references/</code> tree copied from the repository.
                     </div>
                 </div>
 
                 <div class="glass-panel rounded-xl border border-white/10 overflow-hidden">
                     <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
-                        <span class="font-medium text-lg text-white">What does the audit log record?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-gray-400 accordion-icon"></i>
+                        <span class="font-medium text-lg text-white">How does the system avoid generic AI prose?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-slate-400 accordion-icon"></i>
                     </button>
-                    <div class="accordion-content px-6 text-gray-400">
-                        Every plan lifecycle event: created, approved, rejected, executed, and expired. Each entry includes timestamp, plan ID, kind, connection name, risk level, and a summary. Use <code class="bg-black/30 px-1 rounded text-brand-300">ssh_read_audit_log</code> to view it in a formatted, human-readable layout — no need to read raw JSONL.
+                    <div class="accordion-content px-6 text-slate-400">
+                        The anti-AI layer is explicit. Files in <code class="bg-black/30 px-1 rounded text-brand-300">anti_ai/</code> target cadence repetition, excessive transition chaining, rhythm symmetry, and over-smoothed paragraph endings so the output stays formal without sounding templated.
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="install" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 text-center">
-            <h2 class="text-3xl font-bold mb-6">One command to install.</h2>
-            <p class="text-gray-400 mb-10">The installer clones the repo, creates a venv, installs dependencies, and prints the exact config to paste into your MCP client.</p>
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 text-center">
+            <h2 class="text-3xl font-bold mb-6">Open the right entry points first</h2>
+            <p class="text-slate-300/80 mb-10">These are the files that define how the repository behaves in practice.</p>
 
             <div class="grid md:grid-cols-2 gap-6 text-left mb-6">
                 <div class="glass-panel p-6 rounded-2xl border border-white/10">
-                    <div class="text-xs text-brand-400 font-bold tracking-wider mb-4 flex items-center gap-2">
-                        <i data-lucide="monitor" class="w-3.5 h-3.5"></i> WINDOWS — PowerShell
+                    <div class="text-xs text-brand-300 font-bold tracking-wider mb-4 flex items-center gap-2">
+                        <i data-lucide="folder" class="w-3.5 h-3.5"></i> CORE RUNTIME
                     </div>
-                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-gray-200 flex items-center justify-between gap-3">
-                        <span class="truncate">irm https://raw.githubusercontent.com/nqmn/adremote-mcp/main/install.ps1 | iex</span>
-                        <button onclick="copyCmd('win')" class="shrink-0 bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-colors" title="Copy">
-                            <i data-lucide="copy" class="w-4 h-4 text-gray-400"></i>
+                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-slate-200 flex items-center justify-between gap-3">
+                        <span class="truncate">AGENTS.md + runtime/system_prompt.md + runtime/router.md</span>
+                        <button onclick="copyCard('runtime')" class="shrink-0 bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-colors" title="Copy">
+                            <i data-lucide="copy" class="w-4 h-4 text-slate-300"></i>
                         </button>
                     </div>
-                    <p class="text-xs text-gray-500 mt-3">Installs to <span class="font-mono text-gray-400">%USERPROFILE%\adremote-mcp</span></p>
+                    <p class="text-xs text-slate-500 mt-3">Use these to understand the system contract, runtime behavior, and routing assumptions.</p>
                 </div>
+
                 <div class="glass-panel p-6 rounded-2xl border border-white/10">
-                    <div class="text-xs text-brand-400 font-bold tracking-wider mb-4 flex items-center gap-2">
-                        <i data-lucide="terminal" class="w-3.5 h-3.5"></i> WSL / LINUX — bash
+                    <div class="text-xs text-brand-300 font-bold tracking-wider mb-4 flex items-center gap-2">
+                        <i data-lucide="package" class="w-3.5 h-3.5"></i> PACKAGED SKILL
                     </div>
-                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-gray-200 flex items-center justify-between gap-3">
-                        <span class="truncate">curl -fsSL https://raw.githubusercontent.com/nqmn/adremote-mcp/main/install.sh | bash</span>
-                        <button onclick="copyCmd('linux')" class="shrink-0 bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-colors" title="Copy">
-                            <i data-lucide="copy" class="w-4 h-4 text-gray-400"></i>
+                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-slate-200 flex items-center justify-between gap-3">
+                        <span class="truncate">skill-package/scholarly-research-writing-review/</span>
+                        <button onclick="copyCard('skill')" class="shrink-0 bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-colors" title="Copy">
+                            <i data-lucide="copy" class="w-4 h-4 text-slate-300"></i>
                         </button>
                     </div>
-                    <p class="text-xs text-gray-500 mt-3">Installs to <span class="font-mono text-gray-400">~/adremote-mcp</span></p>
+                    <p class="text-xs text-slate-500 mt-3">Use this when you want the installable Codex skill artifact rather than only the source repository.</p>
                 </div>
             </div>
 
-            <p class="text-xs text-gray-600 mb-10">Already cloned? Run <code class="text-gray-500 font-mono">.\install.ps1</code> or <code class="text-gray-500 font-mono">./install.sh</code> from inside the repo — the installer detects it and installs in place.</p>
+            <p class="text-xs text-slate-600 mb-10">Also useful: <code class="text-slate-500 font-mono">AUTO_ROUTING_RULES.md</code>, <code class="text-slate-500 font-mono">TEST_CASES.md</code>, and <code class="text-slate-500 font-mono">METHODOLOGY_SOURCES.md</code>.</p>
 
-            <a href="https://github.com/nqmn/adremote-mcp/blob/main/README.md" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-[0_0_15px_rgba(239,68,68,0.2)]">
-                <i data-lucide="book-open" class="w-5 h-5"></i>
-                Full Documentation
+            <a href="skill-package/scholarly-research-writing-review/SKILL.md" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-halo">
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                Open the Skill Package
             </a>
         </section>
     </main>
 
     <footer class="border-t border-white/5 py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2 text-gray-500 text-sm">
-                <i data-lucide="terminal" class="w-4 h-4"></i>
-                <span>© 2026 Mohd Adil — <a href="mailto:mohdadil@live.com" class="hover:text-white transition-colors">mohdadil@live.com</a> — MIT License</span>
+            <div class="flex items-center gap-2 text-slate-500 text-sm">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+                <span>Academic Writer repository landing page aligned to README.md and the local module tree.</span>
             </div>
-            <div class="flex gap-6 text-gray-500">
-                <a href="https://github.com/nqmn/adremote-mcp" target="_blank" rel="noreferrer" class="hover:text-white transition-colors">
-                    <i data-lucide="github" class="w-5 h-5"></i>
-                </a>
+            <div class="flex gap-6 text-slate-500 text-sm">
+                <a href="README.md" class="hover:text-white transition-colors">README</a>
+                <a href="AGENTS.md" class="hover:text-white transition-colors">AGENTS.md</a>
+                <a href="skill-package/scholarly-research-writing-review/SKILL.md" class="hover:text-white transition-colors">SKILL.md</a>
             </div>
         </div>
     </footer>
@@ -556,43 +592,57 @@
             iconClose.classList.add('hidden');
         }
 
-        const cmds = {
-            win: {
-                cmd: 'irm https://raw.githubusercontent.com/nqmn/adremote-mcp/main/install.ps1 | iex',
-                note: 'Installs to %USERPROFILE%\\adremote-mcp — run in PowerShell'
+        const prompts = {
+            draft: {
+                label: 'Section drafting prompt',
+                text: 'Use $scholarly-research-writing-review.\nWrite an Introduction for an Elsevier article in engineering.\nTopic: explainable AI for medical image diagnosis.\nUse British English.',
+                note: 'Matches the README usage pattern for section drafting.'
             },
-            linux: {
-                cmd: 'curl -fsSL https://raw.githubusercontent.com/nqmn/adremote-mcp/main/install.sh | bash',
-                note: 'Installs to ~/adremote-mcp — run in bash or WSL terminal'
+            review: {
+                label: 'Manuscript diagnosis prompt',
+                text: 'Use $scholarly-research-writing-review.\nReview my draft and tell me whether it is Q1-ready.\nIdentify the biggest weaknesses and what I should fix first.',
+                note: 'Matches the manuscript diagnosis workflow described in the README.'
+            },
+            slr: {
+                label: 'Systematic review prompt',
+                text: 'Use $scholarly-research-writing-review.\nDesign a systematic literature review protocol on explainable AI for medical image diagnosis.\nUse Kitchenham, SEGRESS, and PRISMA principles.',
+                note: 'Matches the repo methodology stack and the confidence example in the README.'
             }
         };
 
-        let currentOs = null;
+        const cards = {
+            runtime: 'AGENTS.md + runtime/system_prompt.md + runtime/router.md',
+            skill: 'skill-package/scholarly-research-writing-review/'
+        };
 
-        function selectOs(os) {
-            currentOs = os;
-            document.querySelectorAll('.os-btn').forEach(btn => {
-                btn.classList.remove('border-brand-500', 'bg-brand-500/10', 'text-white');
+        let currentMode = null;
+
+        function selectMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.classList.remove('border-brand-500', 'bg-brand-500/10');
                 btn.classList.add('border-white/10', 'bg-white/5');
             });
-            const active = document.getElementById('os-' + os);
+
+            const active = document.getElementById('mode-' + mode);
             active.classList.remove('border-white/10', 'bg-white/5');
             active.classList.add('border-brand-500', 'bg-brand-500/10');
 
-            const box = document.getElementById('os-cmd-box');
+            const box = document.getElementById('mode-box');
             box.classList.remove('hidden');
-            document.getElementById('os-cmd-text').textContent = cmds[os].cmd;
-            document.getElementById('os-cmd-note').textContent = cmds[os].note;
+            document.getElementById('mode-label').textContent = prompts[mode].label;
+            document.getElementById('mode-text').textContent = prompts[mode].text;
+            document.getElementById('mode-note').textContent = prompts[mode].note;
 
-            const copyBtn = document.getElementById('os-copy-btn');
-            copyBtn.querySelector('i').setAttribute('data-lucide', 'copy');
+            const icon = document.getElementById('mode-copy-btn').querySelector('i');
+            icon.setAttribute('data-lucide', 'copy');
             lucide.createIcons();
         }
 
-        function copyOsCmd() {
-            if (!currentOs) return;
-            navigator.clipboard.writeText(cmds[currentOs].cmd);
-            const icon = document.getElementById('os-copy-btn').querySelector('i');
+        function copyModeText() {
+            if (!currentMode) return;
+            navigator.clipboard.writeText(prompts[currentMode].text);
+            const icon = document.getElementById('mode-copy-btn').querySelector('i');
             icon.setAttribute('data-lucide', 'check');
             lucide.createIcons();
             setTimeout(() => {
@@ -601,11 +651,11 @@
             }, 2000);
         }
 
-        function copyCmd(os) {
-            navigator.clipboard.writeText(cmds[os].cmd);
+        function copyCard(key) {
+            navigator.clipboard.writeText(cards[key]);
         }
 
-        selectOs('linux');
+        selectMode('draft');
 
         function toggleAccordion(button) {
             const content = button.nextElementSibling;
