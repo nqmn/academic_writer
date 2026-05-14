@@ -72,7 +72,8 @@ The system supports:
 - [`notes/`](notes/): style, spelling, and structural notes
 - [`COMMANDS.md`](COMMANDS.md): namespaced command triggers
 - [`TEST_CASES.md`](TEST_CASES.md): dry-run routing and quality tests
-- [`skill-package/`](skill-package/): installable Codex skill package
+- [`packages/`](packages/): installable Codex skill package artifacts
+- [`docs/`](docs/): standalone site and presentation assets
 
 Within [`methodology/`](methodology/), the repository also includes:
 
@@ -143,7 +144,7 @@ For a shorter routing summary, see:
 
 This repository includes a packaged Codex skill at:
 
-- [`skill-package/scholarly-research-writing-review/`](skill-package/scholarly-research-writing-review/)
+- [`packages/scholarly-research-writing-review/`](packages/scholarly-research-writing-review/)
 
 The packaged skill contains:
 
