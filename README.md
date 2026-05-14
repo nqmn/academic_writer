@@ -74,6 +74,7 @@ The system supports:
 - [`TEST_CASES.md`](TEST_CASES.md): dry-run routing and quality tests
 - [`packages/`](packages/): installable Codex skill package artifacts
 - [`docs/`](docs/): standalone site and presentation assets
+- [`scripts/`](scripts/): local maintenance scripts such as package sync
 
 Within [`methodology/`](methodology/), the repository also includes:
 
@@ -151,6 +152,12 @@ The packaged skill contains:
 - a `SKILL.md`
 - `agents/openai.yaml`
 - a bundled `references/` tree copied from this repository
+
+The bundled `references/` tree should be treated as generated package content. To resync it after source edits, run:
+
+```powershell
+.\scripts\sync-skill-package.ps1
+```
 
 For systematic-review work, the skill is intended to rely on bundled Markdown/YAML source notes rather than bundled PDFs.
 
