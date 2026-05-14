@@ -24,6 +24,7 @@ The `open-*` forms below are optional textual labels only.
 - `/open-analyze` for single-paper analysis and literature-table extraction
 - `/open-synthesize` for multi-paper synthesis, literature reviews, and gap positioning
 - `/open-slr` for systematic review, mapping study, tertiary study, PRISMA, and Kitchenham-aligned work
+- `/open-bibliometric` for bibliometric analysis, science mapping, and Web of Science or Scopus export-driven field studies
 - `/open-abstract` for abstract drafting or revision
 - `/open-intro` for introduction drafting or revision
 - `/open-litreview` for literature review and related-works drafting

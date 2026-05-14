@@ -9,7 +9,7 @@ The goal is to keep the systematic-review and evidence-synthesis layer usable wi
 Primary rule:
 
 - use the local Markdown/YAML methodology notes first
-- do not rely on web search for Kitchenham, SEGRESS, PRISMA, or Paul et al. 2023 unless the user asks for broader external research
+- do not rely on web search for Kitchenham, SEGRESS, PRISMA, Paul et al. 2023, or the local bibliometric-methodology sources unless the user asks for broader external research
 
 ## Core source index
 
@@ -17,6 +17,10 @@ Primary rule:
 
 ## Core local methodology notes
 
+- [`methodology/source_notes/donthu_bibliometric_2021.md`](methodology/source_notes/donthu_bibliometric_2021.md)
+  - core bibliometric-methodology and technique-selection guidance
+- [`methodology/source_notes/ozturk_bibliometric_design_2024.md`](methodology/source_notes/ozturk_bibliometric_design_2024.md)
+  - bibliometric research-design, transparency, and analysis-fit guidance
 - [`methodology/source_notes/kitchenham_guidelines_core.md`](methodology/source_notes/kitchenham_guidelines_core.md)
   - main SLR process and protocol structure
 - [`methodology/source_notes/prisma_2020_core.md`](methodology/source_notes/prisma_2020_core.md)
@@ -26,6 +30,8 @@ Primary rule:
 
 ## Supporting local methodology notes
 
+- [`methodology/source_notes/passas_bibliometric_steps_2024.md`](methodology/source_notes/passas_bibliometric_steps_2024.md)
+  - seven-step operational bibliometric checklist
 - [`methodology/source_notes/segress_supplement.md`](methodology/source_notes/segress_supplement.md)
   - item-level elaboration and examples
 - [`methodology/source_notes/kitchenham_process_review_2013.md`](methodology/source_notes/kitchenham_process_review_2013.md)
@@ -37,6 +43,9 @@ Primary rule:
 
 ## Role split
 
+- Donthu et al. 2021: core bibliometric methodology and technique choice
+- Ozturk et al. 2024: bibliometric research-design and transparency logic
+- Passas 2024: compact operational steps and software-oriented workflow
 - Kitchenham: review-process design
 - PRISMA 2020: reporting completeness
 - SEGRESS: software-engineering reporting adaptation
@@ -51,6 +60,11 @@ For standard SLR or SMS tasks:
 For theory-building or framework-based reviews:
 
 - also load Paul et al. 2023
+
+For bibliometric-analysis tasks:
+
+- load Donthu + Ozturk et al. first
+- add Passas when the user needs a more operational step list or tool-oriented workflow
 
 For manuscript writing tasks unrelated to secondary-study methodology:
 

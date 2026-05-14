@@ -67,6 +67,7 @@ module_groups:
     - workflows/manuscript_diagnosis.md
   methodology:
     - methodology/slr_kitchenham.md
+    - methodology/bibliometric_analysis.md
     - methodology/gap_validation.md
   disciplines:
     - disciplines/engineering.md
@@ -139,6 +140,10 @@ special_modes:
     additional_modules:
       - workflows/literature_synthesizer.md
       - methodology/slr_kitchenham.md
+  bibliometric_analysis:
+    additional_modules:
+      - workflows/literature_synthesizer.md
+      - methodology/bibliometric_analysis.md
   rough_draft:
     relaxed_modules:
       - standards/q1_wos_readiness.md

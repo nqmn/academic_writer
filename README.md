@@ -5,6 +5,7 @@ A modular academic writing, literature analysis, synthesis, and review system bu
 - the **Academic Phrasebank** as a phraseological and rhetorical foundation
 - **Q1 WoS readiness** as the default quality bar
 - **systematic review methodology** for SLR/SMS/tertiary-study work
+- **bibliometric-analysis methodology** for science mapping and field-structure studies
 - **anti-AI writing controls** for cleaner, less formulaic prose
 - **diagnostic and synthesis workflows** for real research use
 
@@ -55,6 +56,7 @@ The system supports:
 - manuscript diagnosis and upgrade planning
 - reviewer-response writing
 - SLR, SMS, and tertiary-study protocol and synthesis work
+- bibliometric study design, routing, and interpretation
 
 ## Repository structure
 
@@ -65,7 +67,7 @@ The system supports:
 - [`anti_ai/`](anti_ai/): cadence, anti-template, and humanization controls
 - [`reviewer_response/`](reviewer_response/): reviewer-response patterns
 - [`workflows/`](workflows/): single-paper analysis, literature synthesis, and manuscript diagnosis
-- [`methodology/`](methodology/): systematic review and gap-validation layers
+- [`methodology/`](methodology/): systematic review, bibliometric-analysis, and gap-validation layers
 - [`standards/`](standards/): Q1 WoS readiness and self-review governance
 - [`runtime/`](runtime/): router, ambiguity policy, runtime prompt, and manifest
 - [`disciplines/`](disciplines/): discipline overlays
@@ -79,7 +81,7 @@ The system supports:
 Within [`methodology/`](methodology/), the repository also includes:
 
 - [`methodology/source_manifest.yml`](methodology/source_manifest.yml): local methodology-source index
-- [`methodology/source_notes/`](methodology/source_notes/): distilled local notes derived from the user's Kitchenham, SEGRESS, and PRISMA PDFs
+- [`methodology/source_notes/`](methodology/source_notes/): distilled local notes derived from the user's Kitchenham, SEGRESS, PRISMA, and bibliometric-methodology PDFs
 
 ## Default operating model
 
@@ -202,6 +204,13 @@ Use $scholarly-research-writing-review.
 Design an SLR protocol on explainable AI for medical image diagnosis using Kitchenham and PRISMA.
 ```
 
+### Bibliometric study design
+
+```text
+Use $scholarly-research-writing-review.
+Use this Web of Science `savedrecs.txt` export on explainable AI for medical vision and design a bibliometric analysis with performance analysis, co-citation analysis, bibliographic coupling, and keyword co-occurrence mapping.
+```
+
 ## Confidence example: how the foundations work together
 
 One useful way to test the system is to ask it to combine:
@@ -230,17 +239,20 @@ What a strong response should demonstrate:
 
 ## Offline methodology sources
 
-For SLR, SMS, tertiary-study, Kitchenham, SEGRESS, and PRISMA tasks, the repository now keeps the methodology foundation as local Markdown/YAML notes rather than stored PDFs.
+For SLR, SMS, tertiary-study, Kitchenham, SEGRESS, PRISMA, and bibliometric-analysis tasks, the repository now keeps the methodology foundation as local Markdown/YAML notes rather than stored PDFs.
 
 Primary local source files:
 
 - [`methodology/source_manifest.yml`](methodology/source_manifest.yml)
+- [`methodology/source_notes/donthu_bibliometric_2021.md`](methodology/source_notes/donthu_bibliometric_2021.md)
+- [`methodology/source_notes/ozturk_bibliometric_design_2024.md`](methodology/source_notes/ozturk_bibliometric_design_2024.md)
 - [`methodology/source_notes/kitchenham_guidelines_core.md`](methodology/source_notes/kitchenham_guidelines_core.md)
 - [`methodology/source_notes/prisma_2020_core.md`](methodology/source_notes/prisma_2020_core.md)
 - [`methodology/source_notes/segress_core.md`](methodology/source_notes/segress_core.md)
 
 Supporting local source files:
 
+- [`methodology/source_notes/passas_bibliometric_steps_2024.md`](methodology/source_notes/passas_bibliometric_steps_2024.md)
 - [`methodology/source_notes/paul_framework_reviews_2023.md`](methodology/source_notes/paul_framework_reviews_2023.md)
 - [`methodology/source_notes/segress_supplement.md`](methodology/source_notes/segress_supplement.md)
 - [`methodology/source_notes/kitchenham_process_review_2013.md`](methodology/source_notes/kitchenham_process_review_2013.md)

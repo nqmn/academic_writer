@@ -36,6 +36,7 @@ Supported command triggers include:
 - `open-analyze`
 - `open-synthesize`
 - `open-slr`
+- `open-bibliometric`
 - `open-abstract`
 - `open-intro`
 - `open-litreview`
@@ -138,6 +139,34 @@ Then load the methodology layer:
 
 - `methodology/slr_kitchenham.md`
 
+### Bibliometric analysis mode
+
+If the user mentions:
+
+- `open-bibliometric`
+- bibliometric analysis
+- bibliometric study
+- science mapping
+- citation analysis
+- co-citation analysis
+- bibliographic coupling
+- co-word analysis
+- keyword co-occurrence
+- co-authorship analysis
+- VOSviewer
+- CiteSpace
+- Bibliometrix
+- Gephi
+- `savedrecs.txt`
+- Web of Science export
+- WoS export
+
+Then load the methodology layer:
+
+- `methodology/bibliometric_analysis.md`
+
+If the request also includes a bibliographic export such as `savedrecs.txt`, treat it as a dataset-driven bibliometric task rather than a generic literature-synthesis request.
+
 ### Presentation mode
 
 If the user mentions:
@@ -219,6 +248,12 @@ If no venue is given, use the manifest default.
 If the task is a formal secondary study, load:
 
 - `methodology/slr_kitchenham.md`
+
+Use it together with analysis or synthesis workflows rather than instead of them.
+
+If the task is a bibliometric study, load:
+
+- `methodology/bibliometric_analysis.md`
 
 Use it together with analysis or synthesis workflows rather than instead of them.
 

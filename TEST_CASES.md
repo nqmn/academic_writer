@@ -293,7 +293,34 @@ Expected quality behavior:
 - the synthesis design should show how the chosen framework will structure extraction, integration, gap identification, and future research
 - the framing should still reflect Q1-level rigor in scope, method, and reporting logic
 
-## Case 11: Tertiary study
+## Case 12: Bibliometric routing from Web of Science export
+
+Prompt:
+
+```text
+Use this Web of Science `savedrecs.txt` export on explainable AI for medical vision and do a bibliometric analysis with performance analysis, co-citation analysis, bibliographic coupling, and keyword co-occurrence mapping.
+```
+
+Expected routing:
+
+- standards: `standards/q1_wos_readiness.md`
+- standards: `standards/self_review_protocol.md`
+- methodology: `methodology/bibliometric_analysis.md`
+- methodology: `methodology/source_manifest.yml`
+- methodology:
+  - `methodology/source_notes/donthu_bibliometric_2021.md`
+  - `methodology/source_notes/ozturk_bibliometric_design_2024.md`
+  - `methodology/source_notes/passas_bibliometric_steps_2024.md`
+- workflow: `workflows/literature_synthesizer.md`
+- likely discipline: `disciplines/medicine.md` or `disciplines/interdisciplinary.md`
+
+Expected quality behavior:
+
+- the request should be recognized as dataset-driven bibliometric work rather than generic multi-paper synthesis
+- the output should specify database provenance, cleaning logic, technique choice, tool choice, and interpretation plan
+- the output should distinguish performance analysis from science mapping
+
+## Case 13: Tertiary study
 
 Prompt:
 
@@ -315,7 +342,7 @@ Expected quality behavior:
 - the output should clearly operate at review-of-reviews level
 - the Q1 standard still applies to rigor, gap framing, and reporting discipline
 
-## Case 12: Presentation mode
+## Case 14: Presentation mode
 
 Prompt:
 
@@ -335,7 +362,7 @@ Expected quality behavior:
 
 - the presentation script may simplify delivery, but it should retain the intellectual rigor expected by the Q1 standard
 
-## Case 13: Abstract writing
+## Case 15: Abstract writing
 
 Prompt:
 
@@ -357,7 +384,7 @@ Expected quality behavior:
 
 - the abstract should satisfy the Q1 checklist through explicit problem, gap, objective, method, key findings, contribution, and implication coverage
 
-## Case 14: Humanized academic rewrite
+## Case 16: Humanized academic rewrite
 
 Prompt:
 
@@ -385,7 +412,7 @@ Expected quality behavior:
 - the rewrite should remove formulaic AI signals while preserving Q1-level discussion quality
 - it should remain theoretically engaged, evidence-based, and publication-ready
 
-## Case 15: Manuscript diagnosis
+## Case 17: Manuscript diagnosis
 
 Prompt:
 
@@ -406,7 +433,7 @@ Expected quality behavior:
 - the diagnosis should identify issues such as weak novelty, unsupported gap, descriptive literature review, weak theory, under-justified methods, or shallow discussion
 - the output should provide a concrete upgrade path rather than vague advice
 
-## Case 16: Provenance and methodology confidence test
+## Case 18: Provenance and methodology confidence test
 
 Prompt:
 
@@ -478,5 +505,6 @@ Use these to avoid conflicts with native Codex commands:
 - `/open-analyze`
 - `/open-synthesize`
 - `/open-slr`
+- `/open-bibliometric`
 - `/open-rewrite`
 - `/open-review`

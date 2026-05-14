@@ -1,13 +1,13 @@
 ---
 name: scholarly-research-writing-review
-description: Comprehensive scholarly writing, literature analysis, synthesis, manuscript diagnosis, and systematic-review support for Q1-ready academic work. Use when Codex needs to draft or revise manuscript sections, write literature reviews, identify research gaps, analyze a single research paper, synthesize multiple papers, assess whether a draft is Q1-ready, prepare reviewer responses, or design SLR/SMS/tertiary-review outputs using Kitchenham, SEGRESS, and PRISMA-aligned logic. Natural-language requests are the primary invocation path. Optional `open-*` routing labels such as `open-rewrite`, `open-review`, `open-diagnose`, `open-analyze`, `open-synthesize`, `open-slr`, `open-intro`, `open-litreview`, `open-methods`, `open-discussion`, `open-abstract`, and `open-response` may also be used as text conventions.
+description: Comprehensive scholarly writing, literature analysis, synthesis, manuscript diagnosis, systematic-review support, and bibliometric-analysis support for Q1-ready academic work. Use when Codex needs to draft or revise manuscript sections, write literature reviews, identify research gaps, analyze a single research paper, synthesize multiple papers, assess whether a draft is Q1-ready, prepare reviewer responses, design SLR/SMS/tertiary-review outputs using Kitchenham, SEGRESS, and PRISMA-aligned logic, or plan bibliometric studies from Web of Science or Scopus exports. Natural-language requests are the primary invocation path. Optional `open-*` routing labels such as `open-rewrite`, `open-review`, `open-diagnose`, `open-analyze`, `open-synthesize`, `open-slr`, `open-bibliometric`, `open-intro`, `open-litreview`, `open-methods`, `open-discussion`, `open-abstract`, and `open-response` may also be used as text conventions.
 ---
 
 # Scholarly Research Writing and Review
 
 ## Overview
 
-Use this skill to turn short user requests into submission-grade academic outputs, literature workflows, or manuscript diagnostics without forcing the user to choose modules manually. The skill is built around a phrasebank-based writing layer, a Q1 WoS readiness standard, literature-analysis workflows, systematic-review methodology, and internal self-review logic.
+Use this skill to turn short user requests into submission-grade academic outputs, literature workflows, manuscript diagnostics, or bibliometric-study designs without forcing the user to choose modules manually. The skill is built around a phrasebank-based writing layer, a Q1 WoS readiness standard, literature-analysis workflows, systematic-review methodology, bibliometric-analysis methodology, and internal self-review logic.
 
 ## Core operating rules
 
@@ -52,6 +52,12 @@ Natural-language requests are primary. The `open-*` forms below are optional rou
 - for those tasks, also read `references/methodology/source_manifest.yml` and then load the relevant local source notes under `references/methodology/source_notes/`
 - prefer the bundled local methodology notes before considering any external search
 - if the user asks for a framework-based, impactful, conceptual, or theory-building review, also load `references/methodology/source_notes/paul_framework_reviews_2023.md`
+
+### Bibliometric work
+
+- `open-bibliometric` or requests mentioning bibliometric analysis, science mapping, co-citation, bibliographic coupling, keyword co-occurrence, VOSviewer, Bibliometrix, Gephi, or a Web of Science `savedrecs.txt` export -> read `references/methodology/bibliometric_analysis.md`
+- for those tasks, also read `references/methodology/source_manifest.yml` and then load the relevant local source notes under `references/methodology/source_notes/`
+- prefer the bundled local bibliometric-methodology notes before considering any external search
 
 ### Reviewer response
 

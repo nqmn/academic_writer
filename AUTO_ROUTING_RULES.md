@@ -137,6 +137,7 @@ Slash-style triggers:
 - `open-synthesize` -> multi-paper synthesis
 - `open-review` or `open-diagnose` -> manuscript diagnosis
 - `open-slr` -> systematic-review methodology mode
+- `open-bibliometric` -> bibliometric methodology mode
 
 ### Single-paper analysis
 
@@ -202,6 +203,34 @@ Triggers:
 Load:
 
 - `methodology/slr_kitchenham.md`
+
+### Bibliometric analysis layer
+
+Triggers:
+
+- `open-bibliometric`
+- `bibliometric analysis`
+- `bibliometric study`
+- `science mapping`
+- `citation analysis`
+- `co-citation`
+- `bibliographic coupling`
+- `co-word analysis`
+- `keyword co-occurrence`
+- `co-authorship analysis`
+- `VOSviewer`
+- `CiteSpace`
+- `Bibliometrix`
+- `Gephi`
+- `savedrecs.txt`
+- `Web of Science export`
+- `WoS export`
+
+Load:
+
+- `methodology/bibliometric_analysis.md`
+
+Interpret `savedrecs.txt` or similar Web of Science export files as a strong routing signal for bibliometric work when the request is about field mapping, citation structure, keywords, or network analysis.
 
 ### Gap validation
 
