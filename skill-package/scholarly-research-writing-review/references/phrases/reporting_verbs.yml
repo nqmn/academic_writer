@@ -1,0 +1,36 @@
+neutral:
+  rhetorical_category: reporting_verbs
+  communicative_purpose: report prior work without strong evaluation
+  verbs:
+    - reported
+    - observed
+    - described
+    - noted
+    - identified
+
+strong_claim:
+  rhetorical_category: reporting_verbs
+  communicative_purpose: present stronger evidential claims
+  verbs:
+    - demonstrated
+    - established
+    - confirmed
+    - proved
+
+tentative:
+  rhetorical_category: reporting_verbs
+  communicative_purpose: signal interpretive caution or provisional inference
+  verbs:
+    - suggested
+    - implied
+    - proposed
+    - hypothesised
+
+critical:
+  rhetorical_category: reporting_verbs
+  communicative_purpose: challenge or interrogate prior work
+  verbs:
+    - challenged
+    - questioned
+    - disputed
+    - criticised

@@ -1,0 +1,20 @@
+causal_linking:
+  rhetorical_category: explanation
+  communicative_purpose: describe causal or associative relationships
+  section_applicability:
+    - introduction
+    - discussion
+    - conclusion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "X contributes to ..."
+    - "X results in ..."
+    - "X leads to ..."
+    - "X is associated with ..."
+  example_transformations:
+    input: "Data sparsity makes the model unstable."
+    output: "Data sparsity appears to contribute to instability in model predictions."

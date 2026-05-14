@@ -1,0 +1,33 @@
+majority:
+  rhetorical_category: quantification
+  communicative_purpose: report dominant proportions
+  section_applicability:
+    - results
+    - discussion
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "the majority of ..."
+    - "a substantial proportion of ..."
+    - "most participants ..."
+    - "the largest share of ..."
+
+minority:
+  rhetorical_category: quantification
+  communicative_purpose: report small proportions or exceptions
+  section_applicability:
+    - results
+    - discussion
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "a relatively small number of ..."
+    - "only a minority of ..."
+    - "few cases exhibited ..."
+    - "a limited proportion of ..."

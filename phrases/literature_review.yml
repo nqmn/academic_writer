@@ -1,0 +1,75 @@
+literature_framing:
+  rhetorical_category: synthesis
+  communicative_purpose: frame the scope of the literature
+  section_applicability:
+    - literature_review
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The literature on X has highlighted ..."
+    - "A large and growing body of literature ..."
+    - "Much of the current literature focuses on ..."
+    - "Existing literature on X is extensive ..."
+  example_transformations:
+    input: "There are many papers on evaluation bias."
+    output: "A large and growing body of literature has examined bias in model evaluation."
+
+consensus_building:
+  rhetorical_category: synthesis
+  communicative_purpose: establish areas of agreement in prior work
+  section_applicability:
+    - literature_review
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Previous research has established that ..."
+    - "Several lines of evidence suggest that ..."
+    - "It has been demonstrated that ..."
+    - "There is a broad consensus that ..."
+  example_transformations:
+    input: "Most studies agree that annotation quality matters."
+    output: "Previous research has established that annotation quality substantially shapes downstream model behaviour."
+
+critical_evaluation:
+  rhetorical_category: critique
+  communicative_purpose: evaluate weaknesses in the existing literature
+  section_applicability:
+    - literature_review
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "Existing studies fail to address ..."
+    - "Previous studies suffer from ..."
+    - "Most studies have been limited by ..."
+    - "The literature lacks clarity regarding ..."
+  example_transformations:
+    input: "Older papers rarely report annotation drift."
+    output: "Most studies have been limited by insufficient reporting of annotation drift over time."
+
+contradictory_evidence:
+  rhetorical_category: contradiction
+  communicative_purpose: highlight inconsistency in previous findings
+  section_applicability:
+    - literature_review
+  strength_level: tentative
+  discipline_suitability:
+    - general
+  tone_intensity: cautious
+  caution_level: high
+  phrase_variants:
+    - "Evidence for X has been mixed."
+    - "Conflicting findings suggest ..."
+    - "Results remain inconclusive."
+    - "Findings are inconsistent across studies."
+  example_transformations:
+    input: "Different benchmarks give opposite answers."
+    output: "Evidence for benchmark robustness has been mixed, with findings varying substantially across evaluation settings."

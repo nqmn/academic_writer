@@ -1,0 +1,40 @@
+shared_understanding:
+  rhetorical_category: shared_knowledge
+  communicative_purpose: signal that an observation is likely to be recognised by the reader or field
+  section_applicability:
+    - introduction
+    - discussion
+    - conclusion
+  strength_level: light
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "It is clear that ..."
+    - "It is widely recognised that ..."
+    - "There is now little doubt that ..."
+    - "Given this situation, it is hardly surprising that ..."
+  example_transformations:
+    input: "Everyone knows replication is difficult."
+    output: "It is widely recognised that faithful replication remains difficult in complex evaluation settings."
+
+qualified_shared_knowledge:
+  rhetorical_category: shared_knowledge
+  communicative_purpose: express shared understanding while preserving caution
+  section_applicability:
+    - discussion
+    - conclusion
+  strength_level: tentative
+  discipline_suitability:
+    - general
+  tone_intensity: cautious
+  caution_level: high
+  phrase_variants:
+    - "It is important to acknowledge that ..."
+    - "It is often the case that ..."
+    - "It is entirely possible that ..."
+    - "It may be too early to say whether ..."
+  example_transformations:
+    input: "It may still be too soon to judge long-term effects."
+    output: "It may be too early to say whether these short-term gains will persist under broader deployment conditions."

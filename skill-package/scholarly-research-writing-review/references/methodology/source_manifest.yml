@@ -1,0 +1,100 @@
+default_policy:
+  use_local_methodology_notes_first: true
+  web_search_required: false
+  notes: >
+    For SLR, SMS, tertiary-study, PRISMA, and SEGRESS-related tasks, use the
+    local Markdown source notes in this directory before considering any web
+    lookup. These notes were distilled from user-provided local PDFs.
+
+source_priority:
+  - segress
+  - prisma_2020
+  - kitchenham_guidelines
+  - paul_framework_reviews_2023
+  - kitchenham_process_review_2013
+  - kitchenham_preliminary_2002
+
+sources:
+  segress:
+    type: reporting_guideline
+    basis_files:
+      - local_pdf: "SEGRESS.pdf"
+      - local_pdf: "SEGRESS22supplement.pdf"
+    local_notes:
+      - "source_notes/segress_core.md"
+      - "source_notes/segress_supplement.md"
+    use_for:
+      - reporting secondary studies in software engineering
+      - adapting PRISMA-style reporting to software engineering reviews
+      - mapping-study and qualitative-review reporting extensions
+    notes:
+      - "Treat SEGRESS as the software-engineering reporting layer."
+      - "Use the supplement when item-level explanation or examples are needed."
+
+  prisma_2020:
+    type: reporting_guideline
+    basis_files:
+      - local_pdf: "Prisma 2020.pdf"
+    local_notes:
+      - "source_notes/prisma_2020_core.md"
+    use_for:
+      - transparent reporting
+      - checklist logic
+      - abstract checklist
+      - flow-diagram expectations
+    notes:
+      - "Use PRISMA as a reporting standard, not as the sole review-design method."
+
+  kitchenham_guidelines:
+    type: review_method_guideline
+    basis_files:
+      - local_pdf: "Kitchenham 2019.pdf"
+      - local_pdf: "Kitchenham-2007Systematicreviews5-8.pdf"
+    local_notes:
+      - "source_notes/kitchenham_guidelines_core.md"
+    use_for:
+      - planning, conducting, and reporting software-engineering SLRs
+      - deciding between SLR, SMS, and tertiary review
+      - protocol design
+      - research-question formulation
+    notes:
+      - "The 'Kitchenham 2019' file is a local copy of the EBSE-2007-01 guideline content."
+
+  kitchenham_process_review_2013:
+    type: process_review
+    basis_files:
+      - local_pdf: "Kitchenham, Brereton - 2013 - A systematic review of systematic review process research in software engineering.pdf"
+    local_notes:
+      - "source_notes/kitchenham_process_review_2013.md"
+    use_for:
+      - refining search strategy guidance
+      - understanding common SR process problems
+      - tool-use cautions
+      - quality-assessment caveats
+
+  paul_framework_reviews_2023:
+    type: theory_building_review_guideline
+    basis_files:
+      - local_pdf: "Paul, Khatri, Kaur Duggal - 2023 - Frameworks for developing impactful systematic literature reviews and theory building What, Why and H.pdf"
+    local_notes:
+      - "source_notes/paul_framework_reviews_2023.md"
+    use_for:
+      - framework-based systematic literature reviews
+      - theory-building review design
+      - choosing review-organising frameworks
+      - structuring impactful conceptual synthesis
+    notes:
+      - "Use when the user wants a theory-building or framework-driven review, not only a protocol-compliance review."
+
+  kitchenham_preliminary_2002:
+    type: empirical_guideline
+    basis_files:
+      - local_pdf: "Kitchenham_2002_IEEETSE_721.pdf"
+    local_notes:
+      - "source_notes/kitchenham_preliminary_2002.md"
+    use_for:
+      - empirical-study quality expectations
+      - methodological reporting expectations
+      - critical appraisal orientation
+    notes:
+      - "Use as background guidance rather than as the primary SLR protocol standard."

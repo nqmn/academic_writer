@@ -1,0 +1,40 @@
+methodological_critique:
+  rhetorical_category: critique
+  communicative_purpose: evaluate design, measurement, or sampling weaknesses
+  section_applicability:
+    - literature_review
+    - discussion
+    - reviewer_response
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "suffers from methodological limitations"
+    - "fails to account for ..."
+    - "is constrained by ..."
+    - "should be interpreted cautiously"
+  example_transformations:
+    input: "The study did not control annotator expertise."
+    output: "The study is constrained by the absence of explicit controls for annotator expertise."
+
+theoretical_critique:
+  rhetorical_category: critique
+  communicative_purpose: question conceptual clarity or explanatory scope
+  section_applicability:
+    - literature_review
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "offers only a partial account of ..."
+    - "does not adequately explain ..."
+    - "rests on an under-specified conception of ..."
+    - "leaves the mechanism insufficiently developed"
+  example_transformations:
+    input: "The theory is vague about trust."
+    output: "The framework rests on an under-specified conception of trust in human-model interaction."

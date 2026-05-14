@@ -1,0 +1,6 @@
+interface:
+  display_name: "Scholarly Research Writer"
+  short_description: "Q1-ready writing, review, and synthesis"
+  default_prompt: "Use $scholarly-research-writing-review to draft, review, or synthesize a research manuscript at a Q1-ready standard."
+policy:
+  allow_implicit_invocation: true

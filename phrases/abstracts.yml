@@ -1,0 +1,30 @@
+background_problem:
+  rhetorical_category: compression
+  communicative_purpose: establish context and problem efficiently in an abstract
+  section_applicability:
+    - abstract
+  strength_level: concise
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "X remains a persistent challenge in ..."
+    - "Despite growing interest in X, little is known about ..."
+    - "Current approaches to X are limited by ..."
+
+aim_methods_findings:
+  rhetorical_category: compression
+  communicative_purpose: summarise aim, methods, findings, and contribution
+  section_applicability:
+    - abstract
+  strength_level: concise
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "This study investigates ..."
+    - "A mixed-method approach was employed ..."
+    - "The findings indicate ..."
+    - "The study contributes by ..."

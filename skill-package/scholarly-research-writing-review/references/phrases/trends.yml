@@ -1,0 +1,33 @@
+increase:
+  rhetorical_category: trend_description
+  communicative_purpose: describe upward movement over time or condition
+  section_applicability:
+    - results
+    - discussion
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "increased steadily ..."
+    - "rose markedly ..."
+    - "showed an upward trend ..."
+    - "grew progressively ..."
+
+decrease_stability:
+  rhetorical_category: trend_description
+  communicative_purpose: describe decline or relative stability
+  section_applicability:
+    - results
+    - discussion
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "declined significantly ..."
+    - "decreased gradually ..."
+    - "remained relatively stable ..."
+    - "showed little variation ..."

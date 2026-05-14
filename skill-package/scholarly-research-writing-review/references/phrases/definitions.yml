@@ -1,0 +1,19 @@
+term_definition:
+  rhetorical_category: definition
+  communicative_purpose: define a key term or working concept
+  section_applicability:
+    - introduction
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The term X refers to ..."
+    - "In this study, X is defined as ..."
+    - "Throughout this paper, X denotes ..."
+    - "X is conceptualised here as ..."
+  example_transformations:
+    input: "We use robustness to mean stable performance."
+    output: "In this study, robustness is defined as stable performance across controlled perturbations."

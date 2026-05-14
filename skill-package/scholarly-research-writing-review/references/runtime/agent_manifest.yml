@@ -1,0 +1,144 @@
+agent_name: scholarly_research_writing_review_agent
+version: 1.0.0
+source_basis: "Academic Phrasebank (2023 Enhanced Edition)"
+entrypoints:
+  primary_instruction: AGENTS.md
+  runtime_prompt: runtime/system_prompt.md
+  router: runtime/router.md
+  ambiguity_policy: runtime/ambiguity_policy.md
+defaults:
+  english_variant: british
+  journal_style: elsevier
+  discipline_mode: interdisciplinary
+  anti_ai_enabled: true
+module_groups:
+  standards:
+    - standards/q1_wos_readiness.md
+    - standards/self_review_protocol.md
+  styles:
+    - styles/ieee.md
+    - styles/elsevier.md
+    - styles/nature.md
+    - styles/acm.md
+    - styles/humanities.md
+  phrases:
+    - phrases/introduction.yml
+    - phrases/literature_review.yml
+    - phrases/methods.yml
+    - phrases/results.yml
+    - phrases/discussion.yml
+    - phrases/conclusion.yml
+    - phrases/cautious_language.yml
+    - phrases/critical_language.yml
+    - phrases/transition_signals.yml
+    - phrases/causality.yml
+    - phrases/comparison.yml
+    - phrases/definitions.yml
+    - phrases/trends.yml
+    - phrases/quantities.yml
+    - phrases/abstracts.yml
+    - phrases/acknowledgements.yml
+    - phrases/reporting_verbs.yml
+    - phrases/evidence_collocations.yml
+    - phrases/classifying_listing.yml
+    - phrases/giving_examples.yml
+    - phrases/shared_knowledge.yml
+    - phrases/writing_about_the_past.yml
+  rhetorical_moves:
+    - rhetorical_moves/cars_model.md
+    - rhetorical_moves/gap_identification.md
+    - rhetorical_moves/novelty_positioning.md
+    - rhetorical_moves/methodological_justification.md
+    - rhetorical_moves/contribution_framing.md
+  anti_ai:
+    - anti_ai/cadence_rules.md
+    - anti_ai/rhythm_variation.md
+    - anti_ai/transition_control.md
+    - anti_ai/humanisation_constraints.md
+    - anti_ai/humanizer_overlay.md
+  reviewer_response:
+    - reviewer_response/minor_revision.md
+    - reviewer_response/major_revision.md
+    - reviewer_response/rebuttal_patterns.md
+    - reviewer_response/reviewer_tone.md
+  workflows:
+    - workflows/research_article_analyzer.md
+    - workflows/literature_synthesizer.md
+    - workflows/manuscript_diagnosis.md
+  methodology:
+    - methodology/slr_kitchenham.md
+    - methodology/gap_validation.md
+  disciplines:
+    - disciplines/engineering.md
+    - disciplines/medicine.md
+    - disciplines/social_science.md
+    - disciplines/humanities.md
+    - disciplines/interdisciplinary.md
+  notes:
+    - notes/academic_style.md
+    - notes/presentation_style.md
+    - notes/british_us_spelling.md
+    - notes/sentence_structure.md
+    - notes/paragraph_structure.md
+    - notes/connecting_words.md
+routing_defaults:
+  infer_modules_from_task: true
+  ask_user_only_when_materially_ambiguous: true
+  apply_q1_wos_standard_by_default: true
+  apply_self_review_by_default: true
+  validate_gap_claims_by_default: true
+selection_rules:
+  introduction:
+    required_modules:
+      - phrases/introduction.yml
+      - rhetorical_moves/cars_model.md
+  literature_review:
+    required_modules:
+      - phrases/literature_review.yml
+      - phrases/critical_language.yml
+      - phrases/comparison.yml
+      - methodology/gap_validation.md
+  methods:
+    required_modules:
+      - phrases/methods.yml
+      - rhetorical_moves/methodological_justification.md
+  results:
+    required_modules:
+      - phrases/results.yml
+      - phrases/trends.yml
+      - phrases/quantities.yml
+  discussion:
+    required_modules:
+      - phrases/discussion.yml
+      - phrases/cautious_language.yml
+      - phrases/comparison.yml
+  conclusion:
+    required_modules:
+      - phrases/conclusion.yml
+      - rhetorical_moves/contribution_framing.md
+special_modes:
+  presentation:
+    additional_modules:
+      - notes/presentation_style.md
+  reviewer_response:
+    additional_modules:
+      - reviewer_response/minor_revision.md
+      - reviewer_response/major_revision.md
+      - reviewer_response/rebuttal_patterns.md
+      - reviewer_response/reviewer_tone.md
+  diagnosis:
+    additional_modules:
+      - workflows/manuscript_diagnosis.md
+  single_paper_analysis:
+    additional_modules:
+      - workflows/research_article_analyzer.md
+  literature_synthesis:
+    additional_modules:
+      - workflows/literature_synthesizer.md
+  systematic_review:
+    additional_modules:
+      - workflows/literature_synthesizer.md
+      - methodology/slr_kitchenham.md
+  rough_draft:
+    relaxed_modules:
+      - standards/q1_wos_readiness.md

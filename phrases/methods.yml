@@ -1,0 +1,56 @@
+research_design:
+  rhetorical_category: procedural_description
+  communicative_purpose: describe the design of the study
+  section_applicability:
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "This study employed ..."
+    - "A case-study design was adopted ..."
+    - "A mixed-method approach was utilised ..."
+    - "Data were collected using ..."
+  example_transformations:
+    input: "We used interviews and surveys."
+    output: "A mixed-method approach was utilised, combining semi-structured interviews with a cross-sectional survey."
+
+data_collection:
+  rhetorical_category: procedural_description
+  communicative_purpose: explain how data were obtained
+  section_applicability:
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Participants were recruited ..."
+    - "Data were obtained from ..."
+    - "Measurements were conducted using ..."
+    - "The corpus was compiled from ..."
+  example_transformations:
+    input: "The dataset came from public repositories."
+    output: "Data were obtained from publicly accessible repositories selected according to predefined inclusion criteria."
+
+analysis:
+  rhetorical_category: procedural_description
+  communicative_purpose: describe analytical procedures
+  section_applicability:
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Statistical analysis was performed using ..."
+    - "The data were analysed through ..."
+    - "Thematic analysis was conducted ..."
+    - "Model outputs were evaluated against ..."
+  example_transformations:
+    input: "We compared the outputs with labels."
+    output: "Model outputs were evaluated against expert-labelled references using agreement and error-based metrics."

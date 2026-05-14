@@ -1,0 +1,39 @@
+time_framed_past_reference:
+  rhetorical_category: temporal_framing
+  communicative_purpose: situate prior events, developments, or studies in historical time
+  section_applicability:
+    - literature_review
+    - introduction
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "In the 1930s, ..."
+    - "Over the following decade, ..."
+    - "At the beginning of the 19th century, ..."
+    - "Half a century later, ..."
+  example_transformations:
+    input: "In the early benchmark era, most work ignored robustness."
+    output: "In the early benchmark era, most work gave limited attention to robustness under distributional shift."
+
+research_history:
+  rhetorical_category: temporal_framing
+  communicative_purpose: describe the historical development of a research area
+  section_applicability:
+    - literature_review
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The link between X and Y was established in ..."
+    - "Prior to the work of Smith (1983), the role of X was largely unknown."
+    - "It was not until the late 1960s that ..."
+    - "The construct of X was first articulated by ..."
+  example_transformations:
+    input: "The idea of alignment auditing became visible only much later."
+    output: "It was not until the later stages of contemporary model governance research that alignment auditing received sustained scholarly attention."

@@ -1,0 +1,41 @@
+hedging:
+  rhetorical_category: epistemic_caution
+  communicative_purpose: reduce certainty and preserve defensibility
+  section_applicability:
+    - introduction
+    - literature_review
+    - discussion
+    - conclusion
+  strength_level: tentative
+  discipline_suitability:
+    - general
+  tone_intensity: cautious
+  caution_level: high
+  phrase_variants:
+    - "may indicate ..."
+    - "appears to suggest ..."
+    - "could potentially ..."
+    - "is likely associated with ..."
+  example_transformations:
+    input: "This proves annotation fatigue causes errors."
+    output: "This pattern may indicate that annotation fatigue is associated with higher error rates."
+
+uncertainty:
+  rhetorical_category: uncertainty
+  communicative_purpose: acknowledge incomplete evidence or unresolved explanation
+  section_applicability:
+    - literature_review
+    - discussion
+  strength_level: tentative
+  discipline_suitability:
+    - general
+  tone_intensity: cautious
+  caution_level: high
+  phrase_variants:
+    - "remains unclear ..."
+    - "has yet to be determined ..."
+    - "evidence remains inconclusive ..."
+    - "cannot be ruled out ..."
+  example_transformations:
+    input: "We do not know whether the effect is causal."
+    output: "It has yet to be determined whether the observed effect reflects a causal relationship."

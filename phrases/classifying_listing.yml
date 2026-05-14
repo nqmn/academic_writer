@@ -1,0 +1,41 @@
+classifying_topic:
+  rhetorical_category: classification
+  communicative_purpose: group related concepts into meaningful categories
+  section_applicability:
+    - introduction
+    - literature_review
+    - discussion
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "X can be classified into Xi and Xii."
+    - "X can be categorised into Xi, Xii and Xiii."
+    - "X may be divided into several groups: ..."
+    - "There are two basic approaches currently being adopted in research into X."
+  example_transformations:
+    input: "Current evaluation methods fall into three groups."
+    output: "Current evaluation methods can be categorised into three broad groups: automatic metrics, expert judgement, and user-centred assessment."
+
+listing_information:
+  rhetorical_category: listing
+  communicative_purpose: present items or dimensions in an orderly sequence
+  section_applicability:
+    - introduction
+    - methods
+    - discussion
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The main issues addressed here are ..."
+    - "Three factors are particularly relevant: ..."
+    - "These findings can be considered under three headings."
+    - "The analysis proceeds in four stages."
+  example_transformations:
+    input: "We consider quality, speed, and cost."
+    output: "Three considerations are particularly relevant in this context: output quality, processing speed, and operational cost."

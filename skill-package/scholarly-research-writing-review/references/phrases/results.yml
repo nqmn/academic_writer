@@ -1,0 +1,56 @@
+reporting_results:
+  rhetorical_category: finding_statement
+  communicative_purpose: present primary findings objectively
+  section_applicability:
+    - results
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The findings indicate that ..."
+    - "Results showed a significant ..."
+    - "Analysis revealed ..."
+    - "No statistically significant difference was found ..."
+  example_transformations:
+    input: "The new model was better on long prompts."
+    output: "Analysis revealed improved performance for the proposed model on longer prompt sequences."
+
+comparative_reporting:
+  rhetorical_category: comparison
+  communicative_purpose: compare outcomes across groups, conditions, or systems
+  section_applicability:
+    - results
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Compared with ..."
+    - "In contrast to ..."
+    - "Higher values were observed ..."
+    - "The results differed substantially ..."
+  example_transformations:
+    input: "Method A beat Method B."
+    output: "Compared with Method B, Method A yielded consistently higher recall across all evaluation splits."
+
+quantitative_reporting:
+  rhetorical_category: quantification
+  communicative_purpose: report numerical patterns and magnitudes
+  section_applicability:
+    - results
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The mean value increased ..."
+    - "A reduction of X% was observed ..."
+    - "The frequency of ..."
+    - "The median score remained stable ..."
+  example_transformations:
+    input: "Errors dropped by 12%."
+    output: "A reduction of 12% in classification errors was observed after calibration."

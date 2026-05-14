@@ -1,0 +1,56 @@
+interpretation:
+  rhetorical_category: interpretation
+  communicative_purpose: explain the meaning of the findings
+  section_applicability:
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "These findings suggest that ..."
+    - "One possible explanation is ..."
+    - "The results support previous work indicating ..."
+    - "Taken together, the findings imply ..."
+  example_transformations:
+    input: "The model probably benefits from harder examples."
+    output: "These findings suggest that exposure to more demanding examples may improve the model's robustness."
+
+literature_integration:
+  rhetorical_category: comparison
+  communicative_purpose: relate the findings to prior research
+  section_applicability:
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "These findings are consistent with ..."
+    - "In agreement with previous studies ..."
+    - "Contrary to earlier findings ..."
+    - "This pattern extends prior work by ..."
+  example_transformations:
+    input: "Our trend matches earlier work."
+    output: "These findings are consistent with earlier studies reporting a similar sensitivity to data imbalance."
+
+limitations_future_work:
+  rhetorical_category: limitation
+  communicative_purpose: acknowledge limitations and point to future research
+  section_applicability:
+    - discussion
+  strength_level: cautious
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: high
+  phrase_variants:
+    - "Several limitations should be acknowledged."
+    - "The findings should be interpreted cautiously."
+    - "Further studies are needed to ..."
+    - "Future research should investigate ..."
+  example_transformations:
+    input: "The sample was small, so more work is needed."
+    output: "Several limitations should be acknowledged, most notably the modest sample size; future research should investigate whether the observed pattern generalises to larger cohorts."

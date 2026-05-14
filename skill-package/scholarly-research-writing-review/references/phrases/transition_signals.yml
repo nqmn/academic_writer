@@ -1,0 +1,44 @@
+addition:
+  rhetorical_category: transition
+  communicative_purpose: extend an argument or add supporting information
+  section_applicability:
+    - all
+  strength_level: light
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "furthermore"
+    - "moreover"
+    - "in addition"
+
+contrast:
+  rhetorical_category: transition
+  communicative_purpose: signal contrast, qualification, or exception
+  section_applicability:
+    - all
+  strength_level: light
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "however"
+    - "nevertheless"
+    - "conversely"
+
+causality:
+  rhetorical_category: transition
+  communicative_purpose: signal consequence or inferential linkage
+  section_applicability:
+    - all
+  strength_level: light
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "consequently"
+    - "therefore"
+    - "as a result"

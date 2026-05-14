@@ -1,0 +1,19 @@
+evidence_strength:
+  rhetorical_category: evidence_language
+  communicative_purpose: calibrate the strength of evidential framing
+  section_applicability:
+    - literature_review
+    - discussion
+    - conclusion
+  strong:
+    - "robust evidence"
+    - "compelling evidence"
+    - "substantial evidence"
+  moderate:
+    - "growing evidence"
+    - "emerging evidence"
+    - "preliminary evidence"
+  weak:
+    - "limited evidence"
+    - "inconclusive evidence"
+    - "conflicting evidence"

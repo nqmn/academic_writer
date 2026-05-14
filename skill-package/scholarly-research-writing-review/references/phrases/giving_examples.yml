@@ -1,0 +1,42 @@
+examples_as_support:
+  rhetorical_category: exemplification
+  communicative_purpose: support a general claim with a concrete example
+  section_applicability:
+    - introduction
+    - literature_review
+    - discussion
+    - conclusion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "A useful example of X is ..."
+    - "For example, ..."
+    - "This is exemplified in ..."
+    - "The case of X illustrates ..."
+  example_transformations:
+    input: "One benchmark clearly shows this problem."
+    output: "A useful example of this problem is provided by benchmark leakage in publicly reused evaluation sets."
+
+examples_for_clarity:
+  rhetorical_category: exemplification
+  communicative_purpose: clarify an unfamiliar concept through illustration
+  section_applicability:
+    - introduction
+    - methods
+    - presentations
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "To give a well-known example, ..."
+    - "Another example of what is meant by X is ..."
+    - "This can be illustrated briefly by ..."
+    - "By way of illustration, ..."
+  example_transformations:
+    input: "A calibration curve makes this easier to understand."
+    output: "By way of illustration, a calibration curve provides a simple visual account of how predicted confidence departs from observed accuracy."

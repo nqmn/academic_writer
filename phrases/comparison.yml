@@ -1,0 +1,35 @@
+similarity:
+  rhetorical_category: comparison
+  communicative_purpose: indicate alignment or similarity
+  section_applicability:
+    - literature_review
+    - results
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "similarly ..."
+    - "in line with ..."
+    - "a comparable pattern was observed ..."
+    - "this finding parallels ..."
+
+contrast:
+  rhetorical_category: comparison
+  communicative_purpose: indicate divergence or disagreement
+  section_applicability:
+    - literature_review
+    - results
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "in contrast ..."
+    - "conversely ..."
+    - "unlike previous studies ..."
+    - "by comparison ..."

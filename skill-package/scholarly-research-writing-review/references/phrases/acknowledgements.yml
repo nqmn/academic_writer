@@ -1,0 +1,29 @@
+funding_support:
+  rhetorical_category: acknowledgement
+  communicative_purpose: acknowledge financial or institutional support
+  section_applicability:
+    - acknowledgements
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "This work was supported by ..."
+    - "The authors gratefully acknowledge funding from ..."
+    - "Institutional support was provided by ..."
+
+personal_thanks:
+  rhetorical_category: acknowledgement
+  communicative_purpose: recognise supervisory, technical, or editorial help
+  section_applicability:
+    - acknowledgements
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The authors thank ..."
+    - "We are grateful to ... for valuable feedback."
+    - "Technical assistance from ... is gratefully acknowledged."

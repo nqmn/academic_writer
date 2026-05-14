@@ -1,0 +1,56 @@
+establishing_importance:
+  rhetorical_category: territory
+  communicative_purpose: establish significance of the topic
+  section_applicability:
+    - introduction
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "X is an increasingly important area in ..."
+    - "Recent years have witnessed growing interest in ..."
+    - "X has attracted considerable critical attention."
+    - "Understanding the complexity of X is vitally important if ..."
+  example_transformations:
+    input: "Many people care about model transparency."
+    output: "Model transparency has become an increasingly important area of inquiry within contemporary AI governance."
+
+identifying_gap:
+  rhetorical_category: niche
+  communicative_purpose: expose a research gap or unresolved issue
+  section_applicability:
+    - introduction
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "Few studies have investigated ..."
+    - "There is little published research on ..."
+    - "The role of X remains largely unexamined."
+    - "What remains unclear is ..."
+  example_transformations:
+    input: "We still do not know how reviewers assess reproducibility."
+    output: "What remains unclear is how reviewers assess reproducibility claims across different submission contexts."
+
+occupying_niche:
+  rhetorical_category: niche_occupation
+  communicative_purpose: state the present study's purpose and contribution
+  section_applicability:
+    - introduction
+  strength_level: assertive
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "This study aims to ..."
+    - "The present research investigates ..."
+    - "This paper examines ..."
+    - "The purpose of this investigation was to ..."
+  example_transformations:
+    input: "This paper looks at prompt reliability."
+    output: "This paper examines the reliability of prompt-based evaluation under controlled task variation."

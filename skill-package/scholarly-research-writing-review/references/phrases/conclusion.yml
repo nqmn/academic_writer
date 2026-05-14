@@ -1,0 +1,37 @@
+synthesis:
+  rhetorical_category: closure
+  communicative_purpose: synthesise the main findings and contribution
+  section_applicability:
+    - conclusion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "This study has demonstrated that ..."
+    - "The findings contribute to ..."
+    - "The results highlight the importance of ..."
+    - "Overall, the study provides ..."
+  example_transformations:
+    input: "Our work shows the value of calibration."
+    output: "Overall, the study provides further evidence of the value of calibration in improving predictive stability."
+
+practical_significance:
+  rhetorical_category: implication
+  communicative_purpose: reinforce practical or theoretical significance
+  section_applicability:
+    - conclusion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "These findings have implications for ..."
+    - "The study offers a basis for ..."
+    - "The results may inform ..."
+    - "This work provides a foundation for ..."
+  example_transformations:
+    input: "This can help benchmark designers."
+    output: "The results may inform the design of more reliable benchmark construction protocols."
