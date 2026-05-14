@@ -129,6 +129,15 @@ Minimum expectations:
 - validity or reliability treatment where relevant
 - ethical consideration where relevant
 
+For quantitative studies, also check:
+
+- model fit is reported and acceptable
+- statistical assumptions are not violated
+- multicollinearity is tested and controlled
+- common method bias is addressed (Harman single-factor test is insufficient alone; prefer procedural remedies or marker-variable approaches)
+- endogeneity is acknowledged and addressed where relevant
+- robustness checks are reported
+
 ### 7. Results
 
 Results should:
@@ -240,6 +249,17 @@ Strong Q1-level novelty usually involves one or more of:
 
 Novelty claims must remain evidence-based and proportional.
 
+### Novelty classification
+
+Use this scale to estimate the novelty level of a manuscript before assigning a quality verdict:
+
+- Incremental — marginal extension of an existing study; weak Q1 potential
+- Moderate extension — meaningful but bounded advance; Q2 to low Q1 range
+- Strong conceptual advance — genuine theoretical or empirical contribution; solid Q1 candidate
+- Breakthrough or new framework — redefines problem understanding or introduces a validated new model; excellent
+
+When the novelty level is incremental, flag it as a high rejection risk regardless of other strengths.
+
 ## Common Rejection Risks
 
 Treat the following as red flags:
@@ -253,6 +273,18 @@ Treat the following as red flags:
 - poor English
 - shallow discussion
 - generic implications
+
+## Reviewer Priority Weights
+
+When diagnosing or scoring a manuscript, weight criteria in this order:
+
+- Contribution and novelty — very high; the primary reason papers are accepted or rejected at Q1 level
+- Methodology rigor — very high; fatal flaws here override strong writing
+- Discussion quality — high; weak discussion undermines the value of good data
+- Writing quality — medium; poor English is fixable; poor reasoning is not
+- Formatting and presentation — low; should not drive the verdict
+
+A paper with excellent writing but weak novelty and methodology will not survive Q1 review.
 
 ## Readiness Scorecard
 

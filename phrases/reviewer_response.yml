@@ -1,0 +1,152 @@
+thanking_reviewer:
+  rhetorical_category: reviewer_response
+  communicative_purpose: open a response to a reviewer comment with professional acknowledgement
+  section_applicability:
+    - reviewer_response
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "We thank the reviewer for this helpful observation ..."
+    - "We are grateful to the reviewer for raising this point ..."
+    - "We appreciate the reviewer's careful reading of the manuscript ..."
+    - "We thank the reviewer for this constructive suggestion ..."
+    - "We are grateful for the reviewer's detailed and thoughtful comments ..."
+    - "We thank the reviewer for drawing our attention to ..."
+    - "This is a valuable point that we have taken seriously ..."
+  example_transformations:
+    input: "Thanks for pointing out the missing baseline."
+    output: "We thank the reviewer for drawing our attention to the absence of a baseline comparison, which we agree is important for contextualising the reported results."
+
+agreeing_with_reviewer:
+  rhetorical_category: reviewer_response
+  communicative_purpose: acknowledge that the reviewer's concern is valid and state the revision made
+  section_applicability:
+    - reviewer_response
+  strength_level: assertive
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "We agree that this point required clarification ..."
+    - "The reviewer is correct that ..."
+    - "We accept this criticism and have revised the manuscript accordingly ..."
+    - "This is a valid concern. In response, we have ..."
+    - "We fully agree with the reviewer on this point ..."
+    - "The manuscript has been revised to address this concern ..."
+    - "This omission has now been corrected ..."
+  example_transformations:
+    input: "The reviewer is right that we needed more detail on the sampling."
+    output: "We agree that the description of the sampling procedure required greater detail. The manuscript has been revised to include a full account of the inclusion criteria, recruitment procedure, and final sample composition."
+
+partially_agreeing:
+  rhetorical_category: reviewer_response
+  communicative_purpose: acknowledge part of the concern while preserving aspects of the original approach
+  section_applicability:
+    - reviewer_response
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "We acknowledge the reviewer's concern; however, ..."
+    - "We appreciate this suggestion and have partially revised the manuscript to ..."
+    - "To address this point while preserving the study's original scope, we have ..."
+    - "We accept the spirit of this criticism and have revised ... although we have retained ... because ..."
+    - "While we recognise the merit of this suggestion, we respectfully note that ..."
+    - "We have revised the manuscript to better reflect this nuance, though we maintain that ..."
+  example_transformations:
+    input: "We can't add a new experiment but we can add more discussion."
+    output: "We acknowledge the reviewer's suggestion to include an additional experiment. While the constraints of the current study preclude this extension, we have added a substantive discussion of the expected outcomes in Section 5 and have acknowledged this as a direction for future work."
+
+respectfully_disagreeing:
+  rhetorical_category: reviewer_response
+  communicative_purpose: maintain the original position while addressing the reviewer's concern professionally
+  section_applicability:
+    - reviewer_response
+  strength_level: assertive
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: high
+  phrase_variants:
+    - "We respectfully suggest that ..."
+    - "With respect, we believe that ..."
+    - "We appreciate the reviewer's perspective; however, we maintain that ..."
+    - "This interpretation may arise from ..."
+    - "On reflection, we believe our original approach is justified because ..."
+    - "We note, respectfully, that the concern raised may rest on a misreading of ..."
+    - "We would like to clarify that ..."
+  example_transformations:
+    input: "We think the reviewer misread our method section."
+    output: "We would like to clarify that the procedure described in Section 3 does include the control condition the reviewer identifies as absent. To avoid further misunderstanding, we have revised the relevant paragraph to make this more explicit."
+
+stating_revision:
+  rhetorical_category: reviewer_response
+  communicative_purpose: describe precisely what was changed in the manuscript and where
+  section_applicability:
+    - reviewer_response
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The manuscript has been revised to ..."
+    - "This clarification has been added to Section X (p. Y) ..."
+    - "A new paragraph addressing this issue has been inserted in ..."
+    - "The relevant section has been rewritten to ..."
+    - "We have added the following text to Section X ..."
+    - "Table X has been updated to include ..."
+    - "The limitation is now acknowledged explicitly in Section X ..."
+    - "The wording on p. X has been revised to read: ..."
+  example_transformations:
+    input: "We added more about limitations."
+    output: "A dedicated paragraph addressing the study's methodological limitations has been added to Section 5 (p. 14). Specifically, we now discuss the constraints arising from the sampling procedure and the implications for generalisability."
+
+acknowledging_limitation:
+  rhetorical_category: reviewer_response
+  communicative_purpose: concede a genuine limitation while contextualising it appropriately
+  section_applicability:
+    - reviewer_response
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "We acknowledge this limitation ..."
+    - "This is a recognised limitation of the study ..."
+    - "We agree that this represents a constraint on the generalisability of the findings ..."
+    - "The reviewer correctly identifies this as a limitation ..."
+    - "We have added language acknowledging this limitation and its implications ..."
+    - "While this limitation exists, we note that ..."
+    - "This limitation is now discussed explicitly in Section X ..."
+  example_transformations:
+    input: "We admit the dataset is not diverse enough."
+    output: "We acknowledge that the limited demographic diversity of the dataset constrains the generalisability of these findings. This limitation is now discussed explicitly in the limitations section, along with a recommendation for future studies to employ more representative sampling strategies."
+
+pointing_to_manuscript_location:
+  rhetorical_category: reviewer_response
+  communicative_purpose: direct the reviewer to the location of a change or relevant passage
+  section_applicability:
+    - reviewer_response
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Please see the revised text on p. X ..."
+    - "This change is reflected in Section X, paragraph Y ..."
+    - "The added text can be found in Section X (lines X–Y) ..."
+    - "For the full revised passage, see p. X of the tracked-changes version ..."
+    - "We direct the reviewer to Section X, where this point is now addressed ..."
+    - "The relevant revision appears in the second paragraph of Section X ..."
+  example_transformations:
+    input: "We fixed this in Section 4."
+    output: "The relevant revision appears in the second paragraph of Section 4 (p. 11 of the tracked-changes version), where we have rewritten the description of the analytic procedure to make the steps and their rationale more transparent."

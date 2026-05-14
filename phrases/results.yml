@@ -13,9 +13,85 @@ reporting_results:
     - "Results showed a significant ..."
     - "Analysis revealed ..."
     - "No statistically significant difference was found ..."
+    - "The data demonstrate that ..."
+    - "Examination of the results reveals ..."
+    - "Overall, the findings suggest ..."
+    - "The evidence points to ..."
+    - "A consistent pattern emerged in which ..."
+    - "As shown in Table X, ..."
   example_transformations:
     input: "The new model was better on long prompts."
     output: "Analysis revealed improved performance for the proposed model on longer prompt sequences."
+
+referring_to_figures_tables:
+  rhetorical_category: data_reference
+  communicative_purpose: direct the reader to a visual or tabular data display
+  section_applicability:
+    - results
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "As can be seen from Table X ..."
+    - "Figure X illustrates ..."
+    - "As shown in Figure X, ..."
+    - "The data presented in Table X indicate ..."
+    - "A summary of the results is provided in Table X ..."
+    - "Figure X shows the distribution of ..."
+    - "These trends are illustrated in Figure X ..."
+    - "The values reported in Table X confirm ..."
+  example_transformations:
+    input: "The table shows F1 scores for all models."
+    output: "As shown in Table 2, F1 scores varied substantially across model configurations, with the proposed approach achieving the highest value."
+
+highlighting_significant_data:
+  rhetorical_category: emphasis
+  communicative_purpose: draw attention to the most important or unexpected findings
+  section_applicability:
+    - results
+  strength_level: assertive
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Notably, ..."
+    - "Of particular significance is ..."
+    - "The most striking finding was ..."
+    - "It is worth noting that ..."
+    - "Particularly relevant here is ..."
+    - "A key result concerns ..."
+    - "What stands out is ..."
+    - "An unexpected finding was ..."
+  example_transformations:
+    input: "Surprisingly, accuracy did not improve with more data."
+    output: "Of particular significance is the finding that accuracy did not improve monotonically with increased training data volume."
+
+negative_results:
+  rhetorical_category: finding_statement
+  communicative_purpose: report null, unexpected, or non-significant findings
+  section_applicability:
+    - results
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "No statistically significant difference was found between ..."
+    - "The hypothesis was not supported by the data ..."
+    - "Contrary to expectations, ..."
+    - "X did not appear to influence ..."
+    - "The anticipated effect of X on Y was not observed ..."
+    - "Results failed to confirm ..."
+    - "No significant relationship was identified between ..."
+    - "The effect size was negligible ..."
+  example_transformations:
+    input: "Regularisation did not help in our experiments."
+    output: "Contrary to expectations, the addition of regularisation did not produce a statistically significant improvement in generalisation performance."
 
 comparative_reporting:
   rhetorical_category: comparison
@@ -32,6 +108,11 @@ comparative_reporting:
     - "In contrast to ..."
     - "Higher values were observed ..."
     - "The results differed substantially ..."
+    - "Relative to the baseline, ..."
+    - "Performance was markedly lower for ..."
+    - "Group X outperformed Group Y on ..."
+    - "A difference of X units was recorded between ..."
+    - "Whereas X showed ..., Y demonstrated ..."
   example_transformations:
     input: "Method A beat Method B."
     output: "Compared with Method B, Method A yielded consistently higher recall across all evaluation splits."
@@ -51,6 +132,35 @@ quantitative_reporting:
     - "A reduction of X% was observed ..."
     - "The frequency of ..."
     - "The median score remained stable ..."
+    - "Standard deviation values ranged from ..."
+    - "The proportion of X was approximately ..."
+    - "Scores ranged between X and Y (M = Z, SD = W) ..."
+    - "The rate of X increased from ... to ... over ..."
+    - "A statistically significant correlation was found (r = X, p < Y) ..."
+    - "Effect size was estimated at ..."
   example_transformations:
     input: "Errors dropped by 12%."
     output: "A reduction of 12% in classification errors was observed after calibration."
+
+qualitative_reporting:
+  rhetorical_category: finding_statement
+  communicative_purpose: report themes, categories, or participant perspectives from qualitative data
+  section_applicability:
+    - results
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "Three main themes emerged from the data ..."
+    - "Participants consistently reported ..."
+    - "A recurring concern expressed by interviewees was ..."
+    - "The majority of participants described ..."
+    - "Several respondents noted that ..."
+    - "One participant observed that ..."
+    - "Across the interviews, a pattern emerged in which ..."
+    - "Analysis of the transcripts revealed ..."
+  example_transformations:
+    input: "Interviewees said they found the tool hard to use."
+    output: "A recurring theme across the interviews was difficulty with the tool interface; participants consistently described challenges in locating key functions during initial use."

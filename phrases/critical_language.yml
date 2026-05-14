@@ -15,9 +15,106 @@ methodological_critique:
     - "fails to account for ..."
     - "is constrained by ..."
     - "should be interpreted cautiously"
+    - "is limited by its reliance on ..."
+    - "the sample size is insufficient to ..."
+    - "the study does not control for ..."
+    - "the validity of these findings is undermined by ..."
+    - "no attempt was made to address ..."
+    - "the absence of a control condition weakens ..."
   example_transformations:
     input: "The study did not control annotator expertise."
     output: "The study is constrained by the absence of explicit controls for annotator expertise."
+
+sampling_critique:
+  rhetorical_category: critique
+  communicative_purpose: identify weaknesses in participant selection or sample representativeness
+  section_applicability:
+    - literature_review
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "the sample is not representative of ..."
+    - "the use of a convenience sample limits ..."
+    - "generalisability is restricted by ..."
+    - "the study relied on a narrow population of ..."
+    - "the small sample size precludes ..."
+    - "the findings cannot be generalised beyond ..."
+    - "participant self-selection may have introduced bias ..."
+  example_transformations:
+    input: "The study only used university students."
+    output: "The use of a student convenience sample limits the generalisability of these findings beyond the immediate academic population."
+
+evidence_critique:
+  rhetorical_category: critique
+  communicative_purpose: challenge the sufficiency, quality, or interpretation of evidence
+  section_applicability:
+    - literature_review
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "the evidence in support of this claim is limited ..."
+    - "this conclusion rests on insufficient empirical support ..."
+    - "the data do not unambiguously support ..."
+    - "the findings are consistent with X but do not rule out Y ..."
+    - "correlation should not be taken to imply causation ..."
+    - "the absence of replication raises concerns about ..."
+    - "the reliability of this measure has not been established ..."
+  example_transformations:
+    input: "The authors claim causality but only showed correlation."
+    output: "The evidence in support of a causal interpretation is limited; the reported correlation between X and Y does not rule out the influence of confounding variables."
+
+argument_critique:
+  rhetorical_category: critique
+  communicative_purpose: identify logical inconsistencies or weaknesses in an argument
+  section_applicability:
+    - literature_review
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "this argument overlooks ..."
+    - "this position is difficult to reconcile with ..."
+    - "the logic of this claim does not follow from ..."
+    - "the conclusion does not necessarily follow from the evidence presented ..."
+    - "this reasoning is circular insofar as ..."
+    - "a key assumption here is questionable ..."
+    - "this interpretation is inconsistent with ..."
+  example_transformations:
+    input: "Their conclusion about X doesn't match what they measured."
+    output: "The conclusion drawn about X is difficult to reconcile with the operationalisation used, which measured Y rather than the construct it purports to represent."
+
+constructive_suggestion:
+  rhetorical_category: critique
+  communicative_purpose: follow a critique with a constructive recommendation
+  section_applicability:
+    - literature_review
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "future work would benefit from ..."
+    - "a more robust approach would involve ..."
+    - "this limitation could be addressed by ..."
+    - "the inclusion of X would strengthen ..."
+    - "a replication study using a larger sample would help establish ..."
+    - "the addition of a longitudinal dimension would clarify ..."
+  example_transformations:
+    input: "Future studies should use a bigger and more diverse sample."
+    output: "A more robust approach would involve recruiting participants across multiple sites and demographic groups to improve the generalisability of findings."
 
 theoretical_critique:
   rhetorical_category: critique
@@ -35,6 +132,31 @@ theoretical_critique:
     - "does not adequately explain ..."
     - "rests on an under-specified conception of ..."
     - "leaves the mechanism insufficiently developed"
+    - "the theoretical basis for this claim is unclear ..."
+    - "the framework does not distinguish between ..."
+    - "X conflates two distinct phenomena ..."
+    - "this approach tends to oversimplify ..."
   example_transformations:
     input: "The theory is vague about trust."
     output: "The framework rests on an under-specified conception of trust in human-model interaction."
+
+attribution_critique:
+  rhetorical_category: critique
+  communicative_purpose: attribute a critical view to an author while maintaining scholarly distance
+  section_applicability:
+    - literature_review
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: critical
+  caution_level: medium
+  phrase_variants:
+    - "X has questioned whether ..."
+    - "According to X, this approach fails to ..."
+    - "X argues that Y overlooks ..."
+    - "This view has been challenged by X, who contends that ..."
+    - "X criticises this position on the grounds that ..."
+    - "Several scholars have questioned the validity of ..."
+  example_transformations:
+    input: "Jones said Smith's model is wrong about causality."
+    output: "Jones (2020) has questioned whether Smith's model adequately accounts for directionality, arguing that the causal assumptions embedded in the framework are not empirically justified."

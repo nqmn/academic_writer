@@ -1,0 +1,158 @@
+introducing_presentation:
+  rhetorical_category: spoken_academic
+  communicative_purpose: open a presentation and orient the audience to its structure and purpose
+  section_applicability:
+    - presentation
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: semi-formal
+  caution_level: low
+  phrase_variants:
+    - "I'd like to begin by ..."
+    - "What I want to do today is ..."
+    - "This talk is divided into X parts ..."
+    - "I'll be looking at three main areas ..."
+    - "By the end of this presentation, I hope to have shown ..."
+    - "My aim today is to ..."
+    - "I'm going to start by ... and then move on to ..."
+    - "The focus of this presentation is ..."
+  example_transformations:
+    input: "In this talk I discuss our new model."
+    output: "What I want to do today is present a new modelling approach and demonstrate its performance across three benchmark tasks. I'll begin with the motivation for the work, move on to the methodology, and then present our main findings."
+
+referring_to_visual:
+  rhetorical_category: spoken_academic
+  communicative_purpose: draw the audience's attention to a slide, figure, or table
+  section_applicability:
+    - presentation
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: semi-formal
+  caution_level: low
+  phrase_variants:
+    - "As you can see from this slide ..."
+    - "If you look at this figure ..."
+    - "This graph shows ..."
+    - "I'd like to draw your attention to ..."
+    - "What this table illustrates is ..."
+    - "The key point here, as shown on the right, is ..."
+    - "Looking at the data presented here ..."
+    - "This diagram summarises ..."
+  example_transformations:
+    input: "The chart shows that accuracy went up."
+    output: "If you look at this figure, you can see a clear upward trend in accuracy across all three experimental conditions."
+
+signposting:
+  rhetorical_category: spoken_academic
+  communicative_purpose: guide the audience through the structure of the talk in real time
+  section_applicability:
+    - presentation
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: semi-formal
+  caution_level: low
+  phrase_variants:
+    - "Let me now turn to ..."
+    - "Moving on to ..."
+    - "I'd now like to consider ..."
+    - "This brings me to my second point ..."
+    - "Before I go on to ..., let me just say ..."
+    - "So, to recap what I've said so far ..."
+    - "At this point, I'd like to pause and ..."
+    - "That covers X. Now let's look at Y ..."
+  example_transformations:
+    input: "Now we talk about the results."
+    output: "Let me now turn to the results. What I want to highlight here are three findings that I think have particular implications for the field."
+
+elaborating_a_point:
+  rhetorical_category: spoken_academic
+  communicative_purpose: expand on a claim or finding for an audience in real time
+  section_applicability:
+    - presentation
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: semi-formal
+  caution_level: low
+  phrase_variants:
+    - "What I mean by this is ..."
+    - "To give you an example of this ..."
+    - "Let me explain what I mean ..."
+    - "To put this another way ..."
+    - "In other words, ..."
+    - "What's interesting about this is ..."
+    - "To illustrate this point ..."
+    - "The reason I mention this is that ..."
+  example_transformations:
+    input: "The model generalises well."
+    output: "What I mean by generalisation here is performance on data the model has never seen before. To give you an example, when we applied the model to a completely new domain, accuracy dropped by less than two percentage points."
+
+concluding_talk:
+  rhetorical_category: spoken_academic
+  communicative_purpose: bring the presentation to a close and reinforce the main message
+  section_applicability:
+    - presentation
+  strength_level: assertive
+  discipline_suitability:
+    - general
+  tone_intensity: semi-formal
+  caution_level: low
+  phrase_variants:
+    - "To summarise the main points ..."
+    - "In conclusion, what I've tried to show today is ..."
+    - "I'd like to finish by highlighting ..."
+    - "Let me conclude by returning to the central question ..."
+    - "The key takeaway from this work is ..."
+    - "To round off, I want to emphasise ..."
+    - "What this work contributes, in short, is ..."
+    - "So, to bring this together ..."
+  example_transformations:
+    input: "That's our conclusion. The model works well."
+    output: "To summarise the main points: we have introduced a new approach, demonstrated its advantages over existing baselines, and identified the conditions under which it performs best. The key takeaway is that the method is both effective and computationally efficient."
+
+inviting_questions:
+  rhetorical_category: spoken_academic
+  communicative_purpose: open the floor to audience questions
+  section_applicability:
+    - presentation
+  strength_level: light
+  discipline_suitability:
+    - general
+  tone_intensity: semi-formal
+  caution_level: low
+  phrase_variants:
+    - "I'd be happy to take any questions ..."
+    - "I'll now open the floor to questions ..."
+    - "If anyone would like to ask anything ..."
+    - "I'm very happy to discuss any of these points further ..."
+    - "Are there any questions or comments?"
+    - "I'd welcome any questions or feedback ..."
+  example_transformations:
+    input: "Any questions?"
+    output: "That brings me to the end of the presentation. I'd be happy to take any questions or to discuss any of the points I've raised in more detail."
+
+handling_questions:
+  rhetorical_category: spoken_academic
+  communicative_purpose: respond to audience questions professionally and clearly
+  section_applicability:
+    - presentation
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: semi-formal
+  caution_level: medium
+  phrase_variants:
+    - "That's a very good question ..."
+    - "I think what you're asking is ..."
+    - "If I understand your question correctly ..."
+    - "That's something we're actively investigating ..."
+    - "I'd need to think about that more carefully ..."
+    - "We did look at that, and what we found was ..."
+    - "That's actually beyond the scope of the current work, but ..."
+    - "I'm not sure I can answer that definitively, but ..."
+  example_transformations:
+    input: "We didn't look at that specific case."
+    output: "That's a very good question, and it's actually beyond the scope of the current work. We focused on X, so the case you're describing wasn't something we examined directly — but it's a natural direction for future work."

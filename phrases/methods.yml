@@ -13,9 +13,128 @@ research_design:
     - "A case-study design was adopted ..."
     - "A mixed-method approach was utilised ..."
     - "Data were collected using ..."
+    - "The study was designed as ..."
+    - "An exploratory design was selected in order to ..."
+    - "A longitudinal approach was adopted to track ..."
+    - "The research was conducted within a ..."
+    - "A cross-sectional design was used to examine ..."
+    - "This investigation draws on ..."
   example_transformations:
     input: "We used interviews and surveys."
     output: "A mixed-method approach was utilised, combining semi-structured interviews with a cross-sectional survey."
+
+previously_used_methods:
+  rhetorical_category: procedural_description
+  communicative_purpose: situate the current method within established practice
+  section_applicability:
+    - methods
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Following the procedure described by ..."
+    - "The methodology adopted here is consistent with that used in ..."
+    - "A procedure similar to that reported by X was followed ..."
+    - "The approach developed by X was adapted for ..."
+    - "Drawing on the framework established by ..."
+    - "The instrument used was originally developed by ..."
+  example_transformations:
+    input: "We used the same coding scheme as Smith (2019)."
+    output: "The coding scheme developed by Smith (2019) was adopted with minor adaptations to suit the present corpus."
+
+methodological_justification:
+  rhetorical_category: procedural_justification
+  communicative_purpose: explain why a particular method was chosen
+  section_applicability:
+    - methods
+  strength_level: assertive
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "This approach was selected because ..."
+    - "The method is particularly appropriate for ..."
+    - "A qualitative approach was considered most suitable given ..."
+    - "This design was preferred over alternatives because ..."
+    - "The use of X was justified on the grounds that ..."
+    - "X was chosen in preference to Y because ..."
+    - "This framework enables ..."
+    - "The rationale for adopting X was ..."
+  example_transformations:
+    input: "We chose interviews because surveys would not capture nuance."
+    output: "Semi-structured interviews were preferred over survey instruments on the grounds that they enable participants to elaborate responses and introduce dimensions not anticipated by the researcher."
+
+participant_provenance:
+  rhetorical_category: procedural_description
+  communicative_purpose: describe participant selection, recruitment, and characteristics
+  section_applicability:
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Participants were recruited from ..."
+    - "A purposive sample of X was drawn from ..."
+    - "Eligibility criteria included ..."
+    - "Participants were excluded if ..."
+    - "Written informed consent was obtained from all participants ..."
+    - "All participants were volunteers who ..."
+    - "The final sample comprised ..."
+    - "Sampling continued until theoretical saturation was reached ..."
+  example_transformations:
+    input: "We recruited 40 teachers from secondary schools."
+    output: "A purposive sample of 40 secondary school teachers was recruited, selected to represent variation in school type, subject specialism, and years of experience."
+
+sequential_process:
+  rhetorical_category: procedural_description
+  communicative_purpose: describe a multi-step process using sequencing language
+  section_applicability:
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "First, ... Subsequently, ... Finally, ..."
+    - "In the first stage, ..."
+    - "Following this, ..."
+    - "Once X had been completed, ..."
+    - "Prior to analysis, ..."
+    - "At each step, ..."
+    - "In parallel with ..."
+    - "This was repeated for each ..."
+  example_transformations:
+    input: "We cleaned the data, then ran the model, then checked the output."
+    output: "Prior to modelling, the data underwent a cleaning procedure to remove duplicates and handle missing values. Model training was subsequently performed on the prepared dataset, after which outputs were verified against held-out validation cases."
+
+instrumentation:
+  rhetorical_category: procedural_description
+  communicative_purpose: describe tools, instruments, scales, or software used
+  section_applicability:
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The instrument used to measure X was ..."
+    - "Data were collected using a X-item Likert scale ranging from ..."
+    - "Responses were recorded on a five-point scale anchored by ..."
+    - "The questionnaire consisted of X sections covering ..."
+    - "Reliability of the instrument was assessed using ..."
+    - "The software package X (version Y) was used for ..."
+    - "All computations were performed in ..."
+    - "The validity of the measure was established through ..."
+  example_transformations:
+    input: "We used a survey with 20 questions."
+    output: "Data were collected using a 20-item questionnaire organised into four thematic sections; responses were recorded on a five-point Likert scale anchored by strongly disagree and strongly agree."
 
 data_collection:
   rhetorical_category: procedural_description
@@ -32,6 +151,12 @@ data_collection:
     - "Data were obtained from ..."
     - "Measurements were conducted using ..."
     - "The corpus was compiled from ..."
+    - "Field observations were carried out over a period of ..."
+    - "Interviews were recorded with participant consent and transcribed verbatim ..."
+    - "Secondary data were sourced from ..."
+    - "The dataset was assembled by ..."
+    - "All data were collected between X and Y ..."
+    - "An online platform was used to administer ..."
   example_transformations:
     input: "The dataset came from public repositories."
     output: "Data were obtained from publicly accessible repositories selected according to predefined inclusion criteria."
@@ -51,6 +176,37 @@ analysis:
     - "The data were analysed through ..."
     - "Thematic analysis was conducted ..."
     - "Model outputs were evaluated against ..."
+    - "Descriptive statistics were calculated for all variables ..."
+    - "Inferential analysis was conducted to determine ..."
+    - "Coding was carried out independently by two raters ..."
+    - "Inter-rater reliability was calculated using ..."
+    - "A regression model was fitted to examine ..."
+    - "The analysis proceeded in two stages ..."
+    - "Content analysis was applied to ..."
+    - "All responses were coded according to ..."
   example_transformations:
     input: "We compared the outputs with labels."
     output: "Model outputs were evaluated against expert-labelled references using agreement and error-based metrics."
+
+validity_reliability:
+  rhetorical_category: procedural_justification
+  communicative_purpose: address the trustworthiness or rigour of the data and analysis
+  section_applicability:
+    - methods
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "To ensure reliability, ..."
+    - "Triangulation was employed to ..."
+    - "Member checking was conducted to verify ..."
+    - "Internal consistency was assessed using Cronbach's alpha ..."
+    - "Construct validity was established through ..."
+    - "To minimise observer bias, ..."
+    - "Discrepancies between coders were resolved through discussion ..."
+    - "Transferability of findings was supported by ..."
+  example_transformations:
+    input: "Two people coded the data to check for agreement."
+    output: "To ensure coding reliability, two researchers independently applied the scheme to a 20% subset of the data; discrepancies were resolved through discussion until consensus was reached."

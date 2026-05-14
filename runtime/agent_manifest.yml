@@ -44,6 +44,8 @@ module_groups:
     - phrases/giving_examples.yml
     - phrases/shared_knowledge.yml
     - phrases/writing_about_the_past.yml
+    - phrases/presentation.yml
+    - phrases/reviewer_response.yml
   rhetorical_moves:
     - rhetorical_moves/cars_model.md
     - rhetorical_moves/gap_identification.md

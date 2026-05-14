@@ -12,6 +12,9 @@ addition:
     - "furthermore"
     - "moreover"
     - "in addition"
+    - "additionally"
+    - "equally"
+    - "in a similar vein"
 
 contrast:
   rhetorical_category: transition
@@ -27,6 +30,10 @@ contrast:
     - "however"
     - "nevertheless"
     - "conversely"
+    - "by contrast"
+    - "on the other hand"
+    - "notwithstanding"
+    - "that said"
 
 causality:
   rhetorical_category: transition
@@ -42,3 +49,169 @@ causality:
     - "consequently"
     - "therefore"
     - "as a result"
+    - "thus"
+    - "hence"
+    - "it follows that"
+    - "for this reason"
+
+clarification:
+  rhetorical_category: transition
+  communicative_purpose: rephrase, clarify, or specify a preceding claim
+  section_applicability:
+    - all
+  strength_level: light
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "that is to say"
+    - "in other words"
+    - "more specifically"
+    - "to clarify"
+    - "to be more precise"
+    - "put differently"
+
+sequence:
+  rhetorical_category: transition
+  communicative_purpose: order steps, events, or arguments temporally or procedurally
+  section_applicability:
+    - methods
+    - results
+    - introduction
+  strength_level: light
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "first"
+    - "second"
+    - "subsequently"
+    - "finally"
+    - "in the first instance"
+    - "at a later stage"
+    - "prior to"
+    - "following this"
+
+section_preview:
+  rhetorical_category: section_management
+  communicative_purpose: introduce or preview what the current section or sub-section will cover
+  section_applicability:
+    - introduction
+    - literature_review
+    - methods
+    - discussion
+    - conclusion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "This section examines ..."
+    - "The following discussion considers ..."
+    - "This part of the paper focuses on ..."
+    - "In this section, attention is given to ..."
+    - "The remainder of this section outlines ..."
+    - "What follows is a review of ..."
+    - "This chapter proceeds in three parts ..."
+  example_transformations:
+    input: "Now we talk about the literature on deep learning."
+    output: "The following discussion examines the relevant literature on deep learning architectures, with particular attention to approaches that have been applied to low-resource settings."
+
+topic_introduction:
+  rhetorical_category: section_management
+  communicative_purpose: introduce a new topic or sub-theme within a section
+  section_applicability:
+    - literature_review
+    - discussion
+    - introduction
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "Turning now to ..."
+    - "A further dimension concerns ..."
+    - "A related issue is ..."
+    - "Another aspect that merits attention is ..."
+    - "The question of X has also attracted considerable interest ..."
+    - "Equally relevant to the present discussion is ..."
+    - "A distinct but related strand of research concerns ..."
+  example_transformations:
+    input: "Now we look at privacy concerns."
+    output: "Turning now to the question of privacy, a distinct but related strand of research concerns the disclosure risks associated with model inversion attacks."
+
+topic_reintroduction:
+  rhetorical_category: section_management
+  communicative_purpose: return to a topic introduced earlier in the paper
+  section_applicability:
+    - discussion
+    - conclusion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "As noted earlier, ..."
+    - "Returning to the question of ..."
+    - "As discussed in Section X, ..."
+    - "Recalling the argument made in the introduction, ..."
+    - "This finding relates to the point raised above regarding ..."
+    - "The issue of X, introduced in Section Y, can now be addressed more fully ..."
+  example_transformations:
+    input: "We mentioned the calibration problem before — it matters here too."
+    output: "Returning to the calibration problem introduced in Section 2, the present findings provide additional evidence that this issue is not confined to low-data conditions."
+
+section_summary:
+  rhetorical_category: section_management
+  communicative_purpose: close a section by summarising its main points before transitioning
+  section_applicability:
+    - literature_review
+    - methods
+    - results
+    - discussion
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "In summary, this section has shown that ..."
+    - "To summarise the foregoing, ..."
+    - "The preceding discussion has established ..."
+    - "This section has outlined ..."
+    - "Having reviewed X, it is now possible to ..."
+    - "On the basis of the above, ..."
+    - "Drawing these threads together, ..."
+  example_transformations:
+    input: "So the literature shows a gap in X and Y."
+    output: "Drawing these threads together, the preceding review has established that existing studies have addressed neither the role of X nor its interaction with Y, thereby defining the gap that the present study seeks to fill."
+
+chapter_preview:
+  rhetorical_category: section_management
+  communicative_purpose: signal what the next section or chapter will cover
+  section_applicability:
+    - introduction
+    - literature_review
+    - methods
+    - results
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The following chapter addresses ..."
+    - "Section X will now examine ..."
+    - "The next section presents ..."
+    - "Chapter X goes on to consider ..."
+    - "Attention now turns to ..."
+    - "These issues are taken up in the next chapter ..."
+    - "The implications of these findings are explored in Section X ..."
+  example_transformations:
+    input: "In the next part, we show our results."
+    output: "The following section presents the results of the empirical analysis, organised around the three research questions outlined in the introduction."

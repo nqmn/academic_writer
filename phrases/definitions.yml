@@ -14,6 +14,98 @@ term_definition:
     - "In this study, X is defined as ..."
     - "Throughout this paper, X denotes ..."
     - "X is conceptualised here as ..."
+    - "X can be broadly defined as ..."
+    - "For the purposes of this paper, X is understood to mean ..."
+    - "X is used here to describe ..."
+    - "The concept of X encompasses ..."
   example_transformations:
     input: "We use robustness to mean stable performance."
     output: "In this study, robustness is defined as stable performance across controlled perturbations."
+
+etymology_and_history:
+  rhetorical_category: definition
+  communicative_purpose: situate a term within its historical or disciplinary origins
+  section_applicability:
+    - introduction
+    - literature_review
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "The term X was first used by ..."
+    - "The concept of X originated in ..."
+    - "Historically, X has been understood to mean ..."
+    - "Early uses of X in the literature include ..."
+    - "X derives from the Latin/Greek ..."
+    - "The notion of X can be traced back to ..."
+  example_transformations:
+    input: "Autonomy as a concept goes back to Kant."
+    output: "The concept of autonomy as applied in this field can be traced back to Kantian philosophy, where it denoted self-governance according to rational principles."
+
+definitional_difficulty:
+  rhetorical_category: definition
+  communicative_purpose: acknowledge that a term is contested or difficult to define precisely
+  section_applicability:
+    - introduction
+    - literature_review
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: high
+  phrase_variants:
+    - "X is a term that has been used in a variety of ways ..."
+    - "There is no single accepted definition of X ..."
+    - "Scholars have defined X in different ways ..."
+    - "The concept of X remains contested ..."
+    - "Defining X is not straightforward, as ..."
+    - "X has proven difficult to define precisely because ..."
+    - "The literature reveals considerable disagreement about what X means ..."
+  example_transformations:
+    input: "Fairness is hard to define in AI."
+    output: "The concept of fairness has proven difficult to define precisely in AI contexts, as the literature reveals considerable disagreement about which statistical criteria should be treated as definitive."
+
+definition_commentary:
+  rhetorical_category: definition
+  communicative_purpose: evaluate, compare, or comment on existing definitions
+  section_applicability:
+    - introduction
+    - literature_review
+  strength_level: moderate
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: medium
+  phrase_variants:
+    - "This definition is useful insofar as ..."
+    - "While X's definition captures ..., it does not account for ..."
+    - "A broader definition would include ..."
+    - "This narrow definition excludes ..."
+    - "The definition adopted here differs from X's in that ..."
+    - "For operational purposes, the following definition is adopted ..."
+  example_transformations:
+    input: "Smith's definition is too narrow for our purposes."
+    output: "While Smith's (2018) definition captures the core properties of the construct, it does not account for cases in which X operates under conditions of Y, which are central to the present investigation."
+
+study_specific_usage:
+  rhetorical_category: definition
+  communicative_purpose: specify how a term is used in the current paper to avoid ambiguity
+  section_applicability:
+    - introduction
+    - methods
+  strength_level: direct
+  discipline_suitability:
+    - general
+  tone_intensity: formal
+  caution_level: low
+  phrase_variants:
+    - "In what follows, X will be used to refer to ..."
+    - "Unless otherwise stated, X in this paper refers to ..."
+    - "To avoid ambiguity, the term X is used throughout to mean ..."
+    - "X and Y are used interchangeably here to denote ..."
+    - "The distinction between X and Y, though acknowledged, is not central to this study ..."
+  example_transformations:
+    input: "We use 'model' to mean any neural network."
+    output: "In what follows, the term model is used to refer specifically to neural network architectures trained on supervised data, unless otherwise indicated."

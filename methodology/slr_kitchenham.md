@@ -166,6 +166,8 @@ Searches should optimise:
 - transparency
 - repeatability
 
+Prefer iterative search string refinement with a pilot set (per Kitchenham and Brereton 2013) within a pre-specified protocol structure (per EBSE-2007). This resolves the tension between the two sources: the protocol is written before searching begins, but the search string itself is refined through a small manual seed set before the full search is executed. Do not treat the first-draft search string as final.
+
 ### Step 5: Run screening
 
 Default sequence:

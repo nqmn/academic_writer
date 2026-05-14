@@ -71,7 +71,13 @@ If the user mentions:
 - revision response
 - response letter
 
-Then load reviewer response modules.
+Then load:
+
+- `phrases/reviewer_response.yml`
+- `reviewer_response/minor_revision.md`
+- `reviewer_response/major_revision.md`
+- `reviewer_response/rebuttal_patterns.md`
+- `reviewer_response/reviewer_tone.md`
 
 ### Single-paper analysis mode
 
@@ -119,6 +125,21 @@ If the user mentions:
 Then load:
 
 - `workflows/manuscript_diagnosis.md`
+
+### Paper structure and outline mode
+
+If the user mentions:
+
+- outline my paper
+- structure this manuscript
+- what sections should my paper have
+- paper template
+- how should I structure
+- full paper flow
+
+Then load:
+
+- `workflows/q1_paper_structure.md`
 
 ### Systematic review mode
 
@@ -176,7 +197,10 @@ If the user mentions:
 - oral presentation
 - conference talk
 
-Then add presentation style notes.
+Then load:
+
+- `notes/presentation_style.md`
+- `phrases/presentation.yml`
 
 ## Section-to-Module Mapping
 

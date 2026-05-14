@@ -83,7 +83,19 @@ For each issue, specify:
 - which section it affects
 - what kind of revision is needed
 
-### Step 4: Produce an upgrade plan
+### Step 4: Map to a publication decision category
+
+Use the diagnosis to assign a likely editorial outcome:
+
+- Accept — no critical or high issues; contribution, methodology, and writing all strong; rare at first round
+- Minor revision — no critical issues; small focused repairs needed; no structural rethinking required
+- Major revision — good potential but significant theoretical, methodological, or discussion improvement needed; most common outcome
+- Reject and resubmit — fundamental issues in framing or scope but the core idea has merit; a full rewrite rather than a revision
+- Reject — weak novelty, fatal methodology flaw, poor theoretical contribution, or no meaningful international relevance; no revision path visible
+
+When assigning the category, apply the priority order: contribution and novelty first, methodology second, discussion third, writing fourth.
+
+### Step 5: Produce an upgrade plan
 
 Return either:
 
@@ -109,6 +121,7 @@ Return:
 - strengths
 - weaknesses
 - likely rejection risks
+- publication decision category (Accept / Minor / Major / Reject and resubmit / Reject)
 - upgrade priorities
 
 ### Revision blueprint

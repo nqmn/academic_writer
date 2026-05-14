@@ -49,6 +49,7 @@ This repository is designed for Codex-style agent use, but its structure is also
 The system supports:
 
 - manuscript section drafting and revision
+- full paper outlining and structure planning
 - literature review writing
 - research-gap identification and positioning
 - single-paper analysis
@@ -66,7 +67,7 @@ The system supports:
 - [`rhetorical_moves/`](rhetorical_moves/): move-structure guidance
 - [`anti_ai/`](anti_ai/): cadence, anti-template, and humanization controls
 - [`reviewer_response/`](reviewer_response/): reviewer-response patterns
-- [`workflows/`](workflows/): single-paper analysis, literature synthesis, and manuscript diagnosis
+- [`workflows/`](workflows/): single-paper analysis, literature synthesis, manuscript diagnosis, and paper structure templates
 - [`methodology/`](methodology/): systematic review, bibliometric-analysis, and gap-validation layers
 - [`standards/`](standards/): Q1 WoS readiness and self-review governance
 - [`runtime/`](runtime/): router, ambiguity policy, runtime prompt, and manifest
@@ -261,6 +262,14 @@ Supporting local source files:
 This is intended to reduce unnecessary web dependency. When these local notes are sufficient for the task, the agent should use them first.
 
 The Paul et al. 2023 note is especially useful when the user wants a framework-based or theory-building review rather than only a protocol-compliant review.
+
+### Source conflict resolution
+
+Where multiple sources cover the same ground, the methodology modules contain explicit tie-breaking rules rather than leaving resolution to runtime inference.
+
+**Bibliometric layer** (`methodology/bibliometric_analysis.md`): three sources are layered by role — Donthu et al. 2021 governs technique-selection rationale and scope, Ozturk et al. 2024 governs research-design transparency and fit, Passas 2024 governs operational sequencing. Where sequencing differs (Passas lists data collection before technique selection; Donthu inverts this), the module explicitly follows Donthu: choose technique first, then confirm the dataset supports it.
+
+**SLR layer** (`methodology/slr_kitchenham.md`): sources are layered temporally and by concern — Kitchenham EBSE-2007 governs protocol design, PRISMA 2020 governs reporting completeness, SEGRESS extends PRISMA for software engineering, and Kitchenham and Brereton 2013 refines search-string construction. Where the 2013 source (iterative refinement with a pilot set) appears to conflict with the 2007 protocol-first approach, the module resolves this explicitly: write the protocol first, but refine the search string iteratively using a small manual seed set before the full search is executed.
 
 Test status:
 
