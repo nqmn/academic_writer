@@ -42,6 +42,10 @@
             color-scheme: dark;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         body {
             background-color: #050b16;
             color: #f8fbff;
@@ -619,8 +623,10 @@
                     <div class="text-xs text-brand-300 font-bold tracking-wider mb-4 flex items-center gap-2">
                         <i data-lucide="folder" class="w-3.5 h-3.5"></i> CORE RUNTIME
                     </div>
-                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-slate-200 flex items-center justify-between gap-3">
-                        <span class="truncate"><a href="https://github.com/nqmn/academic_writer/blob/main/AGENTS.md" class="hover:text-white transition-colors">AGENTS.md</a> + <a href="https://github.com/nqmn/academic_writer/blob/main/runtime/system_prompt.md" class="hover:text-white transition-colors">runtime/system_prompt.md</a> + <a href="https://github.com/nqmn/academic_writer/blob/main/runtime/router.md" class="hover:text-white transition-colors">runtime/router.md</a></span>
+                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-slate-200 flex items-center gap-3">
+                        <div class="flex-1 min-w-0 overflow-x-auto">
+                            <span class="whitespace-nowrap"><a href="https://github.com/nqmn/academic_writer/blob/main/AGENTS.md" class="hover:text-white transition-colors">AGENTS.md</a> + <a href="https://github.com/nqmn/academic_writer/blob/main/runtime/system_prompt.md" class="hover:text-white transition-colors">runtime/system_prompt.md</a> + <a href="https://github.com/nqmn/academic_writer/blob/main/runtime/router.md" class="hover:text-white transition-colors">runtime/router.md</a></span>
+                        </div>
                         <button onclick="copyCard('runtime', this)" class="shrink-0 bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-colors" title="Copy">
                             <i data-lucide="copy" class="w-4 h-4 text-slate-300"></i>
                         </button>
@@ -632,8 +638,10 @@
                     <div class="text-xs text-brand-300 font-bold tracking-wider mb-4 flex items-center gap-2">
                         <i data-lucide="package" class="w-3.5 h-3.5"></i> PACKAGED SKILL
                     </div>
-                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-slate-200 flex items-center justify-between gap-3">
-                        <span class="truncate"><a href="https://github.com/nqmn/academic_writer/tree/main/packages/scholarly-research-writing-review" class="hover:text-white transition-colors">packages/scholarly-research-writing-review/</a></span>
+                    <div class="bg-black/40 rounded-xl p-4 font-mono text-sm text-slate-200 flex items-center gap-3">
+                        <div class="flex-1 min-w-0 overflow-x-auto">
+                            <span class="whitespace-nowrap"><a href="https://github.com/nqmn/academic_writer/tree/main/packages/scholarly-research-writing-review" class="hover:text-white transition-colors">packages/scholarly-research-writing-review/</a></span>
+                        </div>
                         <button onclick="copyCard('skill', this)" class="shrink-0 bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-colors" title="Copy">
                             <i data-lucide="copy" class="w-4 h-4 text-slate-300"></i>
                         </button>
