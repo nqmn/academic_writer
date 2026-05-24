@@ -1894,31 +1894,95 @@ Before beginning any critique, load and apply:
 
 
 
-\## Critique Structure
+\## Mandatory Output Format
+
+All manuscript critiques must follow the round-based editorial review format defined in
+workflows/manuscript\_diagnosis.md. The format is mandatory for every review output. Do not
+substitute a bullet-point summary, a table-only output, or a prose-only diagnosis.
+
+The format consists of the following fixed sections in order:
+
+1\. Context transparency block — state what was provided and what is missing
+2\. Manuscript header — echo the title exactly as submitted
+3\. Round label — state the review cycle number
+4\. Section 1 — Critical Review of Contribution and Novelty (label with 1️⃣)
+5\. Section 2 — Methodology and Technical Rigor (label with 2️⃣)
+6\. Section 3 — Strengths and Contributions (label with 3️⃣)
+7\. Section 4 — Weaknesses and Potential Rejection Factors (label with 4️⃣)
+8\. Section 5 — Clarity, Structure, and Writing Style (label with 5️⃣)
+9\. Section 6 — Specific Suggestions for Enhancement (label with 6️⃣)
+10\. Suggested rewritten abstract — provide a fully restructured abstract
+11\. Final Verdict — decision, correction estimate, and revision table
 
 
 
-A manuscript critique must follow this sequence:
+\---
 
 
 
-1\. Overall position — a single defensible verdict with hedging
+\## Agent Integration
 
-2\. Territory assessment — evaluate whether the field is correctly and critically established
+The manuscript critique agent does not operate in isolation. During a critique, it must
+integrate findings from the following agents and apply them within the relevant review sections.
 
-3\. Gap assessment — evaluate whether the gap is evidenced, classified, and problematised
+Integration map:
 
-4\. Contribution assessment — evaluate whether the stated contribution occupies the identified gap
+\* Theoretical Framework Agent (AGENTS.md) — apply during Section 1 (novelty and contribution)
+  to classify the contribution using the 3Us taxonomy (Unexplored, Underdeveloped, Uncertain)
+  and the five-level contribution typology. Report the contribution level explicitly.
 
-5\. Methodology assessment — evaluate design clarity, justification, and replicability
+\* Literature Review Agent (AGENTS.md) — apply during Section 1 (gap assessment) to evaluate
+  whether the stated research gap is evidenced through synthesis of prior literature or merely
+  asserted. Flag descriptive-only literature treatment.
 
-6\. Performance and results claims — evaluate whether results are grounded against a stated baseline
+\* Methods Agent (AGENTS.md) — apply during Section 2 (methodology and technical rigor) to
+  evaluate whether each methodological choice is justified, not merely named. Apply the
+  nine-element methods checklist: setting, design, recruitment, data collection, dataset,
+  dependent and independent variables, covariates, analytical approach, and ethical approval.
 
-7\. Language and register — identify register failures, imprecision, or prohibited phrase patterns
+\* Results Agent (AGENTS.md) — apply during Section 4 (weaknesses) to evaluate whether
+  performance claims follow the correct reporting sequence: sample description, participant
+  characteristics, findings by aim. Flag causal language used without causal design.
 
-8\. Readiness Scorecard — apply the scorecard from standards/q1\_wos\_readiness.md
+\* Discussion Agent (AGENTS.md) — apply during Section 4 (weaknesses) to check whether the
+  discussion avoids repeating results, introduces no new findings, describes limitation
+  implications rather than only listing limitations, and proposes specific future work.
 
-9\. Revision recommendations — ordered by severity, stated as actionable directives
+\* Abstract Agent (AGENTS.md) — apply during Section 5 (clarity and structure) to verify
+  that the abstract conforms to the Background-Gap-Objective-Method-Findings-Contribution-
+  Implication structure. Flag any missing element explicitly.
+
+\* Reviewer Response Agent (AGENTS.md) — apply during Section 6 (suggestions) only when the
+  manuscript is in a revision-stage draft. Do not activate for first-submission reviews.
+
+\* Q1 WoS Readiness Standard (standards/q1\_wos\_readiness.md) — apply throughout all sections.
+  Report the readiness scorecard result in the Final Verdict block.
+
+\* Self-Review Protocol (standards/self\_review\_protocol.md) — perform an internal pass before
+  finalising the review output. Verify that all six mandatory sections are present, that the
+  verdict is hedged, and that the suggested abstract follows the required structure.
+
+
+
+\---
+
+
+
+\## Critique Sequence (Internal)
+
+Follow this internal reasoning order before producing the formatted output:
+
+1\. Identify what the user has submitted and what is missing
+2\. Classify the manuscript state (idea-stage through revision-stage)
+3\. Apply the Theoretical Framework Agent to classify contribution type and gap type
+4\. Apply the Literature Review Agent to assess gap evidencing
+5\. Apply the Methods Agent to assess methodological completeness and justification
+6\. Apply the Results Agent to assess performance claim validity
+7\. Apply the Discussion Agent if discussion material is available
+8\. Apply the Abstract Agent to assess abstract structure
+9\. Apply the Q1 Readiness Scorecard
+10\. Produce the full formatted output per workflows/manuscript\_diagnosis.md
+11\. Apply the Self-Review Protocol before returning the output
 
 
 
