@@ -166,6 +166,27 @@ Preferred correction:
 
 - End with the actual contribution, limitation, or next research task.
 
+### 11. Hyphenated compound adjectives
+
+Watch for adjectival compounds formed with a hyphen before a noun:
+
+- "attention-aware"
+- "code-aware"
+- "context-aware"
+- "research-driven"
+- "data-driven"
+- "model-driven"
+- "evidence-driven"
+- "domain-specific"
+- "task-specific"
+- "human-readable"
+
+Preferred correction:
+
+- Rewrite as a prepositional phrase, a relative clause, or a plain adjective.
+- For example, write "aware of context" or "responsive to context" rather than "context-aware".
+- Exception: "long-term" is accepted and does not require rewriting.
+
 ## Structural Cleanup Rules
 
 - Avoid stacking transitions in adjacent sentences.

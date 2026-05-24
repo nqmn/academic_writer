@@ -63,6 +63,9 @@ Check:
 - novelty is stated
 - contribution is stated
 - objectives or questions are clear
+- writing is calibrated to the target journal's readership, not a generic audience
+- research aim contains setting, population/sample, design, timing, dependent and independent variables
+- every challengeable claim carries a citation
 
 ### Literature review
 
@@ -81,6 +84,9 @@ Check:
 - rationale is given
 - key procedures are transparent
 - validity, reliability, or trustworthiness are addressed when relevant
+- all nine elements present: setting/participants, design/timing, recruitment/sampling, data collection, dataset, dependent/independent variables, covariates, analytic approach per objective, ethical approval
+- every methodological choice is justified, not merely described
+- methods cover all stated research aims, not just one
 
 ### Results
 
@@ -89,6 +95,12 @@ Check:
 - results match the stated objectives or hypotheses
 - the reporting is clear
 - interpretation does not intrude too early
+- section opens with sample description (n approached, eligible, enrolled, dropped out), then participant characteristics, then findings
+- associations are reported with explicit direction ("an increase in X is associated with a decrease in Y"), not just test statistics
+- non-significant associations are reported
+- no citations in the results section
+- causal language ("cause", "impact") is not used unless the design justifies it
+- tables and figures have complete, standalone titles/legends; text summarises rather than repeats them
 
 ### Discussion
 
@@ -98,6 +110,10 @@ Check:
 - theory or prior literature is engaged
 - contradictions are explained when relevant
 - implications and limitations are specific
+- follows the right-side-up triangle: mini synopsis → restate findings → significance → compare with literature → pathways → strengths/limitations → impact/applications → specific future work
+- no detailed results repeated; no new results introduced
+- every limitation is accompanied by its implication for how findings can be applied
+- future research suggestions name a specific population, variable, context, or relationship — not generic phrases like "future research is necessary"
 
 ### Conclusion
 

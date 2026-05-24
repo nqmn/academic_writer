@@ -11,3 +11,4 @@
 - Repeated "Moreover", "Furthermore", or "However" openings.
 - Uniform sentence length across a paragraph.
 - Predictable three-sentence structures repeated across sections.
+- Sentences beginning with "Unlike [X]..." as a comparison opener. Use phrasebank alternatives: "In contrast to...", "Compared with...", "Whereas...", "By contrast,..." instead.

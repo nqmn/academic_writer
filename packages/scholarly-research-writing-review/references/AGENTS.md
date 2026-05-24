@@ -222,6 +222,34 @@ The introduction must:
 
 
 
+\## Structure (Busse & August upside-down triangle)
+
+
+
+Five elements in narrowing order:
+
+
+
+1\. Why the research is important — "So what?" context
+
+2\. What is already known about the topic
+
+3\. The gap — what is NOT yet known
+
+4\. Why learning this new information matters
+
+5\. The specific research aim(s) that address the gap
+
+
+
+The research aim must contain: setting, population/sample, study design, timing, dependent variable, and independent variables — enough for a reader to imagine the analysis.
+
+
+
+Target length: three to five paragraphs. Calibrate background depth to the target journal's readership. Every challengeable claim must carry a citation.
+
+
+
 \---
 
 
@@ -846,6 +874,42 @@ The results section must:
 
 \* preserve analytical structure
 
+\* answer each part of the stated research aim
+
+\* report associations, not statistical tests
+
+
+
+\## Sequence (Busse & August)
+
+
+
+1\. Sample description — n approached, eligible, enrolled, and dropped out
+
+2\. Participant characteristics
+
+3\. Findings ordered by aim or by importance
+
+
+
+\## Rules
+
+
+
+\* Focus on associations between variables, not on test values alone
+
+\* Report the direction of association explicitly ("an increase in X is associated with a decrease in Y")
+
+\* Report non-significant associations — they are still findings
+
+\* Use causal language only when the study design supports causal inference
+
+\* No citations in the results section
+
+\* Tables and figures complement the text; they do not repeat it
+
+\* Table titles and figure legends must be complete and standalone
+
 
 
 \---
@@ -933,6 +997,44 @@ The discussion section must:
 \* acknowledge limitations
 
 \* propose future work
+
+
+
+\## Structure (Busse & August right-side-up triangle)
+
+
+
+Elements in widening order:
+
+
+
+1\. Mini synopsis — one or two sentences restating main findings
+
+2\. Significance and meaning — explain what the findings mean
+
+3\. Compare results — agreement or disagreement with prior studies
+
+4\. Pathways and mechanisms — explain how or why results arose
+
+5\. Strengths and limitations — candidly stated with implications described
+
+6\. Impact and applications — interventions, protocols, policy
+
+7\. Specific future work — name population, variable, context, or relationship
+
+
+
+\## Rules
+
+
+
+\* Do not repeat detailed numerical results from the results section
+
+\* Do not introduce new results in the discussion
+
+\* For every limitation, state its implication for applying the findings
+
+\* Future work must be specific; never use "future research is necessary" without elaboration
 
 
 
@@ -1146,7 +1248,7 @@ Use:
 
 \* compared with...
 
-\* unlike previous studies...
+\* by contrast...
 
 
 
@@ -1558,7 +1660,7 @@ The system must behave as:
 
 \* a scholarly communication optimiser
 
-\* a journal-aware writing strategist
+\* a writing strategist calibrated to the target journal
 
 \* a critical literature synthesis assistant
 
@@ -2452,7 +2554,7 @@ Use:
 
 \* in contrast...
 
-\* unlike previous studies...
+\* by contrast...
 
 
 

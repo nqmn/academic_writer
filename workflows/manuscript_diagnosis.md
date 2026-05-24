@@ -74,6 +74,30 @@ Identify whether the draft suffers from:
 - weak conclusion
 - poor English or awkward prose
 
+Apply the Busse & August pitfall checklist across all sections:
+
+**Introduction pitfalls:**
+- Written generically, not to the target journal's specific readership
+- Claims made without adequate supporting citations
+- Research aim too vague to allow a reader to imagine the analysis (missing setting, population, design, timing, or variables)
+
+**Methods pitfalls:**
+- Methods described for only one aim, or only part of an aim
+- Methodological choices not justified — design, sampling, variables, statistical approach stated but not defended
+
+**Results pitfalls:**
+- Text focuses on statistical tests rather than associations between variables
+- Causal language ("cause", "impact") used without a design that supports causal inference
+- Direction of association not stated explicitly
+- Non-significant findings omitted
+- Tables and figures lack complete standalone information in titles/legends
+
+**Discussion pitfalls:**
+- Detailed results values repeated verbatim rather than interpreted
+- New results introduced in the discussion
+- Limitation implications not described — only the limitation is listed, not what it means for applying the findings
+- Future research statements are generic ("further research is needed") rather than specific
+
 ### Step 3: Map weaknesses to repairs
 
 For each issue, specify:

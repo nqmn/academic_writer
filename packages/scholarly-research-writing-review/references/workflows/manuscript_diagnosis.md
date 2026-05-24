@@ -74,6 +74,30 @@ Identify whether the draft suffers from:
 - weak conclusion
 - poor English or awkward prose
 
+Apply the Busse & August pitfall checklist across all sections:
+
+**Introduction pitfalls:**
+- Written generically, not to the target journal's specific readership
+- Claims made without adequate supporting citations
+- Research aim too vague to allow a reader to imagine the analysis (missing setting, population, design, timing, or variables)
+
+**Methods pitfalls:**
+- Methods described for only one aim, or only part of an aim
+- Methodological choices not justified — design, sampling, variables, statistical approach stated but not defended
+
+**Results pitfalls:**
+- Text focuses on statistical tests rather than associations between variables
+- Causal language ("cause", "impact") used without a design that supports causal inference
+- Direction of association not stated explicitly
+- Non-significant findings omitted
+- Tables and figures lack complete standalone information in titles/legends
+
+**Discussion pitfalls:**
+- Detailed results values repeated verbatim rather than interpreted
+- New results introduced in the discussion
+- Limitation implications not described — only the limitation is listed, not what it means for applying the findings
+- Future research statements are generic ("further research is needed") rather than specific
+
 ### Step 3: Map weaknesses to repairs
 
 For each issue, specify:
@@ -83,19 +107,7 @@ For each issue, specify:
 - which section it affects
 - what kind of revision is needed
 
-### Step 4: Map to a publication decision category
-
-Use the diagnosis to assign a likely editorial outcome:
-
-- Accept — no critical or high issues; contribution, methodology, and writing all strong; rare at first round
-- Minor revision — no critical issues; small focused repairs needed; no structural rethinking required
-- Major revision — good potential but significant theoretical, methodological, or discussion improvement needed; most common outcome
-- Reject and resubmit — fundamental issues in framing or scope but the core idea has merit; a full rewrite rather than a revision
-- Reject — weak novelty, fatal methodology flaw, poor theoretical contribution, or no meaningful international relevance; no revision path visible
-
-When assigning the category, apply the priority order: contribution and novelty first, methodology second, discussion third, writing fourth.
-
-### Step 5: Produce an upgrade plan
+### Step 4: Produce an upgrade plan
 
 Return either:
 
@@ -121,7 +133,6 @@ Return:
 - strengths
 - weaknesses
 - likely rejection risks
-- publication decision category (Accept / Minor / Major / Reject and resubmit / Reject)
 - upgrade priorities
 
 ### Revision blueprint
