@@ -51,6 +51,31 @@ Primary rule:
 - SEGRESS: software-engineering reporting adaptation
 - Paul et al. 2023: framework-based and theory-building synthesis design
 
+## Theoretical framework sources
+
+- [`methodology/source_notes/lim_2026_theory_development.md`](methodology/source_notes/lim_2026_theory_development.md)
+  - theory typology, 3Us gap taxonomy, contribution novelty levels, theoretical interestingness, 3Rs implications
+- [`methodology/source_notes/luft_et_al_2022_literature_reviews_frameworks.md`](methodology/source_notes/luft_et_al_2022_literature_reviews_frameworks.md)
+  - framework selection (three considerations), conceptual framework construction, alignment with methods and findings
+- [`methodology/source_notes/grant_osanloo_theoretical_framework_2014.md`](methodology/source_notes/grant_osanloo_theoretical_framework_2014.md)
+  - 8-step framework selection, 9-point integration checklist, house-blueprint analogy for dissertation contexts
+- [`methodology/source_notes/klopper_matrix_literature_review_2007.md`](methodology/source_notes/klopper_matrix_literature_review_2007.md)
+  - concept matrix method for structuring literature reviews by key concept columns
+
+## Role split
+
+- Lim 2026: theory development, gap classification, contribution novelty, theoretical interestingness
+- Luft et al. 2022: framework selection and conceptual framework construction for academic articles
+- Grant & Osanloo 2014: framework integration for dissertation and thesis work
+- Klopper et al. 2007: concept-matrix organisation of literature reviews
+- Donthu et al. 2021: core bibliometric methodology and technique choice
+- Ozturk et al. 2024: bibliometric research-design and transparency logic
+- Passas 2024: compact operational steps and software-oriented workflow
+- Kitchenham: review-process design
+- PRISMA 2020: reporting completeness
+- SEGRESS: software-engineering reporting adaptation
+- Paul et al. 2023: framework-based and theory-building synthesis design
+
 ## Recommended use
 
 For standard SLR or SMS tasks:
@@ -65,6 +90,12 @@ For bibliometric-analysis tasks:
 
 - load Donthu + Ozturk et al. first
 - add Passas when the user needs a more operational step list or tool-oriented workflow
+
+For theoretical framework selection, justification, or contribution framing:
+
+- load Lim 2026 + Luft et al. 2022
+- add Grant & Osanloo 2014 for dissertation or thesis contexts
+- add Klopper et al. 2007 when structuring the literature review by concept columns
 
 For manuscript writing tasks unrelated to secondary-study methodology:
 

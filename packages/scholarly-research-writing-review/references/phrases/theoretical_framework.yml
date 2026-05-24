@@ -1,0 +1,81 @@
+framework_selection:
+  purpose: justify the choice of a theoretical or conceptual framework
+  tone: formal
+  section: introduction, methods, literature_review
+  phrases:
+    - "This study is grounded in ..."
+    - "The present research draws on [theory] as its theoretical lens ..."
+    - "[Theory] was selected because it aligns with the researcher's assumptions about ..."
+    - "The study employs [framework] to illuminate ..."
+    - "[Theory] provides a useful analytical lens for examining ..."
+    - "This framework was chosen because it corresponds to the phenomenon under investigation ..."
+    - "Among the available frameworks, [theory] most closely reflects the orientation of this study ..."
+
+framework_definition:
+  purpose: introduce and define the chosen theoretical or conceptual framework
+  tone: formal
+  section: introduction, literature_review
+  phrases:
+    - "[Theory], developed by [theorist], holds that ..."
+    - "Grounded in [theory], this study treats [concept] as ..."
+    - "[Framework] is defined as ..."
+    - "Drawing on [theory], [concept] is conceptualised as ..."
+    - "Within [framework], [phenomenon] is understood as ..."
+    - "The central tenet of [theory] is that ..."
+
+framework_alignment:
+  purpose: show how the framework connects to research questions, data collection, and analysis
+  tone: formal
+  section: methods, literature_review
+  phrases:
+    - "Consistent with [theory], the research questions are designed to explore ..."
+    - "This framework informs both the data collection strategy and the analytical approach ..."
+    - "The theoretical orientation of this study shapes the selection of ..."
+    - "[Theory] guided the development of the interview protocol by foregrounding ..."
+    - "Analytical categories were derived a priori from [framework] ..."
+    - "The conceptual framework specifies the presumed relationships among [variables], which in turn informed the choice of ..."
+
+conceptual_framework_construction:
+  purpose: describe how the researcher constructed or adapted a conceptual framework
+  tone: formal
+  section: methods, literature_review
+  phrases:
+    - "The conceptual framework was developed by synthesising ..."
+    - "Drawing on [theories] and [literature], a conceptual framework was constructed to ..."
+    - "The framework integrates [theoretical element A] and [theoretical element B] to account for ..."
+    - "This conceptual model posits that [concept X] mediates the relationship between [concept Y] and [concept Z] ..."
+    - "The framework was refined iteratively as the literature review revealed ..."
+    - "Informed by [source], the framework depicts the presumed relationships among ..."
+
+theoretical_distinction:
+  purpose: distinguish theoretical from conceptual frameworks, or justify the use of multiple frameworks
+  tone: formal
+  section: methods, literature_review
+  phrases:
+    - "While [theoretical framework] provides the overarching lens, the conceptual framework specifies ..."
+    - "The theoretical framework establishes the researcher's assumptions; the conceptual framework articulates the presumed relationships among ..."
+    - "This study integrates two theoretical frameworks — [A] and [B] — to capture both ..."
+    - "Building on [theory], the conceptual framework adds [emergent or context-specific element] to account for ..."
+
+theoretical_contribution_framing:
+  purpose: position a study's theoretical contribution explicitly
+  tone: formal
+  section: discussion, conclusion
+  phrases:
+    - "This study extends [theory] by demonstrating that ..."
+    - "The findings refine [theoretical proposition] by showing that ..."
+    - "By applying [theory] in the context of [new setting], this study contributes a contextual adaptation of ..."
+    - "The present work challenges the assumption within [theory] that ..."
+    - "The results affirm [theoretical claim] while revealing that ..."
+    - "This study represents a theoretical modification of [framework] in that ..."
+    - "The contribution qualifies as a theoretical extension insofar as it introduces [new element] into the existing framework of ..."
+
+gap_to_theory_link:
+  purpose: connect a theoretical gap to the chosen framework and study aim
+  tone: formal
+  section: introduction
+  phrases:
+    - "The theoretical gap in [area] — specifically the underdeveloped account of [concept] — motivates the selection of [framework] ..."
+    - "Uncertainty regarding [theoretical relationship] makes [theory] particularly appropriate as an analytical lens ..."
+    - "Because [concept] remains unexplored within [domain], this study applies [framework] to ..."
+    - "The theoretical gap is not one of absence but of inconsistency; [theory] provides a basis for reconciling ..."

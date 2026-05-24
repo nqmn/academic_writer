@@ -542,6 +542,202 @@ Use:
 
 
 
+\# THEORETICAL FRAMEWORK AGENT
+
+
+
+\## Purpose
+
+
+
+The theoretical framework agent activates when the task involves:
+
+
+
+\* selecting, justifying, or articulating a theoretical framework
+
+\* constructing a conceptual framework from literature and emergent ideas
+
+\* distinguishing theoretical from conceptual frameworks
+
+\* identifying theoretical gaps (unexplored, underdeveloped, uncertain)
+
+\* framing theoretical contributions by novelty level
+
+\* writing a theoretical background, theoretical foundation, or framework section
+
+
+
+\## Source Basis
+
+
+
+\* Lim (2026) — theory typology, 3Us gap taxonomy, contribution levels, theoretical interestingness, 3Rs implications
+
+\* Luft, Jeong, Idsardi \& Gardner (2022) — framework selection, alignment, and conceptual framework construction
+
+\* Grant \& Osanloo (2014) — dissertation integration, 8-step selection process, 9-point checklist
+
+\* Klopper, Lubbe \& Rugbeer (2007) — concept matrix for literature review organisation
+
+
+
+Load: methodology/theoretical\_framework.md, phrases/theoretical\_framework.yml
+
+
+
+\---
+
+
+
+\## Framework Selection Rules
+
+
+
+Select a theoretical framework by:
+
+
+
+1\. Identifying the researcher's epistemological worldview
+
+2\. Aligning the framework with assumptions about the phenomenon
+
+3\. Verifying that the framework connects to the literature review, data collection, analysis, and discussion
+
+4\. Considering individual-level, institutional-level, or policy-level orientation
+
+
+
+\---
+
+
+
+\## Theoretical Gap Identification (3Us)
+
+
+
+Before stating a theoretical gap, classify it:
+
+
+
+\* Unexplored — no research attention to date
+
+\* Underdeveloped — recognised but thin theoretically or empirically
+
+\* Uncertain — conflicting findings remain unresolved
+
+
+
+Attach a problematization:
+
+
+
+\* Debates — contested assumptions (necessity or importance)
+
+\* Disconnects — theory–practice gap (relevance)
+
+\* Direness — urgency from repeated neglect
+
+
+
+A gap without a problem has no meaning. A problem without a gap has no novelty.
+
+
+
+\---
+
+
+
+\## Theoretical Contribution Typology (Ascending Novelty)
+
+
+
+1\. Theoretical generalizability — new context, same theory; adds replicability
+
+2\. Theoretical adaptation — new context, minor changes; adds contextualisation
+
+3\. Theoretical modification — changes components; adds depth
+
+4\. Theoretical extension — creates an extension; adds breadth
+
+5\. New theoretical development — entirely new theory; highest novelty
+
+
+
+Frame the contribution at the level the evidence actually supports.
+
+
+
+\---
+
+
+
+\## Theoretical Interestingness
+
+
+
+Signal one or more forms when framing novelty:
+
+
+
+\* Counterintuitivity — unusual but sensible finding or framework
+
+\* Paradoxicality — co-existence of opposing outcomes or mechanisms
+
+\* Noteworthiness — broader scope or deeper complexity than prior assumptions
+
+
+
+\---
+
+
+
+\## Theoretical Implications: The 3Rs
+
+
+
+When writing theoretical implications:
+
+
+
+1\. Recap — state the theory type, contribution level, and interestingness form
+
+2\. Retrospect — revisit the theoretical gaps and explain how the contribution affirms, extends, refines, challenges, or refutes prior understanding
+
+3\. Reimagine — identify new areas of inquiry, propose modifications, suggest new contexts
+
+
+
+\---
+
+
+
+\## Phrase Module
+
+
+
+Use phrases from phrases/theoretical\_framework.yml for:
+
+
+
+\* framework\_selection — justifying framework choice
+
+\* framework\_definition — introducing and defining the framework
+
+\* framework\_alignment — connecting framework to methods
+
+\* conceptual\_framework\_construction — describing how the researcher built the framework
+
+\* theoretical\_contribution\_framing — positioning the study's theoretical addition
+
+\* gap\_to\_theory\_link — connecting a theoretical gap to the framework and aim
+
+
+
+\---
+
+
+
 \# LITERATURE REVIEW AGENT
 
 
@@ -1617,6 +1813,506 @@ Use:
 \* This clarification has been added to...
 
 \* We acknowledge this limitation...
+
+
+
+\---
+
+
+
+\# MANUSCRIPT CRITIQUE AGENT
+
+
+
+\## Purpose
+
+
+
+The manuscript critique agent activates when the task involves:
+
+
+
+\* evaluating the novelty, originality, or contribution of a submitted manuscript
+
+\* identifying weaknesses in argumentation, structure, methodology, or language
+
+\* assessing gap identification and gap-to-contribution alignment
+
+\* reviewing an abstract, introduction, or full manuscript draft
+
+\* determining submission readiness against Q1 WoS standards
+
+\* evaluating whether performance claims are defensible and grounded against a stated baseline
+
+
+
+\---
+
+
+
+\## Activation Conditions
+
+
+
+This agent activates when the user:
+
+
+
+\* submits a manuscript excerpt, abstract, or full draft for review
+
+\* requests a novelty assessment or contribution evaluation
+
+\* asks whether a paper is publishable, well-argued, or ready for submission
+
+\* requests identification of weaknesses before submission or resubmission
+
+
+
+\---
+
+
+
+\## Quality Standard
+
+
+
+All manuscript critiques are conducted against the Q1 WoS standard defined in standards/q1\_wos\_readiness.md unless the user explicitly requests a lower bar.
+
+
+
+Before beginning any critique, load and apply:
+
+
+
+\* standards/q1\_wos\_readiness.md — Global Quality Gate, Section Standards, Novelty Standard, Common Rejection Risks, Readiness Scorecard
+
+\* workflows/q1\_paper\_structure.md — section-order conventions, Busse and August structural rules, Reviewer Expectations by Section, Manuscript Quality Checklist
+
+
+
+\---
+
+
+
+\## Critique Structure
+
+
+
+A manuscript critique must follow this sequence:
+
+
+
+1\. Overall position — a single defensible verdict with hedging
+
+2\. Territory assessment — evaluate whether the field is correctly and critically established
+
+3\. Gap assessment — evaluate whether the gap is evidenced, classified, and problematised
+
+4\. Contribution assessment — evaluate whether the stated contribution occupies the identified gap
+
+5\. Methodology assessment — evaluate design clarity, justification, and replicability
+
+6\. Performance and results claims — evaluate whether results are grounded against a stated baseline
+
+7\. Language and register — identify register failures, imprecision, or prohibited phrase patterns
+
+8\. Readiness Scorecard — apply the scorecard from standards/q1\_wos\_readiness.md
+
+9\. Revision recommendations — ordered by severity, stated as actionable directives
+
+
+
+\---
+
+
+
+\## Overall Position Patterns
+
+
+
+Use:
+
+
+
+\* The manuscript presents...
+
+\* The contribution, as currently argued, appears to...
+
+\* The paper may contribute to the literature; however...
+
+\* The novelty claim remains insufficiently supported because...
+
+\* The study appears to address an important problem, though...
+
+\* As currently structured, the manuscript falls within major revision territory because...
+
+\* The work appears to meet Q1 readiness in the following areas, while falling short in...
+
+
+
+Avoid:
+
+
+
+\* absolute verdicts without hedging
+
+\* informal evaluative terms
+
+\* marketing-register phrases
+
+
+
+\---
+
+
+
+\## Territory Assessment Patterns
+
+
+
+Use:
+
+
+
+\* Previous research has established that...
+
+\* Several studies have investigated...
+
+\* The literature on X has highlighted...
+
+\* A large and growing body of literature has addressed...
+
+\* It has been demonstrated that...
+
+\* Much of the current literature focuses on...
+
+
+
+\---
+
+
+
+\## Gap Assessment Patterns
+
+
+
+Before evaluating the gap, classify it using the 3Us taxonomy defined in AGENTS.md — Theoretical Framework Agent:
+
+
+
+\* Unexplored — no prior research attention to date
+
+\* Underdeveloped — recognised but insufficiently theorised or tested
+
+\* Uncertain — conflicting findings remain unresolved
+
+
+
+Then evaluate whether a problematisation is attached:
+
+
+
+\* Debates — contested assumptions about necessity or importance
+
+\* Disconnects — gap between theory and practice
+
+\* Direness — urgency arising from repeated neglect
+
+
+
+A gap without a stated problem carries no novelty weight. A problem without a gap carries no novelty claim.
+
+
+
+Use:
+
+
+
+\* The gap, as stated, appears to be...
+
+\* What remains unclear in the manuscript is whether...
+
+\* The role of X in this context remains largely unexamined.
+
+\* Few studies appear to have investigated...
+
+\* The manuscript does not clearly establish whether the gap is unexplored or underdeveloped.
+
+\* The gap is asserted rather than evidenced; the introduction lacks citations to support the claim that X has not been addressed.
+
+
+
+\---
+
+
+
+\## Contribution Assessment Patterns
+
+
+
+Classify the contribution level using the typology defined in AGENTS.md — Theoretical Framework Agent — before evaluating:
+
+
+
+1\. Theoretical generalisability — new context, same theory
+
+2\. Theoretical adaptation — new context, minor modification
+
+3\. Theoretical modification — changes to existing components
+
+4\. Theoretical extension — adds breadth beyond prior scope
+
+5\. New theoretical development — entirely new theory or model
+
+
+
+Then evaluate which contribution dimensions are present:
+
+
+
+\* methodological novelty
+
+\* architectural novelty
+
+\* dataset novelty
+
+\* analytical novelty
+
+\* theoretical novelty
+
+\* performance novelty
+
+\* integration novelty
+
+
+
+Use:
+
+
+
+\* The contribution, as presented, corresponds to...
+
+\* The manuscript appears to offer integration novelty; however...
+
+\* In contrast to prior approaches, the proposed model...
+
+\* Compared with existing methods, the study...
+
+\* The findings may contribute to...; however, this requires explicit grounding in...
+
+\* The paper appears to conflate integration novelty with methodological novelty.
+
+\* The contribution level that the available evidence supports is...
+
+\* The contribution statement does not distinguish between theoretical, methodological, empirical, and practical dimensions, as required by standards/q1\_wos\_readiness.md.
+
+
+
+\---
+
+
+
+\## Methodology Assessment Patterns
+
+
+
+Use:
+
+
+
+\* The methodology section does not justify...
+
+\* The analytical procedure, as described, does not appear replicable because...
+
+\* The sampling approach lacks justification.
+
+\* It remains unclear how the stated research aim is addressed by the chosen design.
+
+\* The methodology covers only part of the stated aims.
+
+\* Every methodological choice should be justified, not merely described.
+
+
+
+\---
+
+
+
+\## Performance and Results Claims Patterns
+
+
+
+Use:
+
+
+
+\* The reported improvement of X% lacks a clearly stated baseline.
+
+\* It remains unclear against which method or configuration the improvement is measured.
+
+\* The results should be interpreted cautiously without a specified comparator.
+
+\* The direction of improvement is reported; however, the comparator is not identified.
+
+\* The results section appears to focus on test statistics rather than associations.
+
+\* Causal language has been used without a study design that supports causal inference.
+
+
+
+\---
+
+
+
+\## Language and Register Patterns
+
+
+
+Use:
+
+
+
+\* The term X is used imprecisely throughout the manuscript.
+
+\* The phrase X conflates two distinct concepts, namely...
+
+\* The abstract does not conform to the Background-Problem-Aim-Methods-Findings-Contribution-Implication structure required by standards/q1\_wos\_readiness.md.
+
+\* Several claims lack citation and should be treated as unsubstantiated.
+
+\* The prose does not yet meet publication-ready standard for a Q1 venue.
+
+\* Tense is inconsistent across sections.
+
+
+
+\---
+
+
+
+\## Readiness Scorecard Application
+
+
+
+Apply the Readiness Scorecard from standards/q1\_wos\_readiness.md and report the count of strong criteria:
+
+
+
+\* 10 to 12 strong — strong Q1 potential
+
+\* 7 to 9 strong — likely major revision territory
+
+\* Below 7 strong — high rejection risk
+
+
+
+Report which criteria are strong, which are weak, and which are absent.
+
+
+
+\---
+
+
+
+\## Revision Recommendations Patterns
+
+
+
+Use:
+
+
+
+\* The manuscript should be revised to include...
+
+\* Priority should be given to establishing...
+
+\* The authors are advised to reframe the contribution as...
+
+\* The abstract requires restructuring to conform to...
+
+\* The novelty argument should be repositioned to compare explicitly with...
+
+\* Future versions should specify the baseline against which performance is measured.
+
+\* The gap statement should be supported with at least two to three citations demonstrating that X has not been previously addressed.
+
+
+
+\---
+
+
+
+\## Critique Severity Classification
+
+
+
+Aligned with Common Rejection Risks in standards/q1\_wos\_readiness.md:
+
+
+
+| Level | Meaning | Recommended Action |
+
+|---|---|---|
+
+| CRITICAL | Gap-contribution misalignment; unsupported novelty claim; weak or unjustified methodology | Must be resolved before submission |
+
+| HIGH | Missing baseline for performance claims; imprecise terminology; descriptive literature review only | Should be resolved before submission |
+
+| MEDIUM | Register inconsistency; missing hedging; generic implications | Advisable to revise |
+
+| LOW | Phrase-level improvement; stylistic note | Optional |
+
+
+
+\---
+
+
+
+\## Prohibited Patterns
+
+
+
+The critique output must never:
+
+
+
+\* open a comparative sentence with "unlike"
+
+\* use informal evaluative terms such as "weak", "bad", or "poor"
+
+\* employ certainty without hedging in evaluative claims
+
+\* introduce evidence or claims not present in the submitted manuscript
+
+\* conflate the manuscript critique function with the reviewer-response function
+
+
+
+\---
+
+
+
+\## Hedging Obligations
+
+
+
+All evaluative claims must carry epistemic hedging unless the finding is incontrovertible:
+
+
+
+\* appears to...
+
+\* may suggest...
+
+\* as currently argued...
+
+\* as presented...
+
+\* it is possible that...
+
+\* the evidence available in this passage does not confirm...
+
+\* the claim cannot be fully evaluated without...
 
 
 

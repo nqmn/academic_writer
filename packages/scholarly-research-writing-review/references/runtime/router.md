@@ -61,6 +61,36 @@ If the user asks to write or revise a section such as:
 
 Then load the section-specific phrase libraries and rhetorical move guidance.
 
+### Manuscript critique mode
+
+If the user mentions:
+
+- `open-critique`
+- review this paper
+- critique this manuscript
+- does this paper have novelty
+- assess novelty
+- evaluate the contribution
+- is this paper publishable
+- check the gap
+- assess the contribution
+- what is wrong with this paper
+- evaluate this abstract
+- score this manuscript
+
+Then load:
+
+- `standards/q1_wos_readiness.md`
+- `workflows/manuscript_diagnosis.md`
+- `methodology/gap_validation.md`
+- `phrases/critical_language.yml`
+- `phrases/cautious_language.yml`
+- `rhetorical_moves/contribution_framing.md`
+- `rhetorical_moves/novelty_positioning.md`
+- `rhetorical_moves/gap_identification.md`
+
+Apply the MANUSCRIPT CRITIQUE AGENT from `AGENTS.md` as the active agent for output structuring, phrase selection, prohibited patterns, hedging obligations, and severity classification.
+
 ### Reviewer response
 
 If the user mentions:
@@ -119,6 +149,37 @@ If the user mentions:
 Then load:
 
 - `workflows/manuscript_diagnosis.md`
+
+### Theoretical framework mode
+
+If the user mentions:
+
+- `open-framework`
+- theoretical framework
+- conceptual framework
+- select a framework
+- justify the framework
+- framework section
+- theory selection
+- theoretical background
+- theoretical lens
+- theoretical contribution
+- theoretical gap
+- unexplored gap
+- underdeveloped theory
+- uncertain findings
+- Lim 2026
+- Grant and Osanloo
+- Luft et al.
+
+Then load:
+
+- `methodology/theoretical_framework.md`
+- `methodology/gap_validation.md`
+- `phrases/theoretical_framework.yml`
+- `rhetorical_moves/contribution_framing.md`
+- `rhetorical_moves/novelty_positioning.md`
+- `rhetorical_moves/gap_identification.md`
 
 ### Systematic review mode
 

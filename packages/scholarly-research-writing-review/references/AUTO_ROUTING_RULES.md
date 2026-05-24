@@ -185,6 +185,34 @@ Load:
 
 ## Methodology routing
 
+### Theoretical framework layer
+
+Triggers:
+
+- `open-framework`
+- `theoretical framework`
+- `conceptual framework`
+- `select a framework`
+- `justify the framework`
+- `framework section`
+- `theory selection`
+- `theoretical background`
+- `theoretical lens`
+- `theoretical contribution`
+- `theoretical gap`
+- `unexplored gap`
+- `underdeveloped theory`
+- `uncertain findings`
+
+Load:
+
+- `methodology/theoretical_framework.md`
+- `methodology/gap_validation.md`
+- `phrases/theoretical_framework.yml`
+- `rhetorical_moves/contribution_framing.md`
+- `rhetorical_moves/novelty_positioning.md`
+- `rhetorical_moves/gap_identification.md`
+
 ### Systematic review layer
 
 Triggers:
@@ -287,6 +315,34 @@ If the field is named or strongly implied, load one dominant discipline overlay:
 - `US English` or `American English` -> load `notes/british_us_spelling.md` and write in US spelling
 
 ## Specialist mode routing
+
+### Manuscript critique
+
+Triggers:
+
+- `open-critique`
+- `review this paper`
+- `critique this manuscript`
+- `does this paper have novelty`
+- `assess novelty`
+- `evaluate the contribution`
+- `is this paper publishable`
+- `check the gap`
+- `assess the contribution`
+- `what is wrong with this paper`
+- `evaluate this abstract`
+- `score this manuscript`
+
+Load:
+
+- `standards/q1_wos_readiness.md`
+- `workflows/manuscript_diagnosis.md`
+- `methodology/gap_validation.md`
+- `phrases/critical_language.yml`
+- `phrases/cautious_language.yml`
+- `rhetorical_moves/contribution_framing.md`
+- `rhetorical_moves/novelty_positioning.md`
+- `rhetorical_moves/gap_identification.md`
 
 ### Reviewer response
 

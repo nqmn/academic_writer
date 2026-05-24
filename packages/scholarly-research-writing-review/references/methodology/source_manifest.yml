@@ -2,9 +2,10 @@ default_policy:
   use_local_methodology_notes_first: true
   web_search_required: false
   notes: >
-    For SLR, SMS, tertiary-study, PRISMA, and SEGRESS-related tasks, use the
-    local Markdown source notes in this directory before considering any web
-    lookup. These notes were distilled from user-provided local PDFs.
+    For SLR, SMS, tertiary-study, PRISMA, SEGRESS, theoretical framework, and
+    theory-development tasks, use the local Markdown source notes in this
+    directory before considering any web lookup. These notes were distilled
+    from user-provided local PDFs.
 
 source_priority:
   - segress
@@ -13,6 +14,10 @@ source_priority:
   - paul_framework_reviews_2023
   - kitchenham_process_review_2013
   - kitchenham_preliminary_2002
+  - lim_2026_theory_development
+  - luft_et_al_2022_frameworks
+  - grant_osanloo_2014_dissertation
+  - klopper_matrix_2007
 
 sources:
   segress:
@@ -98,3 +103,66 @@ sources:
       - critical appraisal orientation
     notes:
       - "Use as background guidance rather than as the primary SLR protocol standard."
+
+  lim_2026_theory_development:
+    type: theory_development_guideline
+    basis_files:
+      - local_pdf: "Lim - 2026 - Theory and theory development Guidelines for establishing theoretical gaps , foundations , contributions , and implication.pdf"
+    local_notes:
+      - "source_notes/lim_2026_theory_development.md"
+    use_for:
+      - identifying and classifying theoretical gaps (unexplored, underdeveloped, uncertain)
+      - problematizing gaps (debates, disconnects, direness)
+      - establishing theoretical foundations using five-question framework
+      - framing theoretical contributions by novelty level
+      - writing theoretical implications using 3Rs (recap, retrospect, reimagine)
+      - evaluating theoretical interestingness (counterintuitivity, paradoxicality, noteworthiness)
+    notes:
+      - "Primary source for theory-gap identification and contribution-novelty framing."
+      - "Use the 3Us taxonomy when classifying gap types in introduction or literature review sections."
+      - "Use the five-level contribution typology when framing novelty claims."
+
+  luft_et_al_2022_frameworks:
+    type: conceptual_framework_guideline
+    basis_files:
+      - local_pdf: "luft-et-al-2022-literature-reviews-theoretical-frameworks-and-conceptual-frameworks-an-introduction-for-new-biology.pdf"
+    local_notes:
+      - "source_notes/luft_et_al_2022_literature_reviews_frameworks.md"
+    use_for:
+      - distinguishing literature reviews, theoretical frameworks, and conceptual frameworks
+      - selecting a theoretical framework using three key considerations
+      - constructing conceptual frameworks from literature and emergent ideas
+      - aligning framework with research question, methods, and findings
+    notes:
+      - "Use when the user needs to select or articulate a theoretical or conceptual framework."
+      - "Provides worked examples (Jensen & Lawson 2011; Sabel et al. 2017) for framework alignment."
+
+  grant_osanloo_2014_dissertation:
+    type: dissertation_framework_guideline
+    basis_files:
+      - local_pdf: "UNDERSTANDING, SELECTING, AND INTEGRATING A THEORETICAL FRAMEWORK IN DISSERTATION RESEARCH.pdf"
+    local_notes:
+      - "source_notes/grant_osanloo_theoretical_framework_2014.md"
+    use_for:
+      - selecting a theoretical framework for dissertation research
+      - integrating framework with problem, purpose, significance, and research questions
+      - building concept maps to align framework and literature review
+      - distinguishing theoretical from conceptual frameworks using house-blueprint analogy
+    notes:
+      - "Use for dissertation and thesis contexts where the framework must thread through all sections."
+      - "8-step selection process and 9-point integration checklist are directly applicable."
+
+  klopper_matrix_2007:
+    type: literature_review_method
+    basis_files:
+      - local_pdf: "Matrix of Literature Review.pdf"
+    local_notes:
+      - "source_notes/klopper_matrix_literature_review_2007.md"
+    use_for:
+      - structuring literature reviews using the concept matrix method
+      - extracting key concepts from problem statements for matrix columns
+      - systematic, comparative analysis across multiple references
+      - avoiding patchwork or cherry-picked literature reviews
+    notes:
+      - "Use when the user needs a structured approach to organising literature review content."
+      - "Concept columns in the matrix become section headings in the written review."

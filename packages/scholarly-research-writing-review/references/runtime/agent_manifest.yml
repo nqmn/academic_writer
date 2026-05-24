@@ -24,6 +24,7 @@ module_groups:
   phrases:
     - phrases/introduction.yml
     - phrases/literature_review.yml
+    - phrases/theoretical_framework.yml
     - phrases/methods.yml
     - phrases/results.yml
     - phrases/discussion.yml
@@ -69,6 +70,7 @@ module_groups:
     - methodology/slr_kitchenham.md
     - methodology/bibliometric_analysis.md
     - methodology/gap_validation.md
+    - methodology/theoretical_framework.md
   disciplines:
     - disciplines/engineering.md
     - disciplines/medicine.md
@@ -93,11 +95,19 @@ selection_rules:
     required_modules:
       - phrases/introduction.yml
       - rhetorical_moves/cars_model.md
+      - methodology/gap_validation.md
   literature_review:
     required_modules:
       - phrases/literature_review.yml
       - phrases/critical_language.yml
       - phrases/comparison.yml
+      - methodology/gap_validation.md
+  theoretical_framework_section:
+    required_modules:
+      - methodology/theoretical_framework.md
+      - phrases/theoretical_framework.yml
+      - rhetorical_moves/contribution_framing.md
+      - rhetorical_moves/novelty_positioning.md
       - methodology/gap_validation.md
   methods:
     required_modules:
@@ -136,6 +146,14 @@ special_modes:
   literature_synthesis:
     additional_modules:
       - workflows/literature_synthesizer.md
+  theoretical_framework:
+    additional_modules:
+      - methodology/theoretical_framework.md
+      - methodology/gap_validation.md
+      - phrases/theoretical_framework.yml
+      - rhetorical_moves/contribution_framing.md
+      - rhetorical_moves/novelty_positioning.md
+      - rhetorical_moves/gap_identification.md
   systematic_review:
     additional_modules:
       - workflows/literature_synthesizer.md
@@ -144,6 +162,16 @@ special_modes:
     additional_modules:
       - workflows/literature_synthesizer.md
       - methodology/bibliometric_analysis.md
+  manuscript_critique:
+    additional_modules:
+      - standards/q1_wos_readiness.md
+      - workflows/manuscript_diagnosis.md
+      - methodology/gap_validation.md
+      - phrases/critical_language.yml
+      - phrases/cautious_language.yml
+      - rhetorical_moves/contribution_framing.md
+      - rhetorical_moves/novelty_positioning.md
+      - rhetorical_moves/gap_identification.md
   rough_draft:
     relaxed_modules:
       - standards/q1_wos_readiness.md

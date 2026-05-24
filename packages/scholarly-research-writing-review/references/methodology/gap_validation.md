@@ -20,31 +20,34 @@ unless the available evidence justifies the statement or the wording is appropri
 
 ## Gap Types
 
-Distinguish among:
+### Primary classification — the 3Us (Lim, 2026)
 
-### Underexplored gap
+Use these three categories first to classify any gap:
 
-The area has limited coverage, sparse cases, or thin evidence.
+- Unexplored: the aspect has received no research attention at all — emerging topics, overlooked populations, untested contexts.
+- Underdeveloped: the aspect is recognised but remains theoretically or empirically thin.
+- Uncertain: existing studies exist but have produced conflicting or inconsistent findings.
 
-### Inconsistency gap
+### Extended classification
 
-Studies exist, but findings conflict or remain unstable.
+Once the 3U type is established, refine further where needed:
 
-### Methodological gap
+- Underexplored (maps to Unexplored): limited coverage, sparse cases, or thin evidence.
+- Inconsistency (maps to Uncertain): findings conflict or remain unstable across studies.
+- Methodological: previous work has design, data, or inference limitations regardless of topic coverage.
+- Theoretical: the mechanism, construct, or conceptual framing remains underdeveloped.
+- Context: findings may not transfer to an important setting, population, region, or application context.
+- Integration: relevant strands exist but have not been connected in a way that answers the present question.
 
-The topic has been studied, but design, data, or inference limitations remain.
+## Problematizing the Gap (Lim, 2026)
 
-### Theoretical gap
+A gap without a problem has no meaning. A problem without a gap has no novelty.
 
-The mechanism, construct, or conceptual framing remains underdeveloped.
+After classifying the gap, attach a problem form:
 
-### Context gap
-
-Findings may not transfer to an important setting, population, region, or application context.
-
-### Integration gap
-
-Relevant strands exist, but they have not been connected in a way that answers the present question.
+- Debates: contested assumptions creating confusion (necessity) or opportunity (importance) — use when the gap causes active disagreement.
+- Disconnects: gaps between theory and practice highlighting relevance — use when the gap produces real-world consequences.
+- Direness: urgency when debates and disconnects have been repeatedly ignored — use when the gap is genuinely high-stakes.
 
 ## Validation Questions
 
