@@ -1,9 +1,9 @@
 ---
-name: scholarly-research-writing-review
+name: academic-writer
 description: Comprehensive scholarly writing, literature analysis, synthesis, manuscript diagnosis, systematic-review support, and bibliometric-analysis support for Q1-ready academic work. Use when Codex needs to draft or revise manuscript sections, write literature reviews, identify research gaps, analyze a single research paper, synthesize multiple papers, assess whether a draft is Q1-ready, prepare reviewer responses, design SLR/SMS/tertiary-review outputs using Kitchenham, SEGRESS, and PRISMA-aligned logic, or plan bibliometric studies from Web of Science or Scopus exports. Natural-language requests are the primary invocation path. Optional `open-*` routing labels such as `open-rewrite`, `open-review`, `open-diagnose`, `open-analyze`, `open-synthesize`, `open-slr`, `open-bibliometric`, `open-intro`, `open-litreview`, `open-methods`, `open-discussion`, `open-abstract`, and `open-response` may also be used as text conventions.
 ---
 
-# Scholarly Research Writing and Review
+# Academic Writer
 
 ## Overview
 
@@ -26,15 +26,15 @@ The skill covers:
 
 Treat these as the top-level control files:
 
-- `references/AGENTS.md` for the full academic behavior system
-- `references/runtime/system_prompt.md` for runtime operating posture
-- `references/runtime/router.md` for routing logic
-- `references/runtime/ambiguity_policy.md` for clarification thresholds
-- `references/runtime/agent_manifest.yml` for module inventory and default selection logic
-- `references/AUTO_ROUTING_RULES.md` for shorter routing conventions
-- `references/COMMANDS.md` for the `open-*` text labels
+- `AGENTS.md` for the full academic behavior system
+- `runtime/system_prompt.md` for runtime operating posture
+- `runtime/router.md` for routing logic
+- `runtime/ambiguity_policy.md` for clarification thresholds
+- `runtime/agent_manifest.yml` for module inventory and default selection logic
+- `AUTO_ROUTING_RULES.md` for shorter routing conventions
+- `COMMANDS.md` for the `open-*` text labels
 
-Read `references/AGENTS.md` first when the task is broad, high-stakes, or requires system-level alignment. Read `references/runtime/agent_manifest.yml` when deciding whether a module family is part of the intended operating surface.
+Read `AGENTS.md` first when the task is broad, high-stakes, or requires system-level alignment. Read `runtime/agent_manifest.yml` when deciding whether a module family is part of the intended operating surface.
 
 ## Global operating rules
 
@@ -51,217 +51,217 @@ Read `references/AGENTS.md` first when the task is broad, high-stakes, or requir
 
 For substantial academic work, always read:
 
-- `references/standards/q1_wos_readiness.md`
-- `references/standards/self_review_protocol.md`
-- `references/runtime/ambiguity_policy.md`
+- `standards/q1_wos_readiness.md`
+- `standards/self_review_protocol.md`
+- `runtime/ambiguity_policy.md`
 
 For manuscript structuring, section ordering, and reviewer expectations, also read:
 
-- `references/workflows/q1_paper_structure.md`
+- `workflows/q1_paper_structure.md`
 
 For broad system behavior or when the request cuts across multiple academic functions, also read:
 
-- `references/AGENTS.md`
-- `references/runtime/router.md`
-- `references/runtime/agent_manifest.yml`
+- `AGENTS.md`
+- `runtime/router.md`
+- `runtime/agent_manifest.yml`
 
 ## Routing
 
-Natural-language requests are primary. The `open-*` forms are optional text routing labels, not required commands. Use `references/COMMANDS.md` when the request explicitly references those labels.
+Natural-language requests are primary. The `open-*` forms are optional text routing labels, not required commands. Use `COMMANDS.md` when the request explicitly references those labels.
 
 ### Introduction and territory framing
 
 For introduction drafting, introduction revision, territory establishment, gap framing, novelty framing, or study-purpose setup, read:
 
-- `references/phrases/introduction.yml`
-- `references/rhetorical_moves/cars_model.md`
-- `references/rhetorical_moves/gap_identification.md`
-- `references/rhetorical_moves/novelty_positioning.md`
-- `references/methodology/gap_validation.md`
+- `phrases/introduction.yml`
+- `rhetorical_moves/cars_model.md`
+- `rhetorical_moves/gap_identification.md`
+- `rhetorical_moves/novelty_positioning.md`
+- `methodology/gap_validation.md`
 
 ### Literature review and synthesis
 
 For literature reviews, related work, thematic synthesis, contradiction mapping, or gap identification from multiple sources, read:
 
-- `references/workflows/literature_synthesizer.md`
-- `references/phrases/literature_review.yml`
-- `references/phrases/critical_language.yml`
-- `references/phrases/comparison.yml`
-- `references/phrases/reporting_verbs.yml`
-- `references/phrases/evidence_collocations.yml`
-- `references/rhetorical_moves/gap_identification.md`
-- `references/methodology/gap_validation.md`
+- `workflows/literature_synthesizer.md`
+- `phrases/literature_review.yml`
+- `phrases/critical_language.yml`
+- `phrases/comparison.yml`
+- `phrases/reporting_verbs.yml`
+- `phrases/evidence_collocations.yml`
+- `rhetorical_moves/gap_identification.md`
+- `methodology/gap_validation.md`
 
 ### Theoretical or conceptual framework
 
 For theoretical framework selection, conceptual framework construction, theory contribution framing, theoretical gaps, or framework-method alignment, read:
 
-- `references/methodology/theoretical_framework.md`
-- `references/phrases/theoretical_framework.yml`
-- `references/rhetorical_moves/contribution_framing.md`
-- `references/rhetorical_moves/novelty_positioning.md`
-- `references/methodology/gap_validation.md`
+- `methodology/theoretical_framework.md`
+- `phrases/theoretical_framework.yml`
+- `rhetorical_moves/contribution_framing.md`
+- `rhetorical_moves/novelty_positioning.md`
+- `methodology/gap_validation.md`
 
-Also use the relevant source notes under `references/methodology/source_notes/` when the task requires stronger theoretical grounding.
+Also use the relevant source notes under `methodology/source_notes/` when the task requires stronger theoretical grounding.
 
 ### Methods
 
 For methods sections, design justification, analytical procedure explanation, protocol construction, or reproducibility framing, read:
 
-- `references/phrases/methods.yml`
-- `references/rhetorical_moves/methodological_justification.md`
-- `references/workflows/q1_paper_structure.md`
+- `phrases/methods.yml`
+- `rhetorical_moves/methodological_justification.md`
+- `workflows/q1_paper_structure.md`
 
 ### Results
 
 For results sections, outcome reporting, trend reporting, or quantitative phrasing, read:
 
-- `references/phrases/results.yml`
-- `references/phrases/trends.yml`
-- `references/phrases/quantities.yml`
-- `references/phrases/reporting_verbs.yml`
+- `phrases/results.yml`
+- `phrases/trends.yml`
+- `phrases/quantities.yml`
+- `phrases/reporting_verbs.yml`
 
 ### Discussion and conclusion
 
 For discussion, interpretation, implications, limitations, future work, or conclusion writing, read:
 
-- `references/phrases/discussion.yml`
-- `references/phrases/conclusion.yml`
-- `references/phrases/cautious_language.yml`
-- `references/phrases/comparison.yml`
-- `references/rhetorical_moves/contribution_framing.md`
+- `phrases/discussion.yml`
+- `phrases/conclusion.yml`
+- `phrases/cautious_language.yml`
+- `phrases/comparison.yml`
+- `rhetorical_moves/contribution_framing.md`
 
 ### Abstracts
 
 For abstract drafting or revision, read:
 
-- `references/phrases/abstracts.yml`
-- `references/workflows/q1_paper_structure.md`
+- `phrases/abstracts.yml`
+- `workflows/q1_paper_structure.md`
 
 ### Definitions, classification, examples, and general rhetorical support
 
 Load these only when the wording task requires them:
 
-- `references/phrases/definitions.yml`
-- `references/phrases/classifying_listing.yml`
-- `references/phrases/giving_examples.yml`
-- `references/phrases/shared_knowledge.yml`
-- `references/phrases/writing_about_the_past.yml`
-- `references/phrases/presentation.yml`
-- `references/phrases/transition_signals.yml`
-- `references/phrases/causality.yml`
-- `references/phrases/acknowledgements.yml`
-- `references/phrases/reviewer_response.yml`
+- `phrases/definitions.yml`
+- `phrases/classifying_listing.yml`
+- `phrases/giving_examples.yml`
+- `phrases/shared_knowledge.yml`
+- `phrases/writing_about_the_past.yml`
+- `phrases/presentation.yml`
+- `phrases/transition_signals.yml`
+- `phrases/causality.yml`
+- `phrases/acknowledgements.yml`
+- `phrases/reviewer_response.yml`
 
 ### Single-paper analysis
 
 For requests such as "analyze this paper", "extract contributions", "summarize methods", or "build a literature table from one article", read:
 
-- `references/workflows/research_article_analyzer.md`
-- `references/workflows/q1_paper_structure.md`
+- `workflows/research_article_analyzer.md`
+- `workflows/q1_paper_structure.md`
 
 ### Manuscript diagnosis
 
 For Q1-readiness review, publishability assessment, contribution critique, or structured editorial-style diagnosis, read:
 
-- `references/workflows/manuscript_diagnosis.md`
-- `references/workflows/q1_paper_structure.md`
-- `references/methodology/theoretical_framework.md`
-- `references/methodology/gap_validation.md`
-- `references/standards/q1_wos_readiness.md`
-- `references/standards/self_review_protocol.md`
+- `workflows/manuscript_diagnosis.md`
+- `workflows/q1_paper_structure.md`
+- `methodology/theoretical_framework.md`
+- `methodology/gap_validation.md`
+- `standards/q1_wos_readiness.md`
+- `standards/self_review_protocol.md`
 
 ### Reviewer response
 
 For rebuttals, response letters, point-by-point replies, or revision-cover explanations, read:
 
-- `references/reviewer_response/major_revision.md`
-- `references/reviewer_response/minor_revision.md`
-- `references/reviewer_response/rebuttal_patterns.md`
-- `references/reviewer_response/reviewer_tone.md`
-- `references/phrases/reviewer_response.yml`
+- `reviewer_response/major_revision.md`
+- `reviewer_response/minor_revision.md`
+- `reviewer_response/rebuttal_patterns.md`
+- `reviewer_response/reviewer_tone.md`
+- `phrases/reviewer_response.yml`
 
 ### Systematic review and tertiary-study work
 
 For SLR, SMS, tertiary review, Kitchenham, SEGRESS, PRISMA, review protocol design, review questions, search-string planning, or evidence-synthesis workflow design, read:
 
-- `references/methodology/slr_kitchenham.md`
-- `references/methodology/source_manifest.yml`
-- `references/METHODOLOGY_SOURCES.md`
+- `methodology/slr_kitchenham.md`
+- `methodology/source_manifest.yml`
+- `METHODOLOGY_SOURCES.md`
 
-Then load the relevant files from `references/methodology/source_notes/` based on the task. Prefer:
+Then load the relevant files from `methodology/source_notes/` based on the task. Prefer:
 
-- `references/methodology/source_notes/kitchenham_guidelines_core.md`
-- `references/methodology/source_notes/prisma_2020_core.md`
-- `references/methodology/source_notes/segress_core.md`
+- `methodology/source_notes/kitchenham_guidelines_core.md`
+- `methodology/source_notes/prisma_2020_core.md`
+- `methodology/source_notes/segress_core.md`
 
 Use supporting notes when needed, including:
 
-- `references/methodology/source_notes/kitchenham_process_review_2013.md`
-- `references/methodology/source_notes/kitchenham_preliminary_2002.md`
-- `references/methodology/source_notes/paul_framework_reviews_2023.md`
-- `references/methodology/source_notes/luft_et_al_2022_literature_reviews_frameworks.md`
-- `references/methodology/source_notes/grant_osanloo_theoretical_framework_2014.md`
-- `references/methodology/source_notes/klopper_matrix_literature_review_2007.md`
-- `references/methodology/source_notes/lim_2026_theory_development.md`
+- `methodology/source_notes/kitchenham_process_review_2013.md`
+- `methodology/source_notes/kitchenham_preliminary_2002.md`
+- `methodology/source_notes/paul_framework_reviews_2023.md`
+- `methodology/source_notes/luft_et_al_2022_literature_reviews_frameworks.md`
+- `methodology/source_notes/grant_osanloo_theoretical_framework_2014.md`
+- `methodology/source_notes/klopper_matrix_literature_review_2007.md`
+- `methodology/source_notes/lim_2026_theory_development.md`
 
 ### Bibliometric work
 
 For bibliometric analysis, science mapping, co-citation, bibliographic coupling, keyword co-occurrence, Web of Science or Scopus export planning, or VOSviewer/Bibliometrix-oriented study design, read:
 
-- `references/methodology/bibliometric_analysis.md`
-- `references/methodology/source_manifest.yml`
-- `references/METHODOLOGY_SOURCES.md`
+- `methodology/bibliometric_analysis.md`
+- `methodology/source_manifest.yml`
+- `METHODOLOGY_SOURCES.md`
 
-Then load the relevant files from `references/methodology/source_notes/`, especially:
+Then load the relevant files from `methodology/source_notes/`, especially:
 
-- `references/methodology/source_notes/donthu_bibliometric_2021.md`
-- `references/methodology/source_notes/ozturk_bibliometric_design_2024.md`
-- `references/methodology/source_notes/passas_bibliometric_steps_2024.md`
+- `methodology/source_notes/donthu_bibliometric_2021.md`
+- `methodology/source_notes/ozturk_bibliometric_design_2024.md`
+- `methodology/source_notes/passas_bibliometric_steps_2024.md`
 
 ### Structure and quality references
 
 Use these when the task requires stronger section-level control, diagnosis, or polishing discipline:
 
-- `references/workflows/q1_paper_structure.md`
-- `references/notes/academic_style.md`
-- `references/notes/sentence_structure.md`
-- `references/notes/paragraph_structure.md`
-- `references/notes/connecting_words.md`
-- `references/notes/presentation_style.md`
-- `references/notes/british_us_spelling.md`
+- `workflows/q1_paper_structure.md`
+- `notes/academic_style.md`
+- `notes/sentence_structure.md`
+- `notes/paragraph_structure.md`
+- `notes/connecting_words.md`
+- `notes/presentation_style.md`
+- `notes/british_us_spelling.md`
 
 ## Style and discipline overlays
 
 If the user names a style family, read the matching file:
 
-- Elsevier -> `references/styles/elsevier.md`
-- IEEE -> `references/styles/ieee.md`
-- Nature -> `references/styles/nature.md`
-- ACM -> `references/styles/acm.md`
-- humanities -> `references/styles/humanities.md`
+- Elsevier -> `styles/elsevier.md`
+- IEEE -> `styles/ieee.md`
+- Nature -> `styles/nature.md`
+- ACM -> `styles/acm.md`
+- humanities -> `styles/humanities.md`
 
 If the field is strongly implied, read one dominant discipline overlay:
 
-- engineering or systems -> `references/disciplines/engineering.md`
-- medicine or clinical diagnosis -> `references/disciplines/medicine.md`
-- social science or interpretive policy work -> `references/disciplines/social_science.md`
-- humanities or textual-historical work -> `references/disciplines/humanities.md`
-- mixed or cross-domain work -> `references/disciplines/interdisciplinary.md`
+- engineering or systems -> `disciplines/engineering.md`
+- medicine or clinical diagnosis -> `disciplines/medicine.md`
+- social science or interpretive policy work -> `disciplines/social_science.md`
+- humanities or textual-historical work -> `disciplines/humanities.md`
+- mixed or cross-domain work -> `disciplines/interdisciplinary.md`
 
 If the user specifies British English or US English, read:
 
-- `references/notes/british_us_spelling.md`
+- `notes/british_us_spelling.md`
 
 ## Anti-AI control
 
 For polished prose, always read:
 
-- `references/anti_ai/cadence_rules.md`
-- `references/anti_ai/rhythm_variation.md`
-- `references/anti_ai/transition_control.md`
-- `references/anti_ai/humanisation_constraints.md`
-- `references/anti_ai/humanizer_overlay.md`
+- `anti_ai/cadence_rules.md`
+- `anti_ai/rhythm_variation.md`
+- `anti_ai/transition_control.md`
+- `anti_ai/humanisation_constraints.md`
+- `anti_ai/humanizer_overlay.md`
 
 Treat these as mandatory quality-control modules, not optional polish.
 
@@ -295,8 +295,8 @@ Do not treat these as core runtime guidance:
 - `docs/` is presentation or site material, not skill reasoning logic
 - `scripts/` contains repo maintenance utilities, not academic-behavior instructions
 - `packages/` contains packaged artifacts derived from this source repo
-- `references/TEST_CASES.md` is for validation and confidence checks, not default reasoning context
-- `references/README.md` is orientation material, not the main operating brain
+- `TEST_CASES.md` is for validation and confidence checks, not default reasoning context
+- `README.md` is orientation material, not the main operating brain
 
 Read them only when the task is packaging, maintenance, validation, or documentation-related.
 
@@ -306,5 +306,3 @@ Read them only when the task is packaging, maintenance, validation, or documenta
 - Do not expose internal module-loading steps unless the user asks for them.
 - If diagnosing weaknesses, prioritize the highest-impact repairs first.
 - For polished outputs, do not stop at a plausible draft. Return the version after self-review and anti-AI cleanup.
-
-

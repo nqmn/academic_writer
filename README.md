@@ -113,11 +113,114 @@ The agent should then infer internally:
 The recommended usage is:
 
 - natural-language prompting
-- or explicit skill invocation such as `Use $scholarly-research-writing-review.`
+- explicit skill invocation such as `Use $academic-writer.` when installing from the repository root
+- explicit skill invocation such as `Use $scholarly-research-writing-review.` when using the packaged artifact under [`packages/scholarly-research-writing-review/`](packages/scholarly-research-writing-review/)
 
 The repository also defines optional `open-*` routing labels, but these should be treated as text conventions rather than guaranteed native Codex commands.
 
 See [`COMMANDS.md`](COMMANDS.md) for the routing-label list.
+
+## Installation
+
+### Skills CLI
+
+Install with the cross-agent Skills CLI:
+
+```bash
+npx skills add nqmn/academic_writer
+```
+
+This repository is now installable directly from the repository root because the root contains:
+
+- [`SKILL.md`](SKILL.md) as the runtime artifact
+- [`agents/openai.yaml`](agents/openai.yaml) as the UI and invocation metadata
+
+Update an existing install:
+
+```bash
+npx skills add nqmn/academic_writer
+```
+
+If your harness refreshes installed skills in place, rerunning the same command should pull the latest repository version. If it does not, remove the old install in your local skill directory and add the repository again.
+
+### Claude Code plugin
+
+For Claude Code or any agent harness that uses filesystem skill folders directly, install the repository in the location where that harness expects skills, or copy the root [`SKILL.md`](SKILL.md) into an existing skill folder together with the supporting repository files it references.
+
+Any agent harness can use the skill directly because the runtime artifact is `SKILL.md`.
+
+### Packaged skill artifact
+
+The packaged variant remains available at [`packages/scholarly-research-writing-review/`](packages/scholarly-research-writing-review/). Use that folder when a harness expects a self-contained skill with a bundled `references/` tree.
+
+## Usage
+
+### Overview
+
+The root install is invoked as `$academic-writer`.
+
+The packaged artifact is invoked as `$scholarly-research-writing-review`.
+
+Both entry points describe the same academic-writing brain. The difference is packaging:
+
+- root install uses the source repository directly
+- packaged install uses the self-contained skill artifact under `packages/`
+
+### Patterns detected
+
+The skill is designed to infer the task from normal academic requests rather than requiring rigid commands.
+
+Before:
+
+```text
+Please help me write the introduction for my paper on explainable AI in radiology. Use Elsevier style and British English.
+```
+
+After:
+
+```text
+Use $academic-writer.
+Write an introduction for an Elsevier paper on explainable AI in radiology. Use British English.
+```
+
+Before:
+
+```text
+Can you review whether this manuscript is strong enough for a Q1 journal and tell me what is weak?
+```
+
+After:
+
+```text
+Use $academic-writer.
+Review this manuscript for Q1 readiness and identify the highest-impact weaknesses first.
+```
+
+Before:
+
+```text
+I want a systematic literature review protocol on explainable AI for medical image diagnosis.
+```
+
+After:
+
+```text
+Use $academic-writer.
+Design an SLR protocol on explainable AI for medical image diagnosis using Kitchenham, SEGRESS, and PRISMA principles.
+```
+
+Before:
+
+```text
+Can you compare these papers and tell me the research gap?
+```
+
+After:
+
+```text
+Use $academic-writer.
+Compare these papers, synthesize the literature, and identify the most defensible research gap.
+```
 
 ## Quality defaults
 
