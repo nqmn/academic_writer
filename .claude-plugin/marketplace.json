@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "academic-writer",
+  "owner": {
+    "name": "nqmn",
+    "url": "https://github.com/nqmn"
+  },
+  "description": "The academic-writer skill, installable as a Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "academic-writer",
+      "source": "./",
+      "description": "Q1-ready scholarly writing, literature synthesis, manuscript diagnosis, theoretical framing, systematic-review support, and bibliometric-analysis support for academic work.",
+      "license": "Apache-2.0",
+      "keywords": ["academic-writing", "research", "literature-review", "manuscript-review", "systematic-review", "bibliometric-analysis"]
+    }
+  ]
+}

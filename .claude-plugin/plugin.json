@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "academic-writer",
+  "description": "Q1-ready scholarly writing, literature synthesis, manuscript diagnosis, theoretical framing, systematic-review support, and bibliometric-analysis support for academic work.",
+  "version": "1.0.0",
+  "author": {
+    "name": "nqmn",
+    "url": "https://github.com/nqmn"
+  },
+  "homepage": "https://github.com/nqmn/academic_writer",
+  "repository": "https://github.com/nqmn/academic_writer",
+  "license": "Apache-2.0",
+  "keywords": ["academic-writing", "research", "literature-review", "manuscript-review", "systematic-review", "bibliometric-analysis"]
+}
