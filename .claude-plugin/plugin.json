@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "academic-writer",
   "description": "Q1-ready scholarly writing, literature synthesis, manuscript diagnosis, theoretical framing, systematic-review support, and bibliometric-analysis support for academic work.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "nqmn",
     "url": "https://github.com/nqmn"
@@ -10,5 +10,23 @@
   "homepage": "https://github.com/nqmn/academic_writer",
   "repository": "https://github.com/nqmn/academic_writer",
   "license": "Apache-2.0",
-  "keywords": ["academic-writing", "research", "literature-review", "manuscript-review", "systematic-review", "bibliometric-analysis"]
+  "keywords": ["academic-writing", "research", "literature-review", "manuscript-review", "systematic-review", "bibliometric-analysis"],
+  "skills": "./packages/",
+  "interface": {
+    "displayName": "Academic Writer",
+    "shortDescription": "Q1-ready writing and review",
+    "longDescription": "Academic writing, literature synthesis, manuscript diagnosis, theoretical framing, systematic-review support, and bibliometric-analysis support packaged for Claude Code.",
+    "developerName": "nqmn",
+    "category": "Productivity",
+    "capabilities": ["Write", "Review", "Research"],
+    "websiteURL": "https://github.com/nqmn/academic_writer",
+    "privacyPolicyURL": "https://github.com/nqmn/academic_writer",
+    "termsOfServiceURL": "https://github.com/nqmn/academic_writer",
+    "defaultPrompt": [
+      "Review this manuscript for Q1 readiness.",
+      "Write an introduction for my paper.",
+      "Design an SLR protocol for this topic."
+    ],
+    "brandColor": "#1F4D3A"
+  }
 }
